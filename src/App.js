@@ -74,7 +74,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/donate" element={<Donate />} />
             {/* <Route path="/classes" element={<Home jamaahTimes={jamaahTimes} startTimes={startTimes} scrollNeeded={true}/>} /> */}
-            <Route path="*" element={<ErrorPage />} />
+            <Route path="*" element={<Home jamaahTimes={jamaahTimes} startTimes={startTimes}/>} />
           </Routes>
           <p className='fg-white bg-green footer '>Baitul Mamur Academy © 2022</p>
       </div>
