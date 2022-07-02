@@ -1,0 +1,33 @@
+.img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: 100%; */
+  
+    background-attachment: fixed;
+    height: 30vh;
+    /* height: 100vh; */
+    background-image: url("../../Assets/vision.jpg");
+}
+.about{
+width: 75%;
+margin: auto;
+/* padding-top: 2em;
+padding-bottom: 2em; */
+padding: 2em;
+background: rgb(1, 0, 16);
+width: 100%;
+color: white;
+/* text-align: center; */
+}
+.heading{
+    text-align: center;
+    margin-top: 4vh;
+    margin-bottom: 2vh;
+    text-decoration: underline;
+  }
+  .content{
+    /* margin: auto; */
+    /* width: 75vw; */
+    /* margin-bottom: 2vh; */
+  }

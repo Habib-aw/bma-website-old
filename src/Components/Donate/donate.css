@@ -1,0 +1,57 @@
+#donate{
+    /* margin-left: 5vw; */
+    margin-top: 2vw;
+    display: flex;
+    justify-content: center;
+}
+.other-donate{
+  display: flex;
+  flex-direction: column;
+  width:80%;
+  margin: auto;
+}
+.other-masjid,.other-bank{
+  background: rgba(0, 0, 0, 0.458);
+  border-radius: 1rem;
+  padding: 1rem;
+  color: white;
+  margin: 1rem 0;
+  /* margin: auto; */
+  /* margin: auto; */
+}
+.donation-all{
+  width:75%;  
+}
+.donation-other{
+  width: 25%;
+}
+.progress-bars,.donation{
+  /* width: 50%; */
+  width: 75%;
+  margin: auto;
+}
+.inner-donation-other{
+  width: 90%;
+  margin: auto;
+}
+@media only screen and (max-width: 1200px){
+  .progress-bars,.donation{
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 800px){
+  
+
+}
+@media only screen and (max-width: 1000px){
+  #donate{
+    flex-direction: column;
+  }
+  .donation-other{
+    width: 100%;
+  }
+  .donation-all{
+    width:100%; 
+  }
+
+}
