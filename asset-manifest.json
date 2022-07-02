@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/bma-website/static/css/main.41a1f956.css",
+    "main.css": "/bma-website/static/css/main.9eb6a3db.css",
     "main.js": "/bma-website/static/js/main.bc9e89ea.js",
     "static/js/787.f896d5ed.chunk.js": "/bma-website/static/js/787.f896d5ed.chunk.js",
     "static/media/aqeedah.png": "/bma-website/static/media/aqeedah.f3f2957662dbb1382d59.png",
     "static/media/vision.jpg": "/bma-website/static/media/vision.e22cd330315296449ec7.jpg",
     "index.html": "/bma-website/index.html",
-    "main.41a1f956.css.map": "/bma-website/static/css/main.41a1f956.css.map",
+    "main.9eb6a3db.css.map": "/bma-website/static/css/main.9eb6a3db.css.map",
     "main.bc9e89ea.js.map": "/bma-website/static/js/main.bc9e89ea.js.map",
     "787.f896d5ed.chunk.js.map": "/bma-website/static/js/787.f896d5ed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.41a1f956.css",
+    "static/css/main.9eb6a3db.css",
     "static/js/main.bc9e89ea.js"
   ]
 }
