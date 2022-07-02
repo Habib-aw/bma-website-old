@@ -13,3 +13,11 @@
     font-size: 4.5vw;
     background-image: linear-gradient(135deg,rgb(1, 0, 16)73%,rgb(232,208,188)70% );
   }
+@media only screen and (max-width:750px){
+    .salah-times h4{
+      font-size: 3.5vw;
+    }
+    .start{
+      font-size: 3vw;
+    }
+}
