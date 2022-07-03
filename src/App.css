@@ -28,14 +28,6 @@
   margin-left: 83%;
 }
 
-.footer{
-  padding: 30px;
-  text-align: center;
-  margin-top: 10vh;
-  background-color: rgb(1, 0, 16);
-  color: white;
-  margin-bottom: 0;
-}
 
 
 /* --------------------------------Navbar-------------------------------- */
@@ -63,13 +55,34 @@
   right:2.5%;
   position: fixed;
   border: none;
-  background: white;
-  border-radius: 2em;
-  padding-inline: 0.5em;
-  font-size: 2em;
+  color: rgb(1, 0, 16);
+  border-radius: 3rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.2rem;
+  font-size: 2rem;
+  padding-inline: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  font-weight: 500;
 }
 
   /* --------------------------------Navbar-------------------------------- */
+.logo{
+  margin-left:0.5rem;
+  margin-bottom: 0;
+  color: white;
+  display: flex;
+  font-family: 'Courier New', Courier, monospace;
+  
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.logo p{
+  margin-bottom: 0;
+  font-size: 2rem;
+}
 body{
   margin: 0;
   padding: 0;
@@ -79,7 +92,7 @@ body{
   align-items: center;
   justify-content: space-between;
   background: rgb(1, 0, 16);
-  /* height: 8vh; */
+  padding-block: 1vh;
 }
 
 .nav-links ul{
@@ -106,7 +119,7 @@ body{
   position: absolute;
   flex-direction: column;
   right: 1rem;
-  top:0.5rem;
+  top:1rem;
 }
 .menu-item{
   display: flex;
@@ -178,5 +191,15 @@ body{
   }
   .progress-description-small{
     display: block;
+  }
+}
+@media only screen and (max-width:900px) {
+  .logo p{
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width:725px) {
+  .logo p{
+    font-size: 1rem;
   }
 }

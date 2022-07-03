@@ -30,18 +30,36 @@
   width: 75%;
   margin: auto;
 }
+.progress-bars-child{
+  margin-bottom: 3rem;
+}
+
 .inner-donation-other{
   width: 90%;
   margin: auto;
 }
+.org-name{
+  display: flex;
+  flex-wrap: wrap;
+}
+.donate-btn{
+  border: none;
+  border-radius: 0.5rem;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  /* margin-inline: 0.5rem; */
+}
+
+.donation-btns{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 @media only screen and (max-width: 1200px){
   .progress-bars,.donation{
     width: 75%;
   }
-}
-@media only screen and (max-width: 800px){
-  
-
 }
 @media only screen and (max-width: 1000px){
   #donate{
@@ -49,6 +67,9 @@
   }
   .donation-other{
     width: 100%;
+  }
+  .progress-bars-child:last-child{
+    margin-bottom: 0;
   }
   .donation-all{
     width:100%; 

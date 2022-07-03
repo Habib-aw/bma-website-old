@@ -9,6 +9,7 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import { useState,useEffect } from 'react';
 import data from "./data/times.json";
+import Footer from './Components/Footer';
 function App() {
   const [startTimes,setStartTimes] = useState("");
   const [jamaahTimes,setJamaahTimes] = useState("");
@@ -51,7 +52,8 @@ function App() {
           <nav className='nav'>
             <div className='logo'>
               {/* some */}
-              <img src={logo} alt="logo" />              
+              <img src={logo} width="75" height="55" alt="logo" />
+              <p>Baitul Mamur Academy</p>
             </div>
             <div onClick={()=>setShowMenuItems(!showMenuItems)}  className='menu'>
               <span className='menu-item'></span>
@@ -76,7 +78,7 @@ function App() {
             {/* <Route path="/classes" element={<Home jamaahTimes={jamaahTimes} startTimes={startTimes} scrollNeeded={true}/>} /> */}
             <Route path="*" element={<Home jamaahTimes={jamaahTimes} startTimes={startTimes}/>} />
           </Routes>
-          <p className='fg-white bg-green footer '>Baitul Mamur Academy © 2022</p>
+          <Footer/>
       </div>
     </Router>
   );
