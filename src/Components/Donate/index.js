@@ -9,6 +9,12 @@ function Donate() {
   function highlight(val){
     
   }
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+  });
+  }, []);
   return (
     <div id='donate'>
       <div className='donation-all'>

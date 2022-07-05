@@ -1,0 +1,62 @@
+.footer{
+    padding: 30px;
+    text-align: center;
+    background-color: rgb(1, 0, 16);
+    color: white;
+    margin-bottom: 0;
+  }
+  
+.carousel-footer{
+  margin: auto;
+  /* background: black; */
+  margin-bottom: 0;
+  background-color: white;
+  padding-block: 1rem;
+}
+
+.carousel-footer-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+.fundraisers-title{
+  display: flex;
+  justify-content: center;
+  background-color:rgb(1, 0, 16);
+  color: white;
+  margin-bottom: 0;
+  padding-block: 1vh;
+  text-align: center;
+
+}
+.carousel-footer-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: darkslategrey;
+  width: 50%;
+  color: white;
+  margin: auto;
+  border-radius: 3rem;
+  padding-block: 1rem;
+  text-align: center;
+}
+.carousel-footer-link{
+  color: white;
+  width: 50%;
+  text-align: center;
+}
+@media only screen and (max-width:600px){
+  .fundraisers-title{
+    font-size: 5.4vw;
+  }
+}
+@media only screen and (max-width:1024px){
+  .carousel-footer-item,.carousel-footer-link,.carousel-footer-text{
+    width: 80%;
+  }
+}

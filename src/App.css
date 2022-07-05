@@ -50,7 +50,7 @@
   /* } */
 
 .toTop{
-  z-index: 1;
+  z-index: 10;
   bottom: 5%;
   right:2.5%;
   position: fixed;
@@ -58,7 +58,7 @@
   color: rgb(1, 0, 16);
   border-radius: 3rem;
   padding-top: 0.4rem;
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.1rem;
   font-size: 2rem;
   padding-inline: 1rem;
   display: flex;
@@ -130,7 +130,7 @@ body{
   /* margin: 1rem; */
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width:910px) {
   .menu{
     display:block;
   }
@@ -154,6 +154,9 @@ body{
   }
   #hide{
     display: none;
+  }
+  .logo p{
+    font-size: 1.5rem;
   }
 }
 
@@ -193,13 +196,17 @@ body{
     display: block;
   }
 }
-@media only screen and (max-width:900px) {
+@media only screen and (max-width:465px) {
   .logo p{
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 }
-@media only screen and (max-width:725px) {
+@media only screen and (max-width:365px) {
   .logo p{
     font-size: 1rem;
+  }
+  .logo{
+    gap: 0;
+    margin-left: 0;
   }
 }

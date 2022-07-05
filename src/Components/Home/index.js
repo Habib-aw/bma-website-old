@@ -1,14 +1,18 @@
 import './home.css';
 import Carousel from 'react-bootstrap/Carousel'
 import itiqaad from "../../Assets/aqeedah.png"
+import itiqaad_wide from "../../Assets/aqeedah-wide.png";
 import temp from "../../Assets/temp.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Classes from "../Classes";
+import Updates from "../Updates";
 import { useRef } from 'react';
 import { useEffect } from 'react';
+import { useState } from 'react';
 // import PrayerTimes from './PrayerTimes'
 function Home({startTimes, jamaahTimes,scrollNeeded}) {
   const scrollClass = useRef()
+  const [smallImg,setSmallImg] = useState(false);
   useEffect(()=>{
     if(scrollNeeded){
         scrollClass.current.scrollIntoView({behavior: "smooth"})
@@ -16,7 +20,21 @@ function Home({startTimes, jamaahTimes,scrollNeeded}) {
   })
   useEffect(() => {
     document.title = 'Baitul Mamur Academy';
+    if (window.innerWidth <= 750){
+      setSmallImg(true)
+    }else{
+      setSmallImg(false)
+    }
   });
+  useEffect(()=>{
+    window.addEventListener("resize",()=>{
+      if (window.innerWidth <= 750){
+        setSmallImg(true)
+      }else{
+        setSmallImg(false)
+      }
+    })
+  },[])
   const styling = "d-block w-100"
   const carouselHeight = 500;
   return (
@@ -53,14 +71,13 @@ function Home({startTimes, jamaahTimes,scrollNeeded}) {
           <Carousel.Item>
             <img
               className={styling}
-              src={itiqaad}
+              src={smallImg ? itiqaad:itiqaad_wide}
               alt="First slide"
               height={carouselHeight}
             />
-            {/* <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption> */}
+            {smallImg ? null:<h1 className='book-name'>Lum'atul Itiqaad</h1>}
+            {smallImg ? null:<h1 className='author'>By Imam Ibn Qudamah</h1>}
+            {smallImg ? null:<h1 className='teacher'>Taught by Ustadh Muzakkir</h1>}
           </Carousel.Item>
           <Carousel.Item>
             <img
@@ -69,21 +86,12 @@ function Home({startTimes, jamaahTimes,scrollNeeded}) {
               alt="Second slide"
               height={carouselHeight}
             />
-
-            {/* <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption> */}
           </Carousel.Item>
         </Carousel>
         {/* <PrayerTimes jamaahTimes={jamaahTimes} startTimes={startTimes}/> */}
       </div>
-    <section id='abcdef'> 
-        <h1 className='news-title'>News and Updates</h1>
-          <div className='news-container'>
-            
-
-          </div>
+    <section > 
+        <Updates />
     </section>
     <section ref={scrollClass}>
       <Classes />
