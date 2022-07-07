@@ -11,13 +11,12 @@ import { useState,useEffect } from 'react';
 import data from "./data/times.json";
 import Footer from './Components/Footer';
 function App() {
-  const [startTimes,setStartTimes] = useState("");
-  const [jamaahTimes,setJamaahTimes] = useState("");
+  const [times,setTimes] = useState("");
   const [showMenuItems,setShowMenuItems] = useState(false);
   const date = new Date()
   const currentDate = date.toLocaleString("en-GB", { day : '2-digit'})+"-"+date.toLocaleString("en-GB", { month: "short" })+"-"+(new Date().getFullYear()).toString().substring(2);
+  const month = date.getMonth()
   const [scrollTop,setScrollTop] = useState(false);
-  
   useEffect(()=>{
     window.addEventListener("scroll",()=>{
       if(window.scrollY>100){
@@ -27,13 +26,13 @@ function App() {
       }
     })
   })
+  
   useEffect(()=>{
-    for (let i = 0; i < data[0].length; i++) {
-      if(currentDate.toString()===data[0][i].Date){
-        setStartTimes(data[0][i])
-        setJamaahTimes(data[1][i])
-        break
-    }
+    for (let i = 0; i < data[month].length; i++) {
+      if(data[month][i].Date===currentDate.toString()){
+        setTimes(data[month][i])
+        break;
+      }
     }
   })
   useEffect(()=>{
@@ -72,13 +71,13 @@ function App() {
           </nav>
           {scrollTop ? <button className="toTop" onClick={scrollToTop}>^</button>:null}
           <Routes>
-            <Route path="/" element={<Home jamaahTimes={jamaahTimes} startTimes={startTimes}/>} />
+            <Route path="/" element={<Home times={times}/>} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/calendar" element={<Calendar />} />
             {/* <Route path="/classes" element={<Home jamaahTimes={jamaahTimes} startTimes={startTimes} scrollNeeded={true}/>} /> */}
-            <Route path="*" element={<Home jamaahTimes={jamaahTimes} startTimes={startTimes}/>} />
+            <Route path="*" element={<Home times={times}/>} />
           </Routes>
           <Footer/>
       </div>

@@ -3,6 +3,8 @@ import Card from 'react-bootstrap/Card'
 // import Button from 'react-bootstrap/Button'
 import itiqaad from "../../Assets/aqeedah.png"
 import temp from "../../Assets/temp.png"
+import arabic from "../../Assets/arabic.jpg";
+
 import './classes.css'
 function Classes() {
   return (
@@ -34,7 +36,7 @@ function Classes() {
   </Card.Body>
 </Card>
 <Card style={{ width: '18rem' }} className="card">
-  <Card.Img variant="top" src={temp} />
+  <Card.Img variant="top" src={arabic} />
   <Card.Body>
     <Card.Title>Arabic class</Card.Title>
     <Card.Text>

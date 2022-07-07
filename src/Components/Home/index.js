@@ -2,7 +2,8 @@ import './home.css';
 import Carousel from 'react-bootstrap/Carousel'
 import itiqaad from "../../Assets/aqeedah.png"
 import itiqaad_wide from "../../Assets/aqeedah-wide.png";
-import temp from "../../Assets/temp.png"
+import arabic_wide from "../../Assets/arabic-wide.jpg";
+import arabic from "../../Assets/arabic.jpg";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Classes from "../Classes";
 import Updates from "../Updates";
@@ -10,9 +11,10 @@ import { useRef } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 // import PrayerTimes from './PrayerTimes'
-function Home({startTimes, jamaahTimes,scrollNeeded}) {
+function Home({times,scrollNeeded}) {
   const scrollClass = useRef()
   const [smallImg,setSmallImg] = useState(false);
+  const [mgrb,setMgrb] = useState();
   useEffect(()=>{
     if(scrollNeeded){
         scrollClass.current.scrollIntoView({behavior: "smooth"})
@@ -25,6 +27,11 @@ function Home({startTimes, jamaahTimes,scrollNeeded}) {
     }else{
       setSmallImg(false)
     }
+    if (window.innerWidth < 910){
+      setMgrb(true)
+    }else{
+      setMgrb(false)
+    }
   });
   useEffect(()=>{
     window.addEventListener("resize",()=>{
@@ -33,8 +40,15 @@ function Home({startTimes, jamaahTimes,scrollNeeded}) {
       }else{
         setSmallImg(false)
       }
+      if (window.innerWidth < 910){
+        setMgrb(true)
+      }else{
+        setMgrb(false)
+      }
+
     })
   },[])
+  // console.log(times)
   const styling = "d-block w-100"
   const carouselHeight = 500;
   return (
@@ -42,28 +56,28 @@ function Home({startTimes, jamaahTimes,scrollNeeded}) {
       <div className='salah-times'>
       <div className='bubble bubble1'>
         <h4>Fajr</h4> 
-        <span className='start'>{startTimes.Fajr}</span> 
-        <span className='start'>{jamaahTimes.Fajr}</span>
+        <span className='start'>{times.Fajr_start}</span> 
+        <span className='start'>{times.Fajr_jamaah}</span>
       </div>
       <div className='bubble bubble2'>
         <h4>Zuhr</h4> 
-        <span className='start'>{startTimes.Zuhr}</span> 
-        <span className='start'>{jamaahTimes.Zuhr}</span>
+        <span className='start'>{times.Zuhr_start}</span> 
+        <span className='start'>{times.Zuhr_jamaah}</span>
       </div>
       <div className='bubble bubble3'>
         <h4>Asr</h4> 
-        <span className='start'>{startTimes.Asr}</span> 
-        <span className='start'>{jamaahTimes.Asr}</span>
+        <span className='start'>{times.Asr_start}</span> 
+        <span className='start'>{times.Asr_jamaah}</span>
       </div>
       <div className='bubble bubble4'>
-        <h4>Mgrb</h4> 
-        <span className='start'>{startTimes.Maghrib}</span> 
-        <span className='start'>{jamaahTimes.Maghrib}</span>
+        <h4>{mgrb ? "Mgrb":"Maghrib"}</h4> 
+        <span className='start'>{times.Maghrib_start}</span> 
+        <span className='start'>{times.Maghrib_jamaah}</span>
       </div>
       <div className='bubble bubble5'>
         <h4>Isha</h4> 
-        <span className='start'>{startTimes.Isha}</span> 
-        <span className='start'>{jamaahTimes.Isha}</span>
+        <span className='start'>{times.Isha_start}</span> 
+        <span className='start'>{times.Isha_jamaah}</span>
       </div>
       </div>
       <div className='carousel'>
@@ -82,13 +96,13 @@ function Home({startTimes, jamaahTimes,scrollNeeded}) {
           <Carousel.Item>
             <img
               className={styling}
-              src={temp}
+              src={smallImg ? arabic:arabic_wide}
               alt="Second slide"
               height={carouselHeight}
             />
           </Carousel.Item>
         </Carousel>
-        {/* <PrayerTimes jamaahTimes={jamaahTimes} startTimes={startTimes}/> */}
+        {/* <PrayerTimes times={times} times={times}/> */}
       </div>
     <section > 
         <Updates />
@@ -108,19 +122,19 @@ function Home({startTimes, jamaahTimes,scrollNeeded}) {
           </tr>
           <tr className='table-row'>
             <th className='table-entry'>Start</th>
-            <th className='table-entry'>{startTimes.Fajr}</th>
-            <th className='table-entry'>{startTimes.Zuhr}</th>
-            <th className='table-entry'>{startTimes.Asr}</th>
-            <th className='table-entry'>{startTimes.Maghrib}</th>
-            <th className='table-entry'>{startTimes.Isha}</th>
+            <th className='table-entry'>{times.Fajr}</th>
+            <th className='table-entry'>{times.Zuhr}</th>
+            <th className='table-entry'>{times.Asr}</th>
+            <th className='table-entry'>{times.Maghrib}</th>
+            <th className='table-entry'>{times.Isha}</th>
           </tr>
           <tr className='table-row'>
             <th className='table-entry'>Jama'ah</th>
-            <th className='table-entry'>{jamaahTimes.Fajr}</th>
-            <th className='table-entry'>{jamaahTimes.Zuhr}</th>
-            <th className='table-entry'>{jamaahTimes.Asr}</th>
-            <th className='table-entry'>{jamaahTimes.Maghrib}</th>
-            <th className='table-entry'>{jamaahTimes.Isha}</th>
+            <th className='table-entry'>{times.Fajr}</th>
+            <th className='table-entry'>{times.Zuhr}</th>
+            <th className='table-entry'>{times.Asr}</th>
+            <th className='table-entry'>{times.Maghrib}</th>
+            <th className='table-entry'>{times.Isha}</th>
           </tr>
         </table> */}
     </div>
