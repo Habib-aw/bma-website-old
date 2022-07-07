@@ -1,20 +1,25 @@
 {
   "files": {
-    "main.css": "/bma-website/static/css/main.8ff95963.css",
-    "main.js": "/bma-website/static/js/main.9f5ec7c6.js",
+    "main.css": "/bma-website/static/css/main.9c08235c.css",
+    "main.js": "/bma-website/static/js/main.fc834b7e.js",
     "static/js/787.f896d5ed.chunk.js": "/bma-website/static/js/787.f896d5ed.chunk.js",
     "static/media/eid-adha-2022.jpg": "/bma-website/static/media/eid-adha-2022.bbadf9044fc5612096ef.jpg",
     "static/media/aqeedah.png": "/bma-website/static/media/aqeedah.f3f2957662dbb1382d59.png",
     "static/media/aqeedah-wide.png": "/bma-website/static/media/aqeedah-wide.855aef66828b32f95be6.png",
     "static/media/vision.jpg": "/bma-website/static/media/vision.e22cd330315296449ec7.jpg",
+    "static/media/ramadan-reflection.jpg": "/bma-website/static/media/ramadan-reflection.766b24424083800d3dbe.jpg",
+    "static/media/sacrifice-hijjah.jpeg": "/bma-website/static/media/sacrifice-hijjah.80a89ee838e7c51e03d2.jpeg",
+    "static/media/eid-fitr.jpg": "/bma-website/static/media/eid-fitr.a4f52d5624de28f3e15e.jpg",
+    "static/media/arabic-wide.jpg": "/bma-website/static/media/arabic-wide.b4b3c09219ee9fb02fc4.jpg",
+    "static/media/arabic.jpg": "/bma-website/static/media/arabic.5e308072fe5d1b8b1eb0.jpg",
     "static/media/logo.png": "/bma-website/static/media/logo.b817792f8ee86fd4aca1.png",
     "index.html": "/bma-website/index.html",
-    "main.8ff95963.css.map": "/bma-website/static/css/main.8ff95963.css.map",
-    "main.9f5ec7c6.js.map": "/bma-website/static/js/main.9f5ec7c6.js.map",
+    "main.9c08235c.css.map": "/bma-website/static/css/main.9c08235c.css.map",
+    "main.fc834b7e.js.map": "/bma-website/static/js/main.fc834b7e.js.map",
     "787.f896d5ed.chunk.js.map": "/bma-website/static/js/787.f896d5ed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ff95963.css",
-    "static/js/main.9f5ec7c6.js"
+    "static/css/main.9c08235c.css",
+    "static/js/main.fc834b7e.js"
   ]
 }
