@@ -117,6 +117,11 @@ thead{
 .view{
     display: flex;
 }
+@media (min-width:1255px) {
+    .checkbox{
+        flex-direction: column;
+    }
+}
 @media (min-width:1600px) {
     td,th{
         font-size: 1.25vw;
