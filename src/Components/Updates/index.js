@@ -26,10 +26,10 @@ function Updates() {
         })
     })
     const images = [
+        eid_adha_2022,
         arafat,
         bengali_dates,
         takbeer_tashreeq,
-        eid_adha_2022,
         sacrifice_hijjah,
         ramadan_reflection,
         eid_fitr

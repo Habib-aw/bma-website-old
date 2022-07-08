@@ -26,3 +26,15 @@
     margin-bottom: 3vh;
     padding-inline: 0.5vw;
 }
+@media (min-width:1600px) {
+    .updates-title{
+    font-size:5.5rem;
+    height: 6rem;
+    }
+}
+@media (min-height:850px){
+    .updates-title{
+    font-size:5.5rem;
+    height: 6rem;
+    }
+}

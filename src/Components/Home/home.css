@@ -1,9 +1,9 @@
 .start{
     display: block;
-  }
-  .arabic-info{
-    color: rgb(232,208,188);
-  }
+}
+.arabic-info{
+  color: rgb(232,208,188);
+}
 .title-arabic{
   position: absolute;
   bottom: 30vh;
@@ -72,4 +72,16 @@
     .start{
       font-size: 3vw;
     }
+}
+@media only screen and (min-height:850px){
+  .title-arabic,.book-name{
+    bottom: 15rem;
+  }
+  .time-arabic,.teacher{
+    bottom: 5rem;
+  }
+.teacher-arabic,.author{
+  bottom: 12rem;
+}
+
 }

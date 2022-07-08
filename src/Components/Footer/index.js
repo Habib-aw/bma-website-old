@@ -9,7 +9,7 @@ function Footer() {
         "The council rate is paid out of the staff's pockets to allow the masjid to improve its services please donate generously"
     ]
     return (
-    <div>
+    <div id='footer'>
         <h1 className="fundraisers-title">Please donate to the fundraisers below</h1>
         <Carousel fade className='carousel-footer' variant='dark' indicators={false} controls={false}>
             {donationMsg.map((msg)=>{
