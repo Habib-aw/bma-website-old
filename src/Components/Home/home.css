@@ -1,36 +1,69 @@
 .start{
     display: block;
   }
+  .arabic-info{
+    color: rgb(232,208,188);
+  }
+.title-arabic{
+  position: absolute;
+  bottom: 30vh;
+  right: 5rem;
+  font-size: 8rem;
+}
+.time-arabic{
+  position: absolute;
+  bottom: 10vh;
+  right: 5rem;
+  font-size: 2rem;
+}
+.teacher-arabic{
+  position: absolute;
+  right: 5rem;
+  bottom:23vh;
+}
 .book-name{
   position: absolute;
-  top: 15vh;
+  bottom: 30vh;
   left: 2rem;
   font-size: 8rem;
   color: white;
   text-shadow: 2px 2px 10px black;
 }
+.arabic-caption-title{
+  font-size: 3rem;
+}
+.caption{
+  background-color: rgba(15, 7, 1, 0.395);
+  border-radius: 2rem;
+  color: rgb(232,208,188);
+}
 .author{
   position: absolute;
   font-size: 2rem;
-  top: 16.5rem;
+  bottom: 25vh;
   left: 2.5rem;
   color: white;
   text-shadow: 2px 2px 8px black;
 }
 .teacher{
   position: absolute;
-  top: 24rem;
+  bottom: 10vh;
   left: 2rem;
   font-size: 2.5rem;
   text-shadow: 2px 2px 8px black;
   color: white;
 }
 
+@media only screen and (max-width:1350px){
+  .title-arabic{
+    font-size: 8vw;
+  }
+}
 @media only screen and (max-width:1180px){
   .book-name{
-    top:15vh;
     font-size: 10vw;
   }
+
 }
 @media only screen and (max-width:750px){
     .salah-times h4{

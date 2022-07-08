@@ -30,6 +30,14 @@
     margin-bottom: 0.5rem;
     background-color: black;
 }
+.filter-menu span:nth-child(2){
+    width: 75%;
+    margin-left: 25%;
+}
+.filter-menu span:last-child{
+    width: 50%;
+    margin-left: 50%;
+}
 label{
     margin-left: 0.4rem;
 }

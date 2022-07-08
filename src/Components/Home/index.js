@@ -89,9 +89,9 @@ function Home({times,scrollNeeded}) {
               alt="First slide"
               height={carouselHeight}
             />
-            {smallImg ? null:<h1 className='book-name'>Lum'atul Itiqaad</h1>}
-            {smallImg ? null:<h1 className='author'>By Imam Ibn Qudamah</h1>}
-            {smallImg ? null:<h1 className='teacher'>Taught by Ustadh Muzakkir</h1>}
+            {smallImg ? null:<><h1 className='book-name'>Lum'atul Itiqaad</h1>
+            <h1 className='author'>By Imam Ibn Qudamah</h1>
+            <h1 className='teacher'>Taught by Ustadh Muzakkir</h1></>}
           </Carousel.Item>
           <Carousel.Item>
             <img
@@ -100,6 +100,14 @@ function Home({times,scrollNeeded}) {
               alt="Second slide"
               height={carouselHeight}
             />
+            {smallImg? 
+            <Carousel.Caption className='caption'>
+            <h1 className='arabic-caption-title'>Learn arabic</h1>
+            <h1>with ustadh Muzakkir</h1>
+            <h4>Every monday at 8pm</h4>
+          </Carousel.Caption>:<div className='arabic-info'><h1 className='title-arabic'>Learn Arabic</h1>
+            <h1 className='time-arabic'>Every Monday at 8pm</h1>
+            <h1 className='teacher-arabic'>with Ustadh Muzakkir</h1></div>}
           </Carousel.Item>
         </Carousel>
         {/* <PrayerTimes times={times} times={times}/> */}
