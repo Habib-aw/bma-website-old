@@ -11,6 +11,7 @@ function Index() {
     const [asr,setAsr] = useState(true)
     const [mgrb,setMgrb] = useState(true)
     const [isha,setIsha] = useState(true)
+    const [toggle,setToggle] = useState(false)
     const date = new Date()
     const currentDate = date.toLocaleString("en-GB", { day : '2-digit'})+"-"+date.toLocaleString("en-GB", { month: "short" })+"-"+(new Date().getFullYear()).toString().substring(2);
     var num = 0
@@ -18,42 +19,55 @@ function Index() {
     const monthsLong = ['January','February','March','April','May','June','July','August','September','October','November','December']
     const [month,setMonth] = useState(date.getMonth())
     return (
-        <div >
-            <h1 className='d-flex justify-content-center'>BMA 2022 calendar</h1>
+        <div id='calendar'>
+            <div className='bma-calendar-title'>
+                <h1 className='bma-calendar-title-text'>BMA 2022 calendar</h1>
+
+            </div>
             <div className='calendar-filter'>
-            <div className='filter-checkbox'>
-                <p>Filters</p>
+            <div className='filter-checkbox-wrapper'>
+                <div className='filter-checkbox'>
+                <div className='filters-title-menu'><p>Filters</p><div className='filter-menu' onClick={()=>setToggle(!toggle)}><span className='filter-menu-item'></span><span className='filter-menu-item'></span><span className='filter-menu-item'></span></div></div>
+                <div className={(toggle? 'view':null)+' checkbox'}>
                 <div>
-                    <input type="checkbox" id="start" name="start" value="start" checked={start} onChange={()=>setStart(!start)}/>
-                    <label for="start">View start times</label>
+                    <h6>View times</h6>
+                    <div>
+                        <input type="checkbox" id="start" name="start" value="start" checked={start} onChange={()=>setStart(!start)}/>
+                        <label for="start">View start times</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="jamaah" name="jamaah" value="jamaah" checked={jamaah} onChange={()=>setJamaah(!jamaah)}/>
+                        <label for="jamaah">View jama'ah times</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="sunrise" name="sunrise" value="sunrise" checked={sunrise} onChange={()=>setSunrise(!sunrise)}/>
+                        <label for="sunrise">View sunrise times</label>
+                    </div>
+                    </div>
+                    <div>
+                    <h6>View salahs</h6>
+                    <div>
+                        <input type="checkbox" id="fajr" name="fajr" value="fajr" checked={fajr} onChange={()=>setFajr(!fajr)}/>
+                        <label for="fajr">View fajr times</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="zuhr" name="zuhr" value="zuhr" checked={zuhr} onChange={()=>setZuhr(!zuhr)}/>
+                        <label for="zuhr">View zuhr times</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="asr" name="asr" value="asr" checked={asr} onChange={()=>setAsr(!asr)}/>
+                        <label for="asr">View asr times</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="maghrib" name="maghrib" value="maghrib" checked={mgrb} onChange={()=>setMgrb(!mgrb)}/>
+                        <label for="maghrib">View maghrib times</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="isha" name="isha" value="isha" checked={isha} onChange={()=>setIsha(!isha)}/>
+                        <label for="isha">View isha times</label>
+                    </div>
+                    </div>
                 </div>
-                <div>
-                    <input type="checkbox" id="jamaah" name="jamaah" value="jamaah" checked={jamaah} onChange={()=>setJamaah(!jamaah)}/>
-                    <label for="jamaah">View jama'ah times</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="sunrise" name="sunrise" value="sunrise" checked={sunrise} onChange={()=>setSunrise(!sunrise)}/>
-                    <label for="sunrise">View sunrise times</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="fajr" name="fajr" value="fajr" checked={fajr} onChange={()=>setFajr(!fajr)}/>
-                    <label for="fajr">View fajr times</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="zuhr" name="zuhr" value="zuhr" checked={zuhr} onChange={()=>setZuhr(!zuhr)}/>
-                    <label for="zuhr">View zuhr times</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="asr" name="asr" value="asr" checked={asr} onChange={()=>setAsr(!asr)}/>
-                    <label for="asr">View asr times</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="maghrib" name="maghrib" value="maghrib" checked={mgrb} onChange={()=>setMgrb(!mgrb)}/>
-                    <label for="maghrib">View maghrib times</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="isha" name="isha" value="isha" checked={isha} onChange={()=>setIsha(!isha)}/>
-                    <label for="isha">View isha times</label>
                 </div>
             </div>
             <div className='calendar-with-title'>
