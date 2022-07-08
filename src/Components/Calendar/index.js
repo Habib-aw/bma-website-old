@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import './calendar.css';
 import data from "../../data/times.json";
 function Index() {
@@ -18,6 +18,21 @@ function Index() {
     const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
     const monthsLong = ['January','February','March','April','May','June','July','August','September','October','November','December']
     const [month,setMonth] = useState(date.getMonth())
+    function ChangeAllTimes(){
+        if(start && jamaah && sunrise){
+            setStart(false);
+            setJamaah(false);
+            setSunrise(false);
+        }else{
+            setStart(true);
+            setJamaah(true);
+            setSunrise(true);
+        }
+    }
+    function ChangeAllSalah(){
+            if (fajr && zuhr && asr && mgrb && isha){
+                setFajr(false); setZuhr(false); setAsr(false); setMgrb(false); setIsha(false);}else{setFajr(true); setZuhr(true); setAsr(true); setMgrb(true); setIsha(true);}
+    }
     return (
         <div id='calendar'>
             <div className='bma-calendar-title'>
@@ -32,39 +47,47 @@ function Index() {
                 <div>
                     <h6>View times</h6>
                     <div>
+                        <input type="checkbox" id="all-times" name="all-times" value="all-times" checked={start && jamaah && sunrise} onChange={()=>ChangeAllTimes()} />
+                        <label for="all-times">All</label>
+                    </div>
+                    <div>
                         <input type="checkbox" id="start" name="start" value="start" checked={start} onChange={()=>setStart(!start)}/>
-                        <label for="start">View start times</label>
+                        <label for="start">Start times</label>
                     </div>
                     <div>
                         <input type="checkbox" id="jamaah" name="jamaah" value="jamaah" checked={jamaah} onChange={()=>setJamaah(!jamaah)}/>
-                        <label for="jamaah">View jama'ah times</label>
+                        <label for="jamaah">Jama'ah times</label>
                     </div>
                     <div>
                         <input type="checkbox" id="sunrise" name="sunrise" value="sunrise" checked={sunrise} onChange={()=>setSunrise(!sunrise)}/>
-                        <label for="sunrise">View sunrise times</label>
+                        <label for="sunrise">Sunrise times</label>
                     </div>
                     </div>
                     <div>
                     <h6>View salahs</h6>
                     <div>
+                        <input type="checkbox" id="All-salah" name="All-salah" value="All-salah" checked={fajr && zuhr && asr && mgrb && isha} onChange={()=>ChangeAllSalah()} />
+                        <label for="All-salah">All</label>
+                    </div>
+                    <div>
                         <input type="checkbox" id="fajr" name="fajr" value="fajr" checked={fajr} onChange={()=>setFajr(!fajr)}/>
-                        <label for="fajr">View fajr times</label>
+                        <label for="fajr">Fajr</label>
                     </div>
                     <div>
                         <input type="checkbox" id="zuhr" name="zuhr" value="zuhr" checked={zuhr} onChange={()=>setZuhr(!zuhr)}/>
-                        <label for="zuhr">View zuhr times</label>
+                        <label for="zuhr">Zuhr</label>
                     </div>
                     <div>
                         <input type="checkbox" id="asr" name="asr" value="asr" checked={asr} onChange={()=>setAsr(!asr)}/>
-                        <label for="asr">View asr times</label>
+                        <label for="asr">Asr</label>
                     </div>
                     <div>
                         <input type="checkbox" id="maghrib" name="maghrib" value="maghrib" checked={mgrb} onChange={()=>setMgrb(!mgrb)}/>
-                        <label for="maghrib">View maghrib times</label>
+                        <label for="maghrib">Maghrib</label>
                     </div>
                     <div>
                         <input type="checkbox" id="isha" name="isha" value="isha" checked={isha} onChange={()=>setIsha(!isha)}/>
-                        <label for="isha">View isha times</label>
+                        <label for="isha">Isha</label>
                     </div>
                     </div>
                 </div>
