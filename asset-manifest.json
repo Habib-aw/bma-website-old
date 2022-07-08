@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bma-website/static/css/main.6d64328f.css",
-    "main.js": "/bma-website/static/js/main.5ce4d4fc.js",
+    "main.css": "/bma-website/static/css/main.60669f78.css",
+    "main.js": "/bma-website/static/js/main.74ddd6db.js",
     "static/js/787.f896d5ed.chunk.js": "/bma-website/static/js/787.f896d5ed.chunk.js",
     "static/media/eid-adha-2022.jpg": "/bma-website/static/media/eid-adha-2022.bbadf9044fc5612096ef.jpg",
     "static/media/aqeedah.png": "/bma-website/static/media/aqeedah.f3f2957662dbb1382d59.png",
@@ -17,12 +17,12 @@
     "static/media/arabic.jpg": "/bma-website/static/media/arabic.5e308072fe5d1b8b1eb0.jpg",
     "static/media/logo.png": "/bma-website/static/media/logo.b817792f8ee86fd4aca1.png",
     "index.html": "/bma-website/index.html",
-    "main.6d64328f.css.map": "/bma-website/static/css/main.6d64328f.css.map",
-    "main.5ce4d4fc.js.map": "/bma-website/static/js/main.5ce4d4fc.js.map",
+    "main.60669f78.css.map": "/bma-website/static/css/main.60669f78.css.map",
+    "main.74ddd6db.js.map": "/bma-website/static/js/main.74ddd6db.js.map",
     "787.f896d5ed.chunk.js.map": "/bma-website/static/js/787.f896d5ed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d64328f.css",
-    "static/js/main.5ce4d4fc.js"
+    "static/css/main.60669f78.css",
+    "static/js/main.74ddd6db.js"
   ]
 }
