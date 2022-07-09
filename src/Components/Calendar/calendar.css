@@ -114,8 +114,38 @@ thead{
     }
 
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+#start-date,#end-date{
+    width: 30px;
+}
+#dash-number{
+    margin-inline: 0.4rem;
+}
 .view{
     display: flex;
+}
+#Today-only{
+    margin-top: 0.5em;
+}
+.dates-sm{
+    display: none;
+}
+@media (max-width:384px) {
+    .dates-l{
+        display: none;
+    }
+    .dates-sm{
+        display: block;
+        margin-top: 0.5rem;
+    }
 }
 @media (min-width:1255px) {
     .checkbox{

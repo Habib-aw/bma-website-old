@@ -3,6 +3,8 @@ import {useState,useEffect} from 'react';
 import './calendar.css';
 import data from "../../data/times.json";
 function Index() {
+    const date = new Date()
+    const [month,setMonth] = useState(date.getMonth())
     const [start,setStart] = useState(true)
     const [jamaah,setJamaah] = useState(true)
     const [sunrise,setSunrise] = useState(true)
@@ -11,13 +13,14 @@ function Index() {
     const [asr,setAsr] = useState(true)
     const [mgrb,setMgrb] = useState(true)
     const [isha,setIsha] = useState(true)
+    const [today,setToday] = useState(false)
     const [toggle,setToggle] = useState(false)
-    const date = new Date()
+    const [startDate,setStartDate] = useState(1)
+    const [endDate,setEndDate] = useState(31)
     const currentDate = date.toLocaleString("en-GB", { day : '2-digit'})+"-"+date.toLocaleString("en-GB", { month: "short" })+"-"+(new Date().getFullYear()).toString().substring(2);
     var num = 0
     const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
     const monthsLong = ['January','February','March','April','May','June','July','August','September','October','November','December']
-    const [month,setMonth] = useState(date.getMonth())
     function ChangeAllTimes(){
         if(start && jamaah && sunrise){
             setStart(false);
@@ -42,9 +45,10 @@ function Index() {
             <div className='calendar-filter'>
             <div className='filter-checkbox-wrapper'>
                 <div className='filter-checkbox'>
-                <div className='filters-title-menu'><p>Filters</p><div className='filter-menu' onClick={()=>setToggle(!toggle)}><span className='filter-menu-item'></span><span className='filter-menu-item'></span><span className='filter-menu-item'></span></div></div>
+                <div className='filters-title-menu'><h4>Filters</h4><div className='filter-menu' onClick={()=>setToggle(!toggle)}><span className='filter-menu-item'></span><span className='filter-menu-item'></span><span className='filter-menu-item'></span></div></div>
                 <div className={(toggle? 'view':null)+' checkbox'}>
-                <div>
+                    <div>
+                    <div>
                     <h6>View times</h6>
                     <div>
                         <input type="checkbox" id="all-times" name="all-times" value="all-times" checked={start && jamaah && sunrise} onChange={()=>ChangeAllTimes()} />
@@ -61,6 +65,19 @@ function Index() {
                     <div>
                         <input type="checkbox" id="sunrise" name="sunrise" value="sunrise" checked={sunrise} onChange={()=>setSunrise(!sunrise)}/>
                         <label for="sunrise">Sunrise times</label>
+                    </div>
+                    </div>
+                    <div className='dates-sm'>
+                        <h6>View dates</h6>
+                        <div>
+                            <input type="number" id="start-date" name="start-date" defaultValue={startDate} onChange={(e)=>setStartDate(e.target.value)}/>
+                            <label id='dash-number'>-</label>
+                            <input type="number" id="end-date" name="end-date" defaultValue={endDate} onChange={(e)=>setEndDate(e.target.value)}/>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="Today-only" name="Today-only" value="Today-only" checked={today} onChange={()=>setToday(!today)} />
+                            <label for="Today-only">Today only</label>
+                        </div>
                     </div>
                     </div>
                     <div>
@@ -90,14 +107,29 @@ function Index() {
                         <label for="isha">Isha</label>
                     </div>
                     </div>
+                    <div className='dates-l'>
+                        <h6>View dates</h6>
+                        <div>
+                            <input type="number" id="start-date" name="start-date" defaultValue={startDate} onChange={(e)=>setStartDate(e.target.value)}/>
+                            <label id='dash-number'>-</label>
+                            <input type="number" id="end-date" name="end-date" defaultValue={endDate} onChange={(e)=>setEndDate(e.target.value)}/>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="Today-only" name="Today-only" value="Today-only" checked={today} onChange={()=>setToday(!today)} />
+                            <label for="Today-only">Today only</label>
+                        </div>
+                    </div>
                 </div>
                 </div>
             </div>
             <div className='calendar-with-title'>
             <div className='table-title'> 
-                        <button onClick={(month===0)? ()=>setMonth(11):()=>setMonth(month-1)}>{"<"}</button>
+            {today? <div className='months-title'>{monthsLong[date.getMonth()]}</div>:
+                        <>
+                        <button onClick={((month===0)? ()=>setMonth(11):()=>setMonth(month-1))}>{"<"}</button>
                         <div className='months-title'>{monthsLong[month]}</div>
                         <button onClick={(month===11)? ()=>setMonth(0):()=>setMonth(month+1)}>{">"}</button>
+                        </>}
             </div> 
             <div className='calendar'>
                 <table border="2">
@@ -126,9 +158,9 @@ function Index() {
                             {(jamaah&&isha)? <th>Jama'ah</th>:null}
                         </tr>
                     </thead>
-                {data[month].map((day)=>{
+                {today ? <tr className={(data[date.getMonth()][date.getDate()-1]['Date'] === currentDate.toString())? "bg-danger":null}><td>{date.getDate()}</td>{(start && fajr)? <td>{data[date.getMonth()][date.getDate()-1]['Fajr_start']}</td>:null} {(jamaah && fajr)? <td>{data[date.getMonth()][date.getDate()-1]['Fajr_jamaah']}</td>:null}{(sunrise && fajr)? <td>{data[date.getMonth()][date.getDate()-1]['sunrise']}</td>:null}{(start&&zuhr)? <td>{data[date.getMonth()][date.getDate()-1]['Zuhr_start']}</td>:null}{(jamaah&&zuhr)? <td>{data[date.getMonth()][date.getDate()-1]['Zuhr_jamaah']}</td>:null} {start&&asr? <td>{data[date.getMonth()][date.getDate()-1]['Asr_start']}</td>:null} {jamaah&&asr? <td>{data[date.getMonth()][date.getDate()-1]['Asr_jamaah']}</td>:null}{start&&mgrb? <td>{data[date.getMonth()][date.getDate()-1]['Maghrib_start']}</td>:null}{jamaah&&mgrb? <td>{data[date.getMonth()][date.getDate()-1]['Maghrib_jamaah']}</td>:null} {start&&isha? <td>{data[date.getMonth()][date.getDate()-1]['Isha_start']}</td>:null}{jamaah&&isha? <td>{data[date.getMonth()][date.getDate()-1]['Isha_jamaah']}</td>:null}</tr>:data[month].map((day)=>{
                     num+=1
-                    return <tr className={(day['Date'] === currentDate.toString())? "bg-danger":null}><td>{num}</td>{(start && fajr)? <td>{day['Fajr_start']}</td>:null} {(jamaah && fajr)? <td>{day['Fajr_jamaah']}</td>:null}{(sunrise && fajr)? <td>{day['sunrise']}</td>:null}{(start&&zuhr)? <td>{day['Zuhr_start']}</td>:null}{(jamaah&&zuhr)? <td>{day['Zuhr_jamaah']}</td>:null} {start&&asr? <td>{day['Asr_start']}</td>:null} {jamaah&&asr? <td>{day['Asr_jamaah']}</td>:null}{start&&mgrb? <td>{day['Maghrib_start']}</td>:null}{jamaah&&mgrb? <td>{day['Maghrib_jamaah']}</td>:null} {start&&isha? <td>{day['Isha_start']}</td>:null}{jamaah&&isha? <td>{day['Isha_jamaah']}</td>:null}</tr>
+                    return startDate<=num&&num<=endDate?<tr className={(day['Date'] === currentDate.toString())? "bg-danger":null}><td>{num}</td>{(start && fajr)? <td>{day['Fajr_start']}</td>:null} {(jamaah && fajr)? <td>{day['Fajr_jamaah']}</td>:null}{(sunrise && fajr)? <td>{day['sunrise']}</td>:null}{(start&&zuhr)? <td>{day['Zuhr_start']}</td>:null}{(jamaah&&zuhr)? <td>{day['Zuhr_jamaah']}</td>:null} {start&&asr? <td>{day['Asr_start']}</td>:null} {jamaah&&asr? <td>{day['Asr_jamaah']}</td>:null}{start&&mgrb? <td>{day['Maghrib_start']}</td>:null}{jamaah&&mgrb? <td>{day['Maghrib_jamaah']}</td>:null} {start&&isha? <td>{day['Isha_start']}</td>:null}{jamaah&&isha? <td>{day['Isha_jamaah']}</td>:null}</tr>:null
                 })}
                 </table>
             </div>
