@@ -1,33 +1,57 @@
+.t{
+  width: 70%;
+  /* height: 100vh; */
+  background: rgb(1, 0, 16);
+  height: 150vh;
+}
+.a{
+  width: 30%;
+
+}
+.abc{
+  border-radius: 5rem;
+  border: 5px solid rgb(232,208,188);
+}
+.future{
+  right:11.5vw;
+  /* top: 55vh;
+  right:11.5vw; */
+  position: absolute;
+
+  /* margin-left: 5rem; */
+}
+.future-text{
+  width: 40%;
+  margin-top: 0rem;
+  color: rgb(232,208,188);
+  margin-inline: 3rem;
+}
 .img{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* width: 100%; */
-  
-    background-attachment: fixed;
-    height: 30vh;
-    /* height: 100vh; */
-    background-image: url("../../Assets/vision.jpg");
+  top: 55vh; 
+  right:11.5vw;
+  position: absolute;
+  /* display: flex;
+  align-items: center; */
+
 }
-.about{
-width: 75%;
-margin: auto;
-/* padding-top: 2em;
-padding-bottom: 2em; */
-padding: 2em;
-background: rgb(1, 0, 16);
-width: 100%;
-color: white;
-/* text-align: center; */
+.img img,.abc{
+  float: right;
 }
-.heading{
-    text-align: center;
-    margin-top: 4vh;
-    margin-bottom: 2vh;
-    text-decoration: underline;
-  }
-  .content{
-    /* margin: auto; */
-    /* width: 75vw; */
-    /* margin-bottom: 2vh; */
-  }
+.history-title{
+  color: rgb(232,208,188);
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-size: 5vw;
+  padding-block: 10vh;
+  padding-inline: 10vw;
+}
+.history-title p{
+  font-size: 7vw;
+  font-family: 'Courier New', Courier, monospace;
+}
+.history-text{
+  color: rgb(232,208,188);
+  font-size: 1.5vw;
+  margin-top: 26%;
+  margin-left: 5vw;
+  margin-right: 25%;
+}

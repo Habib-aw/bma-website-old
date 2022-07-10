@@ -13,6 +13,8 @@ import { useState } from 'react';
 // import PrayerTimes from './PrayerTimes'
 function Home({times,scrollNeeded}) {
   const scrollClass = useRef()
+  const [carouselHeight,setCarouselHeight] = useState(500);
+
   const [smallImg,setSmallImg] = useState(false);
   const [mgrb,setMgrb] = useState();
   useEffect(()=>{
@@ -22,6 +24,9 @@ function Home({times,scrollNeeded}) {
   })
   useEffect(() => {
     document.title = 'Baitul Mamur Academy';
+    if(1536<=window.innerWidth ){
+      setCarouselHeight(window.innerWidth/3.072)
+    }
     if (window.innerWidth <= 750){
       setSmallImg(true)
     }else{
@@ -45,12 +50,14 @@ function Home({times,scrollNeeded}) {
       }else{
         setMgrb(false)
       }
+      if( 1536<=window.innerWidth){
+        setCarouselHeight(window.innerWidth/3.072)
+      }
 
     })
   },[])
   // console.log(times)
   const styling = "d-block w-100"
-  const carouselHeight = 500;
   return (
     <div className=''>
       <div className='salah-times'>
@@ -110,7 +117,6 @@ function Home({times,scrollNeeded}) {
             <h1 className='teacher-arabic'>with Ustadh Muzakkir</h1></div>}
           </Carousel.Item>
         </Carousel>
-        {/* <PrayerTimes times={times} times={times}/> */}
       </div>
     <section > 
         <Updates />

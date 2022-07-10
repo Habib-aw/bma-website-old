@@ -77,13 +77,16 @@
 }
 @media only screen and (min-height:850px){
   .title-arabic,.book-name{
-    bottom: 15rem;
+    bottom: 15vw;
+    font-size: 8vw;
   }
   .time-arabic,.teacher{
-    bottom: 5rem;
+    bottom: 5vw;
+    font-size: 2vw;
   }
 .teacher-arabic,.author{
-  bottom: 12rem;
+  bottom: 12vw;
+  font-size: 3vw;
 }
 
 }

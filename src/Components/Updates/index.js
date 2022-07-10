@@ -28,14 +28,15 @@ function Updates() {
     const images = [
         eid_adha_2022,
         arafat,
-        bengali_dates,
         takbeer_tashreeq,
+        bengali_dates,
         sacrifice_hijjah,
         ramadan_reflection,
         eid_fitr
     ]
     return (
         <div>
+        <div className="blue-bar"></div>
         <h1 className='updates-title'>Information and Updates</h1>
         <div className='updates-container snap'>
             {images.map((img)=>{

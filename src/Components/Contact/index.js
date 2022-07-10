@@ -43,10 +43,10 @@ export default function Contact() {
 
   return (
     <div id='contact'>
-        <h1  className='d-flex justify-content-center'>Contact</h1>
+        <h1  className='d-flex justify-content-center mono'>Contact</h1>
         <div className='panel-container'>
           <div className='panel'  >
-              <p>
+              <p className='cursive-mono'>
                 <h2>Find us at</h2>
                 Baitul Mamur Academy <br /> 
                 191 Roman Road <br /> 
@@ -69,7 +69,7 @@ export default function Contact() {
               {submitted ? <h2 className='d-flex justify-content-center align-items-center'>Thanks for your submission</h2>:
               
               <>
-                <h2>Have a question? </h2>
+                <h2 className='cursive'>Have a question? </h2>
                 <form onSubmit={handleSubmit} id='form' className='' autoComplete='on'>
                     <input className='input' name="firstname" type="text" placeholder='First Name*' autoComplete='given-name' required/>
                   <input className='input' name="secondname" type="text" placeholder='Second Name*' autoComplete='family-name' required/>
@@ -91,7 +91,7 @@ export default function Contact() {
                   </div>
                 </form>
               </>}
-              <div id='email'>
+              <div id='email' className='cursive-mono'>
                 <h2>Or contact us at</h2>
                 <a className='references' href={"mailto:"+bmaEmail}>{bmaEmail}</a>
                 <h5 className='references'>Makhtab only</h5>

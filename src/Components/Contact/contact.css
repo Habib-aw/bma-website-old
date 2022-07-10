@@ -1,6 +1,9 @@
 
 #masjid-map{
     margin-top: 2em;
+    border: 3px solid rgb(1, 0, 16);
+
+    border-radius: 2.5vw;
 }
 #Message-subject{
 width: 50%;  
@@ -43,6 +46,15 @@ select option[value=""] {
 #contact{
     margin-top: 1.5em;
 }
+.cursive-mono,.mono{
+    font-family: 'Courier New', Courier, monospace;
+}
+.cursive-mono h2,.cursive{
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 3rem;
+}
+
+
 @media only screen and (max-width: 960px) {
     .panel-container {
         display: inline;

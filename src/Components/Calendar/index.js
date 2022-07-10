@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {useState,useEffect} from 'react';
 import './calendar.css';
@@ -13,6 +14,10 @@ function Index() {
     const [asr,setAsr] = useState(true)
     const [mgrb,setMgrb] = useState(true)
     const [isha,setIsha] = useState(true)
+    const [fajrChanges,setFajrChanges] = useState(false)
+    const [zuhrChanges,setZuhrChanges] = useState(false)
+    const [asrChanges,setAsrChanges] = useState(false)
+    const [ishaChanges,setIshaChanges] = useState(false)
     const [today,setToday] = useState(false)
     const [toggle,setToggle] = useState(false)
     const [startDate,setStartDate] = useState(1)
@@ -32,6 +37,92 @@ function Index() {
             setSunrise(true);
         }
     }
+    function resetFilters(){
+        setFajrChanges(false)
+        setZuhrChanges(false)
+        setAsrChanges(false)
+        setIshaChanges(false)
+        setStart(true)
+        setSunrise(true)
+        setFajr(true)
+        setZuhr(true)
+        setAsr(true)
+        setMgrb(true)
+        setIsha(true)
+        setToday(false)
+        setStartDate(1)
+        setEndDate(31)
+    }
+    function setNoChangesAll(){
+        setFajrChanges(false)
+        setZuhrChanges(false)
+        setAsrChanges(false)
+        setIshaChanges(false)
+        setStart(true)
+        setSunrise(true)
+        setFajr(true)
+        setZuhr(true)
+        setAsr(true)
+        setMgrb(true)
+        setIsha(true)
+    }
+    function setFajrChangesAll(){
+        setFajrChanges(true)
+        setZuhrChanges(false)
+        setAsrChanges(false)
+        setIshaChanges(false)
+        
+        setStart(false)
+        setSunrise(false)
+        
+        setFajr(true)
+        setZuhr(false)
+        setAsr(false)
+        setMgrb(false)
+        setIsha(false)
+    }
+    function setZuhrChangesAll(){
+        setZuhrChanges(true)
+        setFajrChanges(false)
+        setAsrChanges(false)
+        setIshaChanges(false)
+        
+        setStart(false)
+        
+        setZuhr(true)
+        setFajr(false)
+        setAsr(false)
+        setMgrb(false)
+        setIsha(false)
+}
+    function setAsrChangesAll(){
+        setAsrChanges(true)
+        setFajrChanges(false)
+        setZuhrChanges(false)
+        setIshaChanges(false)
+        
+        setStart(false)
+        
+        setAsr(true)
+        setFajr(false)
+        setZuhr(false)
+        setMgrb(false)
+        setIsha(false)
+}
+    function setIshaChangesAll(){
+        setIshaChanges(true)
+        setFajrChanges(false)
+        setZuhrChanges(false)
+        setAsrChanges(false)
+        
+        setStart(false)
+        
+        setIsha(true)
+        setFajr(false)
+        setZuhr(false)
+        setAsr(false)
+        setMgrb(false)
+}
     function ChangeAllSalah(){
             if (fajr && zuhr && asr && mgrb && isha){
                 setFajr(false); setZuhr(false); setAsr(false); setMgrb(false); setIsha(false);}else{setFajr(true); setZuhr(true); setAsr(true); setMgrb(true); setIsha(true);}
@@ -47,7 +138,6 @@ function Index() {
                 <div className='filter-checkbox'>
                 <div className='filters-title-menu'><h4>Filters</h4><div className='filter-menu' onClick={()=>setToggle(!toggle)}><span className='filter-menu-item'></span><span className='filter-menu-item'></span><span className='filter-menu-item'></span></div></div>
                 <div className={(toggle? 'view':null)+' checkbox'}>
-                    <div>
                     <div>
                     <h6>View times</h6>
                     <div>
@@ -66,21 +156,7 @@ function Index() {
                         <input type="checkbox" id="sunrise" name="sunrise" value="sunrise" checked={sunrise} onChange={()=>setSunrise(!sunrise)}/>
                         <label for="sunrise">Sunrise times</label>
                     </div>
-                    </div>
-                    <div className='dates-sm'>
-                        <h6>View dates</h6>
-                        <div>
-                            <input type="number" id="start-date" name="start-date" defaultValue={startDate} onChange={(e)=>setStartDate(e.target.value)}/>
-                            <label id='dash-number'>-</label>
-                            <input type="number" id="end-date" name="end-date" defaultValue={endDate} onChange={(e)=>setEndDate(e.target.value)}/>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="Today-only" name="Today-only" value="Today-only" checked={today} onChange={()=>setToday(!today)} />
-                            <label for="Today-only">Today only</label>
-                        </div>
-                    </div>
-                    </div>
-                    <div>
+                    <div className='salah'>
                     <h6>View salahs</h6>
                     <div>
                         <input type="checkbox" id="All-salah" name="All-salah" value="All-salah" checked={fajr && zuhr && asr && mgrb && isha} onChange={()=>ChangeAllSalah()} />
@@ -93,6 +169,7 @@ function Index() {
                     <div>
                         <input type="checkbox" id="zuhr" name="zuhr" value="zuhr" checked={zuhr} onChange={()=>setZuhr(!zuhr)}/>
                         <label for="zuhr">Zuhr</label>
+                    </div>
                     </div>
                     <div>
                         <input type="checkbox" id="asr" name="asr" value="asr" checked={asr} onChange={()=>setAsr(!asr)}/>
@@ -107,17 +184,44 @@ function Index() {
                         <label for="isha">Isha</label>
                     </div>
                     </div>
-                    <div className='dates-l'>
+                    <div>
+                    <div className='dates'>
                         <h6>View dates</h6>
                         <div>
-                            <input type="number" id="start-date" name="start-date" defaultValue={startDate} onChange={(e)=>setStartDate(e.target.value)}/>
+                            <input type="number" id="start-date" name="start-date" value={startDate} onChange={(e)=>setStartDate(e.target.value)}/>
                             <label id='dash-number'>-</label>
-                            <input type="number" id="end-date" name="end-date" defaultValue={endDate} onChange={(e)=>setEndDate(e.target.value)}/>
+                            <input type="number" id="end-date" name="end-date" value={endDate} onChange={(e)=>setEndDate(e.target.value)}/>
                         </div>
                         <div>
                             <input type="checkbox" id="Today-only" name="Today-only" value="Today-only" checked={today} onChange={()=>setToday(!today)} />
                             <label for="Today-only">Today only</label>
                         </div>
+                    </div>
+                    <div className='changes'>
+                    <h6>View jama'ah changes</h6>
+                    <div>
+                        <input type="radio" id="no-changes" name="jamaah-changes" value="no-changes" defaultChecked onChange={()=>setNoChangesAll()}/>
+                        <label for="no-changes">None</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="fajr-changes" name="jamaah-changes" value="fajr-changes" checked={fajrChanges} onChange={()=>setFajrChangesAll()}/>
+                        <label for="fajr-changes">Fajr</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="zuhr-changes" name="jamaah-changes" value="zuhr-changes" checked={zuhrChanges} onChange={()=>setZuhrChangesAll()}/>
+                        <label for="zuhr-changes">Zuhr</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="asr-changes" name="jamaah-changes" value="asr-changes" checked={asrChanges} onChange={()=>setAsrChangesAll()}/>
+                        <label for="asr-changes">Asr</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="isha-changes" name="jamaah-changes" value="isha-changes" checked={ishaChanges} onChange={()=>setIshaChangesAll()}/>
+                        <label for="isha-changes">Isha</label>
+                    </div>
+                    </div>
+                    <button className='reset-filters' onClick={()=>resetFilters()}>Reset</button>
+
                     </div>
                 </div>
                 </div>
@@ -144,7 +248,7 @@ function Index() {
                         </tr>
                         
                         <tr>
-                            <th>{months[month]}</th>
+                            {today? <th>{months[date.getMonth()]}</th>:<th>{months[month]}</th>}
                             {(start && fajr)?<th>Start</th> :null}
                             {(jamaah && fajr)? <th>Jama'ah</th>:null}
                             {(sunrise && fajr)?<th>Sunrise</th>:null}
@@ -158,10 +262,11 @@ function Index() {
                             {(jamaah&&isha)? <th>Jama'ah</th>:null}
                         </tr>
                     </thead>
-                {today ? <tr className={(data[date.getMonth()][date.getDate()-1]['Date'] === currentDate.toString())? "bg-danger":null}><td>{date.getDate()}</td>{(start && fajr)? <td>{data[date.getMonth()][date.getDate()-1]['Fajr_start']}</td>:null} {(jamaah && fajr)? <td>{data[date.getMonth()][date.getDate()-1]['Fajr_jamaah']}</td>:null}{(sunrise && fajr)? <td>{data[date.getMonth()][date.getDate()-1]['sunrise']}</td>:null}{(start&&zuhr)? <td>{data[date.getMonth()][date.getDate()-1]['Zuhr_start']}</td>:null}{(jamaah&&zuhr)? <td>{data[date.getMonth()][date.getDate()-1]['Zuhr_jamaah']}</td>:null} {start&&asr? <td>{data[date.getMonth()][date.getDate()-1]['Asr_start']}</td>:null} {jamaah&&asr? <td>{data[date.getMonth()][date.getDate()-1]['Asr_jamaah']}</td>:null}{start&&mgrb? <td>{data[date.getMonth()][date.getDate()-1]['Maghrib_start']}</td>:null}{jamaah&&mgrb? <td>{data[date.getMonth()][date.getDate()-1]['Maghrib_jamaah']}</td>:null} {start&&isha? <td>{data[date.getMonth()][date.getDate()-1]['Isha_start']}</td>:null}{jamaah&&isha? <td>{data[date.getMonth()][date.getDate()-1]['Isha_jamaah']}</td>:null}</tr>:data[month].map((day)=>{
+                    <tbody>
+                {today ? <tr className={(data[date.getMonth()][date.getDate()-1]['Date'] === currentDate.toString())? "bg-danger":null}><td>{date.getDate()}</td>{(start && fajr)? <td>{data[date.getMonth()][date.getDate()-1]['Fajr_start']}</td>:null} {(jamaah && fajr)? <td>{data[date.getMonth()][date.getDate()-1]['Fajr_jamaah']}</td>:null}{(sunrise && fajr)? <td>{data[date.getMonth()][date.getDate()-1]['sunrise']}</td>:null}{(start&&zuhr)? <td>{data[date.getMonth()][date.getDate()-1]['Zuhr_start']}</td>:null}{(jamaah&&zuhr)? <td>{data[date.getMonth()][date.getDate()-1]['Zuhr_jamaah']}</td>:null} {start&&asr? <td>{data[date.getMonth()][date.getDate()-1]['Asr_start']}</td>:null} {jamaah&&asr? <td>{data[date.getMonth()][date.getDate()-1]['Asr_jamaah']}</td>:null}{start&&mgrb? <td>{data[date.getMonth()][date.getDate()-1]['Maghrib_start']}</td>:null}{jamaah&&mgrb? <td>{data[date.getMonth()][date.getDate()-1]['Maghrib_jamaah']}</td>:null} {start&&isha? <td>{data[date.getMonth()][date.getDate()-1]['Isha_start']}</td>:null}{jamaah&&isha? <td>{data[date.getMonth()][date.getDate()-1]['Isha_jamaah']}</td>:null}</tr>:data[month].map((day,index,array)=>{
                     num+=1
-                    return startDate<=num&&num<=endDate?<tr className={(day['Date'] === currentDate.toString())? "bg-danger":null}><td>{num}</td>{(start && fajr)? <td>{day['Fajr_start']}</td>:null} {(jamaah && fajr)? <td>{day['Fajr_jamaah']}</td>:null}{(sunrise && fajr)? <td>{day['sunrise']}</td>:null}{(start&&zuhr)? <td>{day['Zuhr_start']}</td>:null}{(jamaah&&zuhr)? <td>{day['Zuhr_jamaah']}</td>:null} {start&&asr? <td>{day['Asr_start']}</td>:null} {jamaah&&asr? <td>{day['Asr_jamaah']}</td>:null}{start&&mgrb? <td>{day['Maghrib_start']}</td>:null}{jamaah&&mgrb? <td>{day['Maghrib_jamaah']}</td>:null} {start&&isha? <td>{day['Isha_start']}</td>:null}{jamaah&&isha? <td>{day['Isha_jamaah']}</td>:null}</tr>:null
-                })}
+                    return(index!==0)&&((fajrChanges&&(array[index-1]['Fajr_jamaah']===day['Fajr_jamaah']))||(zuhrChanges&&(array[index-1]['Zuhr_jamaah']===day['Zuhr_jamaah']))||(asrChanges&&(array[index-1]['Asr_jamaah']===day['Asr_jamaah']))||(ishaChanges&&(array[index-1]['Isha_jamaah']===day['Isha_jamaah'])))? null:startDate<=num&&num<=endDate?<tr className={(day['Date'] === currentDate.toString())? "bg-danger":null}><td>{num}</td>{(start && fajr)? <td>{day['Fajr_start']}</td>:null} {(jamaah && fajr)? <td>{day['Fajr_jamaah']}</td>:null}{(sunrise && fajr)? <td>{day['sunrise']}</td>:null}{(start&&zuhr)? <td>{day['Zuhr_start']}</td>:null}{(jamaah&&zuhr)? <td>{day['Zuhr_jamaah']}</td>:null} {start&&asr? <td>{day['Asr_start']}</td>:null} {jamaah&&asr? <td>{day['Asr_jamaah']}</td>:null}{start&&mgrb? <td>{day['Maghrib_start']}</td>:null}{jamaah&&mgrb? <td>{day['Maghrib_jamaah']}</td>:null} {start&&isha? <td>{day['Isha_start']}</td>:null}{jamaah&&isha? <td>{day['Isha_jamaah']}</td>:null}</tr>:null
+                })}</tbody>
                 </table>
             </div>
             </div>
