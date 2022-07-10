@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/bma-website/static/css/main.6aeeed06.css",
-    "main.js": "/bma-website/static/js/main.27a81d24.js",
+    "main.css": "/bma-website/static/css/main.1238290f.css",
+    "main.js": "/bma-website/static/js/main.73055531.js",
     "static/js/787.f896d5ed.chunk.js": "/bma-website/static/js/787.f896d5ed.chunk.js",
+    "static/media/arab-history1.PNG": "/bma-website/static/media/arab-history1.c92114e801be0226eec0.PNG",
     "static/media/eid-adha-2022.jpg": "/bma-website/static/media/eid-adha-2022.bbadf9044fc5612096ef.jpg",
+    "static/media/future.jpg": "/bma-website/static/media/future.1a3c429a020e16ab9680.jpg",
     "static/media/aqeedah.png": "/bma-website/static/media/aqeedah.f3f2957662dbb1382d59.png",
     "static/media/aqeedah-wide.png": "/bma-website/static/media/aqeedah-wide.855aef66828b32f95be6.png",
-    "static/media/vision.jpg": "/bma-website/static/media/vision.e22cd330315296449ec7.jpg",
     "static/media/ramadan-reflection.jpg": "/bma-website/static/media/ramadan-reflection.766b24424083800d3dbe.jpg",
     "static/media/sacrifice-hijjah.jpeg": "/bma-website/static/media/sacrifice-hijjah.80a89ee838e7c51e03d2.jpeg",
     "static/media/takbeer-tashreeq.jpeg": "/bma-website/static/media/takbeer-tashreeq.a8f9180b75d675ea7c3c.jpeg",
@@ -17,12 +18,12 @@
     "static/media/arabic.jpg": "/bma-website/static/media/arabic.5e308072fe5d1b8b1eb0.jpg",
     "static/media/logo.png": "/bma-website/static/media/logo.b817792f8ee86fd4aca1.png",
     "index.html": "/bma-website/index.html",
-    "main.6aeeed06.css.map": "/bma-website/static/css/main.6aeeed06.css.map",
-    "main.27a81d24.js.map": "/bma-website/static/js/main.27a81d24.js.map",
+    "main.1238290f.css.map": "/bma-website/static/css/main.1238290f.css.map",
+    "main.73055531.js.map": "/bma-website/static/js/main.73055531.js.map",
     "787.f896d5ed.chunk.js.map": "/bma-website/static/js/787.f896d5ed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6aeeed06.css",
-    "static/js/main.27a81d24.js"
+    "static/css/main.1238290f.css",
+    "static/js/main.73055531.js"
   ]
 }
