@@ -7,7 +7,7 @@ export default function Contact() {
   const [receiverEmail,setEmail] = useState(null)
   const bmaEmail = "baitul.mamur.academy@gmail.com";
   const makhtabEmail = "bma.maktab@gmail.com";
-  const makhtabNumber = "7908015208";
+  const makhtabNumber = "7576951133"//"7908015208";
   const submissions=[
     // first index is value, second dropdown menu, third email
     ["MAKHTAB","Makhtab",makhtabEmail],

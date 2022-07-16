@@ -1,6 +1,27 @@
-  .bubble{
+:root{
+  --lightBrown:rgb(232,208,188);
+  --darkBlueOld:rgb(1, 0, 16);
+  --darkBlue:rgb(2, 0,25);
+  --transparentBlack:rgba(15, 7, 1, 0.395);
+  --lightWhite:rgb(171, 163, 163);
+}
+::-webkit-scrollbar-corner{
+  background-color: var(--darkBlue);
+}
+
+::-webkit-scrollbar{
+  width: 1.25rem;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--lightWhite);
+}
+::-webkit-scrollbar-track{
+  background-color: var(--darkBlue);
+  border-left: 1px solid var(--lightBrown)
+}
+.bubble{
     margin-top: 1em;
-    background: rgba(15, 7, 1, 0.395);
+    background: var(--transparentBlack);
     text-align: center;
     width: 14%;
     z-index: 1;
@@ -31,31 +52,13 @@
 
 
 /* --------------------------------Navbar-------------------------------- */
-  /* .nav-links{
-    /* text-decoration: none; */
-    /* color: black;
-    display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-
-    /* float: right; */
-    /* margin-left: 2%;
-    padding: 5em; */
-  
-  /* .nav{ */
-    /* background: rgb(29,165,153); */
-    /* margin-top: 2em; */
-    /* padding: 1em; */
-    /* border-radius: 1em; */
-  /* } */
-
 .toTop{
   z-index: 10;
   bottom: 5%;
   right:2.5%;
   position: fixed;
   border: none;
-  color: rgb(1, 0, 16);
+  color: var(--darkBlue);
   border-radius: 3rem;
   padding-top: 0.4rem;
   padding-bottom: 0.1rem;
@@ -63,7 +66,7 @@
   padding-inline: 1rem;
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: var(--lightWhite);
   font-weight: 500;
 }
 
@@ -91,7 +94,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgb(1, 0, 16);
+  background: var(--darkBlue);
   padding-block: 1vh;
 }
 
@@ -109,6 +112,10 @@ body{
   text-decoration: none;
   color: white;
   display: block;
+}
+.nav-links li:hover{
+  text-decoration: underline solid;
+  text-underline-offset: 7.5px;
 }
 
 .menu{
@@ -166,7 +173,7 @@ body{
   height: 1.7rem;
 }
 .progress-outer-bar{
-  background: rgb(171, 163, 163);
+  background: var(--lightWhite);
 }
 
 .progress-inner-bar{

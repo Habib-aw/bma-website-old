@@ -14,6 +14,7 @@ function Index() {
     const [asr,setAsr] = useState(true)
     const [mgrb,setMgrb] = useState(true)
     const [isha,setIsha] = useState(true)
+    const [noneChanges,setNoneChanges] = useState(true)
     const [fajrChanges,setFajrChanges] = useState(false)
     const [zuhrChanges,setZuhrChanges] = useState(false)
     const [asrChanges,setAsrChanges] = useState(false)
@@ -38,12 +39,14 @@ function Index() {
         }
     }
     function resetFilters(){
+        setNoneChanges(true)
         setFajrChanges(false)
         setZuhrChanges(false)
         setAsrChanges(false)
         setIshaChanges(false)
         setStart(true)
         setSunrise(true)
+        setJamaah(true)
         setFajr(true)
         setZuhr(true)
         setAsr(true)
@@ -52,8 +55,10 @@ function Index() {
         setToday(false)
         setStartDate(1)
         setEndDate(31)
+        setMonth(date.getMonth())
     }
     function setNoChangesAll(){
+        setNoneChanges(true)
         setFajrChanges(false)
         setZuhrChanges(false)
         setAsrChanges(false)
@@ -71,6 +76,7 @@ function Index() {
         setZuhrChanges(false)
         setAsrChanges(false)
         setIshaChanges(false)
+        setNoneChanges(false)
         
         setStart(false)
         setSunrise(false)
@@ -86,6 +92,7 @@ function Index() {
         setFajrChanges(false)
         setAsrChanges(false)
         setIshaChanges(false)
+        setNoneChanges(false)
         
         setStart(false)
         
@@ -100,6 +107,7 @@ function Index() {
         setFajrChanges(false)
         setZuhrChanges(false)
         setIshaChanges(false)
+        setNoneChanges(false)
         
         setStart(false)
         
@@ -114,6 +122,7 @@ function Index() {
         setFajrChanges(false)
         setZuhrChanges(false)
         setAsrChanges(false)
+        setNoneChanges(false)
         
         setStart(false)
         
@@ -138,7 +147,8 @@ function Index() {
                 <div className='filter-checkbox'>
                 <div className='filters-title-menu'><h4>Filters</h4><div className='filter-menu' onClick={()=>setToggle(!toggle)}><span className='filter-menu-item'></span><span className='filter-menu-item'></span><span className='filter-menu-item'></span></div></div>
                 <div className={(toggle? 'view':null)+' checkbox'}>
-                    <div>
+                    <div className='times-salahs'>
+                    <div className="times">
                     <h6>View times</h6>
                     <div>
                         <input type="checkbox" id="all-times" name="all-times" value="all-times" checked={start && jamaah && sunrise} onChange={()=>ChangeAllTimes()} />
@@ -156,7 +166,8 @@ function Index() {
                         <input type="checkbox" id="sunrise" name="sunrise" value="sunrise" checked={sunrise} onChange={()=>setSunrise(!sunrise)}/>
                         <label for="sunrise">Sunrise times</label>
                     </div>
-                    <div className='salah'>
+                    </div>
+                    <div className='salahs'>
                     <h6>View salahs</h6>
                     <div>
                         <input type="checkbox" id="All-salah" name="All-salah" value="All-salah" checked={fajr && zuhr && asr && mgrb && isha} onChange={()=>ChangeAllSalah()} />
@@ -170,7 +181,6 @@ function Index() {
                         <input type="checkbox" id="zuhr" name="zuhr" value="zuhr" checked={zuhr} onChange={()=>setZuhr(!zuhr)}/>
                         <label for="zuhr">Zuhr</label>
                     </div>
-                    </div>
                     <div>
                         <input type="checkbox" id="asr" name="asr" value="asr" checked={asr} onChange={()=>setAsr(!asr)}/>
                         <label for="asr">Asr</label>
@@ -183,8 +193,9 @@ function Index() {
                         <input type="checkbox" id="isha" name="isha" value="isha" checked={isha} onChange={()=>setIsha(!isha)}/>
                         <label for="isha">Isha</label>
                     </div>
+                    </div>  
                     </div>
-                    <div>
+                    <div className='dates-changes'>
                     <div className='dates'>
                         <h6>View dates</h6>
                         <div>
@@ -200,7 +211,7 @@ function Index() {
                     <div className='changes'>
                     <h6>View jama'ah changes</h6>
                     <div>
-                        <input type="radio" id="no-changes" name="jamaah-changes" value="no-changes" defaultChecked onChange={()=>setNoChangesAll()}/>
+                        <input type="radio" id="no-changes" name="jamaah-changes" value="no-changes" defaultChecked checked={noneChanges} onChange={()=>setNoChangesAll()}/>
                         <label for="no-changes">None</label>
                     </div>
                     <div>
@@ -220,9 +231,8 @@ function Index() {
                         <label for="isha-changes">Isha</label>
                     </div>
                     </div>
-                    <button className='reset-filters' onClick={()=>resetFilters()}>Reset</button>
-
                     </div>
+                    <div><button className='reset-filters' onClick={()=>resetFilters()}>Reset</button></div>
                 </div>
                 </div>
             </div>
@@ -237,7 +247,7 @@ function Index() {
             </div> 
             <div className='calendar'>
                 <table border="2">
-                    <thead>
+                    <thead className='thead'>
                         <tr>
                             <th></th> 
                             {fajr ? <th colSpan={(start && jamaah && sunrise)? 3:(((start && jamaah) || (start && sunrise) || (jamaah &&sunrise))? 2:1)}>Fajr</th>:null}

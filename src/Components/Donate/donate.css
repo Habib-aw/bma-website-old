@@ -11,7 +11,7 @@
   margin: auto;
 }
 .other-masjid,.other-bank{
-  background: rgba(0, 0, 0, 0.458);
+  background: var(--transparentBlack);
   border-radius: 1rem;
   padding: 1rem;
   color: white;

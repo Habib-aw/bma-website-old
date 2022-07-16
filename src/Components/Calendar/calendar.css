@@ -1,5 +1,6 @@
 #calendar{
     margin-bottom: 2.5rem;
+    font-family: 'Times New Roman', Times, serif;
 }
 .bma-calendar-title{
     margin-left: 22.5%;
@@ -51,22 +52,52 @@ label{
 }
 .filter-checkbox-wrapper{
     margin-top: 3.5%;
-    background-color: rgb(1, 0, 16);
-    color:rgb(232,208,188);
+    background-color: var(--lightBrown);
+    border: 2px inset  var(--darkBlue);
+    box-shadow: 0px 0px 6px var(--darkBlue);
+    color:var(--darkBlue);
     margin-left: 1rem;
     border-radius: 1rem;
     width: 20%;
 }
 .calendar{
+    margin: 0;
+    padding: 0;
     overflow-x: auto;
+    font-size: clamp(1rem,(1.25rem+1vw),2.5rem);
+    background-color: rgb(0,1,40);
+    color: var(--lightBrown);
 }
 td,th{
     text-align: center;
     padding-inline: 0.75rem;
 }
-thead{
-    background-color: rgb(1, 0, 16);
-    color: white;
+.dates-changes,.times-salahs{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.table-title button{
+    box-shadow: 3px 0px  3px var(--darkBlue),-3px 0px 3px var(--darkBlue),0px 3px 3px var(--darkBlue), 0px -3px 3px var(--darkBlue);
+    border: 2px solid var(--lightBrown);
+    background-color: var(--darkBlue);
+    color: var(--lightBrown);
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+.thead{
+    background-color: var(--darkBlue);
+    color: var(--lightBrown);
+}
+.thead th{
+    outline:1px solid white;
+}
+.calendar td{
+    border-collapse: collapse;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
 }
 .table-title{
     font-size: 2rem;
@@ -99,6 +130,7 @@ thead{
         width: 500px;
     }
 }
+
 @media only screen and (max-width:1100px) {
     #start-date,#end-date{
         width: 10%;
@@ -114,12 +146,12 @@ thead{
         width: 100%;
         background-color: inherit;
         margin-bottom: -15px;
-        color: rgb(1, 0, 16);
+        color: var(--darkBlue);
         margin-left: 0rem;
     }
     .reset-filters{
-        color: rgb(232,208,188);
-        background-color: rgb(1, 0, 16);
+        color: var(--lightBrown);
+        background-color: var(--darkBlue);
     }
     .bma-calendar-title{
         margin-left: 0%;
@@ -152,15 +184,15 @@ input[type=number] {
 .dates-sm{
     display: none;
 }
-.changes,.salah{
-    margin-top: 1rem;
+.changes,.salahs{
+    /* margin-top: 1rem; */
 }
 .reset-filters{
     margin-top: 1rem;
     border-radius: 0.7vw;
-    color: rgb(1, 0, 16);
-    background-color: rgb(232,208,188);
-
+    background-color: var(--darkBlue);
+    color: var(--lightBrown);
+    border: 2px solid var(--lightBrown);
 }
 
 @media (min-width:1100px) {

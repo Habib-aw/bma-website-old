@@ -1,17 +1,17 @@
 .updates-title{
-    color: rgb(232,208,188);
+    color: var(--lightBrown);
     display: flex;
     justify-content: center;
     height: 5rem;
     align-items: center;
     font-size: 4.3vw;
-    background-image: linear-gradient(135deg,rgb(1, 0, 16)73%,rgb(232,208,188)70% );
+    background-image: linear-gradient(135deg,var(--darkBlue)73%,var(--lightBrown)70% );
     margin-bottom: 0;
     font-family:serif;
 }
 .blue-bar{
     height: 3vh;
-    background-color: rgb(1,0,16);
+    background-color: var(--darkBlue);
 }
 .updates-container{
     display: flex;

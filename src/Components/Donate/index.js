@@ -36,7 +36,7 @@ function Donate() {
         <input type="text"/>
         <br /> <br />
         <label htmlFor="">Expiry date:</label>
-        <input type="date" name="" id=""/>
+        <input type="text"/>
         <br /> <br />
         <label htmlFor="">Ccv:</label>
         <input type="text" /><br />

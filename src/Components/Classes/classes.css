@@ -4,20 +4,19 @@
   height: 5rem;
   align-items: center;
   color: white;
-  background-image: linear-gradient(135deg,rgb(232,208,188) 68%,rgb(1, 0, 16)49.5% );
+  background-image: linear-gradient(135deg,var(--lightBrown) 68%,var(--darkBlue)49.5% );
   font-size: 6vw;
   font-family:serif;
 }
-/* #458181 49.5% 50.5% */
 .cla{
   /* margin-right: 10rem; */
-  color: rgb(1, 0, 16);
+  color: var(--darkBlue);
 
   
   
 }
 .sses{
-  color: rgb(1, 0, 16);
+  color: var(--darkBlue);
 
 }
 .card-stack{
@@ -30,7 +29,7 @@
   padding-bottom:2.5rem;
 }
 .classes{
-  background: rgb(1, 0, 16);
+  background: var(--darkBlue);
 }
 @media (min-width:1600px) {
   .title{

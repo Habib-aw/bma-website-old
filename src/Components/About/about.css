@@ -1,57 +1,96 @@
-.t{
+.about-img{
+  float: right;
   width: 70%;
-  /* height: 100vh; */
-  background: rgb(1, 0, 16);
-  height: 150vh;
 }
-.a{
-  width: 30%;
 
+.about-container{
+  width: 70%;
+  background: var(--darkBlue);
+  height: 175vh;
 }
-.abc{
+
+.future-img{
+  border: 6px solid transparent;
+  background: 
+    linear-gradient(to right, white, white), 
+    linear-gradient(to right, var(--lightBrown) 65.4%, var(--darkBlue) 50%); 
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
   border-radius: 5rem;
-  border: 5px solid rgb(232,208,188);
+  width: 60%;
 }
-.future{
-  right:11.5vw;
-  /* top: 55vh;
-  right:11.5vw; */
+.about-inner-container{
   position: absolute;
 
-  /* margin-left: 5rem; */
 }
+.future-inner-container{
+  right:11.5vw;
+  margin-top: 10vh;
+}
+.about-text{
+  font-size: max(1rem,1.5vw);
+}
+
 .future-text{
   width: 40%;
-  margin-top: 0rem;
-  color: rgb(232,208,188);
-  margin-inline: 3rem;
-}
-.img{
-  top: 55vh; 
-  right:11.5vw;
-  position: absolute;
-  /* display: flex;
-  align-items: center; */
-
-}
-.img img,.abc{
-  float: right;
-}
-.history-title{
-  color: rgb(232,208,188);
-  font-family: Brush Script MT, Brush Script Std, cursive;
-  font-size: 5vw;
-  padding-block: 10vh;
-  padding-inline: 10vw;
-}
-.history-title p{
-  font-size: 7vw;
-  font-family: 'Courier New', Courier, monospace;
+  color: var(--lightBrown);
+  margin-inline: 5vw;
 }
 .history-text{
-  color: rgb(232,208,188);
-  font-size: 1.5vw;
+  color: var(--lightBrown);
   margin-top: 26%;
   margin-left: 5vw;
   margin-right: 25%;
+}
+.history-inner-container{
+  top: 55vh; 
+  right:10.5vw;
+}
+
+.about-title{
+  color: var(--lightBrown);
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-size: max(2.75rem,5vw);
+  padding-top: 10vh;
+  padding-inline: 10vw;
+  margin-bottom: 0;
+}
+.about-bma{
+  font-size: 7vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: max(3.35rem,7vw);
+  margin-bottom: 0;
+
+}
+
+@media only screen and (max-width:910px) {
+  .about-img{
+    width: 100%;
+    float: unset;
+  }
+  .about-container{
+    width: 80%;
+    height:200vh;
+  }
+  .about-inner-container{
+    margin-top: 15vh;
+    right: 0;
+  }
+  .about-text{
+    width: 70%;
+    margin: 0;
+    margin: 15px;
+  }
+  .future-img{
+    border-radius: 0;
+    background: 
+      linear-gradient(to right, white, white), 
+      linear-gradient(to right, var(--lightBrown) 80%, var(--darkBlue) 50%); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+
+  }
+}
+@media only screen and (max-width:320px) {
+
 }
