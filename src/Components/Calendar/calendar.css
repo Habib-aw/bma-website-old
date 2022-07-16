@@ -119,11 +119,13 @@ td,th{
     width: 0.5rem;
     aspect-ratio: 1/1;
 }
+
 @media only screen and (max-width:880px) {
     .calendar-with-title{
         margin: 0;
     }
 }
+
 
 @media (max-width:1350px) {
     #start-date,#end-date{
@@ -148,6 +150,8 @@ td,th{
         margin-bottom: -15px;
         color: var(--darkBlue);
         margin-left: 0rem;
+        border: none;
+        box-shadow: none;
     }
     .reset-filters{
         color: var(--lightBrown);

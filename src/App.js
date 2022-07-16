@@ -52,7 +52,7 @@ function App() {
           <nav className='nav'>
             <div className='logo'>
               <img src={logo} width="75" height="55" alt="logo" />
-              <p>Baitul Mamur Academy</p>
+              <p className='nav-title'><div>Baitul</div>&nbsp;<div>Mamur</div>&nbsp;<div>Academy</div></p>
             </div>
             <div onClick={()=>setShowMenuItems(!showMenuItems)}  className='menu'>
               <span className='menu-item'></span>

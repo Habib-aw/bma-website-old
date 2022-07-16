@@ -50,7 +50,7 @@
 .about-title{
   color: var(--lightBrown);
   font-family: Brush Script MT, Brush Script Std, cursive;
-  font-size: max(2.75rem,5vw);
+  font-size: max(2.5rem,5vw);
   padding-top: 10vh;
   padding-inline: 10vw;
   margin-bottom: 0;
@@ -60,7 +60,6 @@
   font-family: 'Courier New', Courier, monospace;
   font-size: max(3.35rem,7vw);
   margin-bottom: 0;
-
 }
 
 @media only screen and (max-width:910px) {
@@ -91,6 +90,11 @@
 
   }
 }
-@media only screen and (max-width:320px) {
-
+@media only screen and (max-width:330px) {
+  .about-container{
+  width: 100%;
+  }
+  .about-text{
+    width: 90%;
+  }
 }

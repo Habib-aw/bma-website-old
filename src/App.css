@@ -2,6 +2,7 @@
   --lightBrown:rgb(232,208,188);
   --darkBlueOld:rgb(1, 0, 16);
   --darkBlue:rgb(2, 0,25);
+  --darkBlue:rgb(0,0,35);
   --transparentBlack:rgba(15, 7, 1, 0.395);
   --lightWhite:rgb(171, 163, 163);
 }
@@ -27,7 +28,6 @@
     z-index: 1;
     position: absolute;
     border-radius: 2em;
-    /* margin-right: 3%; */
     color: white;
     padding: 1em;
     font-family:monospace;
@@ -71,13 +71,21 @@
 }
 
   /* --------------------------------Navbar-------------------------------- */
+.nav-title div{
+  margin: 0;
+  padding: 0;
+}
+.nav-title{
+display: flex;
+flex-wrap: wrap;
+}
+
 .logo{
   margin-left:0.5rem;
   margin-bottom: 0;
   color: white;
   display: flex;
   font-family: 'Courier New', Courier, monospace;
-  
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -134,10 +142,16 @@ body{
   width: 100%;
   height: 0.3rem;
   margin-top: 0.3rem;
-  /* margin: 1rem; */
 }
 
 @media only screen and (max-width:910px) {
+  .logo{
+    width: 80%;
+    justify-content: flex-start;
+  }
+  .nav-title{
+    justify-content: center;
+  }
   .menu{
     display:block;
   }
