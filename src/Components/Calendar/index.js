@@ -245,7 +245,7 @@ function Index() {
                         <button onClick={(month===11)? ()=>setMonth(0):()=>setMonth(month+1)}>{">"}</button>
                         </>}
             </div> 
-            <div className='calendar'>
+            <div className='calendar disable-select'>
                 <table border="2">
                     <thead className='thead'>
                         <tr>
