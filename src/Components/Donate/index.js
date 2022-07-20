@@ -17,7 +17,7 @@ function Donate() {
   }, []);
   return (
     <div id='donate'>
-      <div className='donation-all'>
+      <di v className='donation-all'>
       <div className='donation'>
         <h2>How much would you like to donate</h2>
         <div className='donation-btns'>
@@ -50,7 +50,7 @@ function Donate() {
         <div className='progress-bars-child'><ProgressBar title={'Rent'} raised={4000} target={18200} description={"Please donate towards the masjid rent in order to support the masjid and keep it running"}/></div>
         <div className="progress-bars-child"><ProgressBar title={'Council rate'} raised={400} target={5000} description={"Please donate towards the council rent to help finance recurring bills so the staff can spend on bettering masjid services"}/></div>
       </div>
-      </div>
+      </di>
       <br /><br />
       <div className='donation-other'>
         <div className='inner-donation-other'>

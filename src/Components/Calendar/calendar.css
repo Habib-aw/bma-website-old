@@ -136,16 +136,7 @@ td,th{
 }
 
 
-@media (max-width:1350px) {
-    #start-date,#end-date{
-        width: 500px;
-    }
-}
-
 @media only screen and (max-width:1200px) {
-    #start-date,#end-date{
-        width: 10%;
-    }
     .calendar-filter{
         flex-direction: column;
         gap: 1rem;
@@ -183,7 +174,7 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 #start-date,#end-date{
-    width: 1.75vw;
+    width: max(1.5rem,1.75vw);
 }
 #dash-number{
     margin-inline: 0.4rem;

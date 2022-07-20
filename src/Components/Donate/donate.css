@@ -1,6 +1,6 @@
 #donate{
     /* margin-left: 5vw; */
-    margin-top: 2vw;
+    /* margin-top: 2vw; */
     display: flex;
     justify-content: center;
 }
@@ -75,4 +75,12 @@
     width:100%; 
   }
 
+}
+.donation-other{
+  background-color: var(--lightBrown);
+}
+.donation-all{
+  background-color: var(--darkBlue);
+  color: var(--lightBrown);
+  /* width: 70%; */
 }

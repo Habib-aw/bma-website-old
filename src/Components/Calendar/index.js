@@ -4,6 +4,9 @@ import {useState,useEffect} from 'react';
 import './calendar.css';
 import data from "../../data/times.json";
 function Index() {
+    useEffect(()=>{
+        document.title = 'Calendar | Baitul Mamur Academy';
+    })
     const date = new Date()
     const [month,setMonth] = useState(date.getMonth())
     const [start,setStart] = useState(true)
