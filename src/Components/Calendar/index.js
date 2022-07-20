@@ -235,7 +235,7 @@ function Index() {
                     </div>
                     </div>
                     </div>
-                    <div><button className='reset-filters' onClick={()=>resetFilters()}>Reset</button></div>
+                    <div className='reset-filters-wrapper'><button className='reset-filters' onClick={()=>resetFilters()}>Reset</button></div>
                 </div>
                 </div>
             </div>
@@ -248,9 +248,9 @@ function Index() {
                         <button onClick={(month===11)? ()=>setMonth(0):()=>setMonth(month+1)}>{">"}</button>
                         </>}
             </div> 
-            <div className='calendar disable-select'>
+            <div className='calendar'>
                 <table border="2">
-                    <thead className='thead'>
+                    <thead className='thead disable-select'>
                         <tr>
                             <th></th> 
                             {fajr ? <th colSpan={(start && jamaah && sunrise)? 3:(((start && jamaah) || (start && sunrise) || (jamaah &&sunrise))? 2:1)}>Fajr</th>:null}
@@ -275,13 +275,25 @@ function Index() {
                             {(jamaah&&isha)? <th>Jama'ah</th>:null}
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='disable-select'>
                 {today ? <tr className={(data[date.getMonth()][date.getDate()-1]['Date'] === currentDate.toString())? "bg-danger":null}><td>{date.getDate()}</td>{(start && fajr)? <td>{data[date.getMonth()][date.getDate()-1]['Fajr_start']}</td>:null} {(jamaah && fajr)? <td>{data[date.getMonth()][date.getDate()-1]['Fajr_jamaah']}</td>:null}{(sunrise && fajr)? <td>{data[date.getMonth()][date.getDate()-1]['sunrise']}</td>:null}{(start&&zuhr)? <td>{data[date.getMonth()][date.getDate()-1]['Zuhr_start']}</td>:null}{(jamaah&&zuhr)? <td>{data[date.getMonth()][date.getDate()-1]['Zuhr_jamaah']}</td>:null} {start&&asr? <td>{data[date.getMonth()][date.getDate()-1]['Asr_start']}</td>:null} {jamaah&&asr? <td>{data[date.getMonth()][date.getDate()-1]['Asr_jamaah']}</td>:null}{start&&mgrb? <td>{data[date.getMonth()][date.getDate()-1]['Maghrib_start']}</td>:null}{jamaah&&mgrb? <td>{data[date.getMonth()][date.getDate()-1]['Maghrib_jamaah']}</td>:null} {start&&isha? <td>{data[date.getMonth()][date.getDate()-1]['Isha_start']}</td>:null}{jamaah&&isha? <td>{data[date.getMonth()][date.getDate()-1]['Isha_jamaah']}</td>:null}</tr>:data[month].map((day,index,array)=>{
                     num+=1
                     return(index!==0)&&((fajrChanges&&(array[index-1]['Fajr_jamaah']===day['Fajr_jamaah']))||(zuhrChanges&&(array[index-1]['Zuhr_jamaah']===day['Zuhr_jamaah']))||(asrChanges&&(array[index-1]['Asr_jamaah']===day['Asr_jamaah']))||(ishaChanges&&(array[index-1]['Isha_jamaah']===day['Isha_jamaah'])))? null:startDate<=num&&num<=endDate?<tr className={(day['Date'] === currentDate.toString())? "bg-danger":null}><td>{num}</td>{(start && fajr)? <td>{day['Fajr_start']}</td>:null} {(jamaah && fajr)? <td>{day['Fajr_jamaah']}</td>:null}{(sunrise && fajr)? <td>{day['sunrise']}</td>:null}{(start&&zuhr)? <td>{day['Zuhr_start']}</td>:null}{(jamaah&&zuhr)? <td>{day['Zuhr_jamaah']}</td>:null} {start&&asr? <td>{day['Asr_start']}</td>:null} {jamaah&&asr? <td>{day['Asr_jamaah']}</td>:null}{start&&mgrb? <td>{day['Maghrib_start']}</td>:null}{jamaah&&mgrb? <td>{day['Maghrib_jamaah']}</td>:null} {start&&isha? <td>{day['Isha_start']}</td>:null}{jamaah&&isha? <td>{day['Isha_jamaah']}</td>:null}</tr>:null
                 })}</tbody>
                 </table>
             </div>
+            <table className='jummah'>
+                <tr>
+                    <td colSpan={2}>Jummah</td>
+                </tr>
+                <tr>
+                    <td>First Jama'ah</td>
+                    <td>Second Jama'ah</td>
+                </tr>
+                <tr>
+                    {month>9 || month<3? <><td>1:00</td><td>1:30</td></>:<><td>1:30</td><td>1:50</td></>}
+                </tr>
+            </table>
             </div>
             </div>
         </div>

@@ -7,6 +7,17 @@
     -moz-user-select: none;
     pointer-events:none;
 }
+.jummah{
+    background-color: var(--darkBlue);
+    color: var(--lightBrown);
+    margin-top: 2rem;
+    border-collapse: collapse;
+    font-size: clamp(1rem,(1.25rem+1vw),2.5rem);
+
+}
+.jummah td{
+    border: 1px solid var(--lightBrown);
+}
 #calendar{
     margin-bottom: 2.5rem;
     font-family: 'Times New Roman', Times, serif;
@@ -22,6 +33,9 @@
 .calendar-filter{
     display: flex;
     gap: 2rem;
+}
+.filters-title-menu h4{
+    font-size: max(1.5rem,1.75vw);
 }
 .filters-title-menu{
     display: flex;
@@ -85,10 +99,9 @@ td,th{
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
-    flex-direction: column;
 }
 
-.table-title button{
+.table-title button,.reset-filters{
     box-shadow: 3px 0px  3px var(--darkBlue),-3px 0px 3px var(--darkBlue),0px 3px 3px var(--darkBlue), 0px -3px 3px var(--darkBlue);
     border: 2px solid var(--lightBrown);
     background-color: var(--darkBlue);
@@ -174,7 +187,7 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 #start-date,#end-date{
-    width: max(1.5rem,1.75vw);
+    width: max(2rem,1.75vw);
 }
 #dash-number{
     margin-inline: 0.4rem;
@@ -188,22 +201,22 @@ input[type=number] {
 .dates-sm{
     display: none;
 }
-.changes,.salahs{
-    /* margin-top: 1rem; */
-}
+
 .reset-filters{
+    padding: 0;
+    padding-inline: 0.5rem;
+    padding-block: 0.1rem;
     margin-top: 1rem;
     border-radius: 0.7vw;
     background-color: var(--darkBlue);
     color: var(--lightBrown);
     border: 2px solid var(--lightBrown);
 }
-
-@media (min-width:1100px) {
-    .checkbox{
-        flex-direction: column;
-    }
+.reset-filters-wrapper{
+    width: 100%;
 }
+
+
 @media (min-width:1600px) {
     td,th{
         font-size: 1.25vw;
@@ -220,4 +233,22 @@ input[type=number] {
     .bma-calendar-title-text{
         font-size: 2.5vw;
     }
+}
+
+@media (min-width:1920px) {
+    input[type=checkbox],input[type=radio]{
+        transform: scale(1.5);
+    }
+}
+
+@media (min-width:2700px) {
+    input[type=checkbox],input[type=radio]{
+        transform: scale(1.9);
+    }
+}
+@media (min-width:1200px) {
+    .dates-changes,.times-salahs,.checkbox{
+        flex-direction: column;
+    }
+    
 }
