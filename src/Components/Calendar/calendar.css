@@ -91,7 +91,7 @@ label{
     align-items: center;
 }
 .jummah-pdfCalendar a{
-    font-size: clamp(1rem,(1.25rem+1vw),2.5rem);
+    font-size: max(1.2rem,1.75vw);
 }
 .calendar{
     margin: 0;

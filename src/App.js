@@ -70,7 +70,7 @@ function App() {
             </div>
           </nav>
           {scrollTop ? <button className="toTop" onClick={scrollToTop}>^</button>:null}
-          <Routes>
+          <Routes id={showMenuItems? "hide-content":""}>
             <Route path="/" element={<Home times={times}/>} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

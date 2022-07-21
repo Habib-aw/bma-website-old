@@ -8,7 +8,7 @@
 .about-container{
   width: 70%;
   background: var(--darkBlue);
-  height: 175vh;
+  padding-bottom: 100vw;
 }
 
 .future-img{
@@ -72,16 +72,24 @@
   }
   .about-container{
     width: 80%;
-    height:200vh;
+    padding-bottom: 0;
   }
   .about-inner-container{
     margin-top: 15vh;
     right: 0;
+    position: static;
+  }
+  .history-title{
+    height: 50vh;
+  }
+  .history-img{
+    position: absolute;
   }
   .about-text{
     width: 70%;
     margin: 0;
     margin: 15px;
+    margin-bottom: 0;
   }
   .future-img{
     border-radius: 0;
@@ -90,6 +98,9 @@
       linear-gradient(to right, var(--lightBrown) 80%, var(--darkBlue) 50%); 
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box; 
+  }
+  .future-text{
+    padding-bottom: 2rem;
   }
 }
 @media only screen and (max-width:330px) {
