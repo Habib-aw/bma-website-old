@@ -300,7 +300,7 @@ function Index() {
             </div>
             <div>
             <a
-                href="../../Assets/Baitul Mamur Academy Calendar 2022.pdf"
+                href={pdfCalendar}
                 download
             >Download the calendar here</a>
             </div>
