@@ -45,7 +45,7 @@
   margin-right: 25%;
 }
 .history-inner-container{
-  top: 55vh; 
+  top: max(28rem,55vh); 
   right:10.5vw;
 }
 
@@ -82,7 +82,7 @@
   .history-title{
     height: 50vh;
   }
-  .history-img{
+  .about-img{
     position: absolute;
   }
   .about-text{
@@ -101,6 +101,9 @@
   }
   .future-text{
     padding-bottom: 2rem;
+  }
+  .future-title{
+    padding-block: 30vh;
   }
 }
 @media only screen and (max-width:330px) {
