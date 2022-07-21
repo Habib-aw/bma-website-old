@@ -3,6 +3,7 @@ import ProgressBar from '../ProgressBar'
 import './donate.css'
 function Donate() {
   const [other,setOther] = useState(false)
+  const callToAction = ", to donate please get in contact with the imam or masjid officials"
   useEffect(() => {
     document.title = 'Donate | Baitul Mamur Academy';
   });
@@ -47,8 +48,8 @@ function Donate() {
       </div>
       
       <div className='progress-bars'>
-        <div className='progress-bars-child'><ProgressBar title={'Rent'} raised={4000} target={18200} description={"Please donate towards the masjid rent in order to support the masjid and keep it running"}/></div>
-        <div className="progress-bars-child"><ProgressBar title={'Council rate'} raised={400} target={5000} description={"Please donate towards the council rent to help finance recurring bills so the staff can spend on bettering masjid services"}/></div>
+        <div className='progress-bars-child'><ProgressBar title={'Rent'} raised={4550} target={18200} description={"Please donate towards the masjid rent in order to support the masjid and keep it running"+callToAction}/></div>
+        <div className="progress-bars-child"><ProgressBar title={'Council rate'} raised={400} target={5000} description={"Please donate towards the council rent to help finance recurring bills so the staff can spend on bettering masjid services"+callToAction}/></div>
       </div>
       </di>
       <br /><br />

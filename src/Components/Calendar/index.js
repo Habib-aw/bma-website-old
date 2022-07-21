@@ -3,6 +3,7 @@ import React from 'react';
 import {useState,useEffect} from 'react';
 import './calendar.css';
 import data from "../../data/times.json";
+import pdfCalendar from "../../Assets/Baitul Mamur Academy Calendar 2022.pdf"
 function Index() {
     useEffect(()=>{
         document.title = 'Calendar | Baitul Mamur Academy';
@@ -282,6 +283,8 @@ function Index() {
                 })}</tbody>
                 </table>
             </div>
+            <div className='jummah-pdfCalendar'>
+            <div >
             <table className='jummah'>
                 <tr>
                     <td colSpan={2}>Jummah</td>
@@ -294,6 +297,14 @@ function Index() {
                     {month>9 || month<3? <><td>1:00</td><td>1:30</td></>:<><td>1:30</td><td>1:50</td></>}
                 </tr>
             </table>
+            </div>
+            <div>
+            <a
+                href="../../Assets/Baitul Mamur Academy Calendar 2022.pdf"
+                download
+            >Download the calendar here</a>
+            </div>
+            </div>
             </div>
             </div>
         </div>

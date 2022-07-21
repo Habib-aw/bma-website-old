@@ -10,7 +10,6 @@
 .jummah{
     background-color: var(--darkBlue);
     color: var(--lightBrown);
-    margin-top: 2rem;
     border-collapse: collapse;
     font-size: clamp(1rem,(1.25rem+1vw),2.5rem);
 
@@ -82,6 +81,17 @@ label{
     margin-left: 1rem;
     border-radius: 1rem;
     width: 20%;
+}
+.jummah-pdfCalendar{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.jummah-pdfCalendar a{
+    font-size: clamp(1rem,(1.25rem+1vw),2.5rem);
 }
 .calendar{
     margin: 0;
@@ -187,7 +197,7 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 #start-date,#end-date{
-    width: max(2rem,1.75vw);
+    width: max(2.2rem,1.75vw);
 }
 #dash-number{
     margin-inline: 0.4rem;
