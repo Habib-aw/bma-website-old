@@ -1,11 +1,10 @@
 {
   "files": {
-    "main.css": "/bma-website/static/css/main.6495a3a0.css",
-    "main.js": "/bma-website/static/js/main.51f26274.js",
+    "main.css": "/bma-website/static/css/main.686b9b53.css",
+    "main.js": "/bma-website/static/js/main.36e5702f.js",
     "static/js/787.f896d5ed.chunk.js": "/bma-website/static/js/787.f896d5ed.chunk.js",
     "static/media/arab-history.png": "/bma-website/static/media/arab-history.c92114e801be0226eec0.png",
-    "static/media/arab-history-slim1.png": "/bma-website/static/media/arab-history-slim1.a6a74c29b7a4189d47ab.png",
-    "static/media/contact.jpg": "/bma-website/static/media/contact.c64d3576bfebcbbad8c8.jpg",
+    "static/media/arab-history-slim.png": "/bma-website/static/media/arab-history-slim.a6a74c29b7a4189d47ab.png",
     "static/media/eid-adha-2022.jpg": "/bma-website/static/media/eid-adha-2022.bbadf9044fc5612096ef.jpg",
     "static/media/future.jpg": "/bma-website/static/media/future.1a3c429a020e16ab9680.jpg",
     "static/media/aqeedah.png": "/bma-website/static/media/aqeedah.f3f2957662dbb1382d59.png",
@@ -20,12 +19,12 @@
     "static/media/arabic.jpg": "/bma-website/static/media/arabic.5e308072fe5d1b8b1eb0.jpg",
     "static/media/logo.png": "/bma-website/static/media/logo.b817792f8ee86fd4aca1.png",
     "index.html": "/bma-website/index.html",
-    "main.6495a3a0.css.map": "/bma-website/static/css/main.6495a3a0.css.map",
-    "main.51f26274.js.map": "/bma-website/static/js/main.51f26274.js.map",
+    "main.686b9b53.css.map": "/bma-website/static/css/main.686b9b53.css.map",
+    "main.36e5702f.js.map": "/bma-website/static/js/main.36e5702f.js.map",
     "787.f896d5ed.chunk.js.map": "/bma-website/static/js/787.f896d5ed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6495a3a0.css",
-    "static/js/main.51f26274.js"
+    "static/css/main.686b9b53.css",
+    "static/js/main.36e5702f.js"
   ]
 }
