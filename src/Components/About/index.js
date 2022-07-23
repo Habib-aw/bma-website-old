@@ -1,8 +1,8 @@
 import React,{useEffect} from 'react'
 import './about.css'
-import history  from '../../Assets/arab-history.png';
-import historySlim  from '../../Assets/arab-history-slim1.png';
-import future  from '../../Assets/future.jpg';
+import history  from '../../Assets/About/arab-history.png';
+import historySlim  from '../../Assets/About/arab-history-slim.png';
+import future  from '../../Assets/About/future.jpg';
 import { useState } from 'react';
 function About() {
   const [img,setImg] = useState(history)

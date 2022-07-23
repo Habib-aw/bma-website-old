@@ -1,9 +1,9 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
 // import Button from 'react-bootstrap/Button'
-import itiqaad from "../../Assets/aqeedah.png"
+import itiqaad from "../../Assets/Home/Carousel/aqeedah.png"
 import temp from "../../Assets/temp.png"
-import arabic from "../../Assets/arabic.jpg";
+import arabic from "../../Assets/Home/Carousel/arabic.jpg";
 
 import './classes.css'
 function Classes() {

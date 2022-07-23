@@ -147,6 +147,27 @@ body{
   margin-top: 0.3rem;
 }
 
+@media only screen and (min-width:1920px) {
+  .logo img{
+    margin-left: 1vw;
+    width: 3.75vw;
+    height: 3vw;
+  }
+  .logo p{
+    font-size: 3vw;
+  }
+  .nav-links li{
+    font-size: 1.4vw;
+    margin-right: 1.2vw;
+  }
+  .nav-links:last-child{
+    margin-right: 1vw;
+  }
+  .toTop{
+    font-size: 3rem;
+    padding-inline: 1.5rem;
+  }
+}
 @media only screen and (max-width:910px) {
   .logo{
     width: 80%;

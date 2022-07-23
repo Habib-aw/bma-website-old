@@ -2,13 +2,13 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import './style.css'
-import eid_adha_2022 from "../../Assets/eid-adha-2022.jpg"
-import sacrifice_hijjah from "../../Assets/sacrifice-hijjah.jpeg"
-import ramadan_reflection from "../../Assets/ramadan-reflection.jpg"
-import takbeer_tashreeq from "../../Assets/takbeer-tashreeq.jpeg"
-import bengali_dates from "../../Assets/bengali-dates-water.jpeg"
-import arafat from "../../Assets/arafat.jpeg"
-import eid_fitr from "../../Assets/eid-fitr.jpg"
+import eid_adha_2022 from "../../Assets/Home/Updates/eid-adha-2022.jpg"
+import sacrifice_hijjah from "../../Assets/Home/Updates/sacrifice-hijjah.jpeg"
+import ramadan_reflection from "../../Assets/Home/Updates/ramadan-reflection.jpg"
+import takbeer_tashreeq from "../../Assets/Home/Updates/takbeer-tashreeq.jpeg"
+import bengali_dates from "../../Assets/Home/Updates/bengali-dates-water.jpeg"
+import arafat from "../../Assets/Home/Updates/arafat.jpeg"
+import eid_fitr from "../../Assets/Home/Updates/eid-fitr.jpg"
 function Updates() {
     const [small,setSmall]= useState(false);
     useEffect(()=>{

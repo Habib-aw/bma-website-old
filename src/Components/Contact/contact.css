@@ -1,28 +1,58 @@
-.contact-img{
-    position: absolute;
-    top:17.5rem;
-    right: 13%;
-    width: 35%;
-    border-radius: 5rem;
+/* Variables */
+.contact-root{
+    --inputWidth:15vw;
+    --leftWidth:calc(var(--inputWidth)*2);
 }
-#contact{
-    --inputWidth:12.5rem;
-    --formWidth:calc(var(--inputWidth)*2);
+.block-space{
+    padding-block: 1.5rem;
 }
+/* Fonts */
+.cursive-mono,.mono{
+    font-family: 'Courier New', Courier, monospace;
+}
+.cursive-mono h2,.cursive{
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 3rem;
+}
+/* HTML elements */
+a{
+    text-decoration: none;
+}
+button{
+    border: 1px solid grey;
+}
+/* containers */
+.containers{
+    display: flex;
+}
+.right-container{
+    width: 30%;
+    background-color: var(--darkBlue);
+    color: var(--lightBrown);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.right-content{
+    width: 75%;
+    font-size: 1.1vw;
+}
+.left-container{
+    width: 70%;
+    color: var(--darkBlue);
+    background-color: var(--lightBrown);
+}
+.left-content{
+    margin-left: 10%;
+}
+/* Form */
+
 #form input,#form select{
     width:var(--inputWidth);
 }
-#form,.textbox{
-    width:var(--formWidth);
+#form,.textbox,#masjid-map{
+    width:var(--leftWidth);
 }
-#masjid-map{
-    width: 45%;
-    height: 70%;
-}
-#Message-subject{
-width: 50%;  
-}
-
 select,
 select option {
     color: black;
@@ -33,113 +63,56 @@ select option[value=""] {
 }
 
 #msg{
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-block: 1rem;
+}
+
+/* contact us */
+.contact-us a{
+    color: var(--lightBrown);
+}
+.contact-us a:hover{
+    color: white;
+}
+.contact-us h5{
+    font-weight: 900;
 }
 .references{
-    display: block;
-    text-decoration: none;
     margin-top: 0.5em;
     font-size: 1.2em;
 }
-#form{
-    /* background-color: red;
-    width: 377.8px; */
-}
-.find-us{
-    margin-bottom: 2rem;
-}
-.panel{
-    /* text-align: center; */
-    padding-left: 5rem;
-}
-.panel-container{
-    display: flex;
-}
-.enquiry{
-    /* text-align: center; */
-    display: flex;
-}
-#email{
-    margin-top: 2em;
-}
-#contact{
-    padding-top: 1.5em;
-    width: 70%;
-    background-color: var(--darkBlue);
-    color: var(--lightBrown);
-}
-.cursive-mono,.mono{
-    font-family: 'Courier New', Courier, monospace;
-}
-.cursive-mono h2,.cursive{
-    font-family: Brush Script MT, Brush Script Std, cursive;
-    font-size: 3rem;
-}
-.detail-wrapper{
-    width: 25rem;
-}
-#email{
-    padding-bottom: 2rem ;
+/* Map */
+#masjid-map{
+    height: max(40vh,20rem);
 }
 
-@media only screen and (min-width: 1920px) {
-    .detail-wrapper{
-        width: 32.5vw;
-    }
-    #contact{
-        --inputWidth:14vw;
-    }
-    #contact h1{
-        font-size: 4vw;
-    }
-    #contact h2{
-        font-size: 3vw;
-    }
-    #email,.find-us,#form{
-        font-size: 1.5vw;
-    }
-    .contact-img{
-        top: 35rem;
-    }
-}
-@media only screen and (max-width: 1200px) {
-    #contact{
-        --inputWidth:48%;
-    }
-    #masjid-map{
-        width: 25rem;
-        margin-top: 2rem;
-        height: 20rem;
-        border-radius: 0;
-    }
-    .panel{
-        padding-left: 0rem;
-    }
-    #contact{
-        width: 100%;
-    }
-    .contact-img{
-        display: none;
-    }
-    .panel{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+.contact-title{
+    font-size: 3.5vw;
 }
 
-@media only screen and (max-width: 450px) {
-    .detail-wrapper{
-        width: 85%;
+
+
+.contact-subtitle,.right-content h2{
+    font-size: 3.25vw;
+}
+@media only screen and (max-width:910px) {
+    .containers{
+        flex-direction: column-reverse;
     }
-    #masjid-map{
+    .left-container,.right-container{
         width: 100%;
     }
-}
-@media only screen and (max-width: 380px) {
-    #email a{
-        font-size: 0.8rem;
+    .right-content{
+        font-size: 3.75vw;
+    }
+    .contact-title{
+        font-size:10vw;
+        margin: 0;
+        /* padding: ; */
+    }
+    .contact-root{
+        --inputWidth:40vw;
+    }
+    .contact-subtitle,.right-content h2{
+        font-size: 10vw;
     }
 }

@@ -1,9 +1,9 @@
 import './home.css';
 import Carousel from 'react-bootstrap/Carousel'
-import itiqaad from "../../Assets/aqeedah.png"
-import itiqaad_wide from "../../Assets/aqeedah-wide.png";
-import arabic_wide from "../../Assets/arabic-wide.jpg";
-import arabic from "../../Assets/arabic.jpg";
+import itiqaad from "../../Assets/Home/Carousel/aqeedah.png"
+import itiqaad_wide from "../../Assets/Home/Carousel/aqeedah-wide.png";
+import arabic_wide from "../../Assets/Home/Carousel/arabic-wide.jpg";
+import arabic from "../../Assets/Home/Carousel/arabic.jpg";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Classes from "../Classes";
 import Updates from "../Updates";
