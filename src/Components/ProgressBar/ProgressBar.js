@@ -1,24 +1,39 @@
 import React,{useEffect,useState} from 'react'
-import '../App.css'
+import './style.css'
 function ProgressBar({title,raised,target,description}) {
     const [Style,setStyle] = useState(null)
+    
+    const [centre,setCentre] = useState(false)
     const percentage =Math.floor(raised/target *100)
-
+    const StyleSm = {
+        width: `${100-percentage*2}%`,
+        color:'black'
+    }
     useEffect(()=>{
+        if((window.innerWidth<400 && percentage<15 )||(percentage<=10 )){
+            setCentre(true)
+        }else{
+            setCentre(false)
+        }
+        window.addEventListener('resize',()=>{
+            if((window.innerWidth<400 && percentage<15)||(percentage<=10 )){
+                setCentre(true)
+            }else{
+                setCentre(false)
+            }
+        })
         setTimeout(()=>{
             const style={
                 opacity:1,
                 width:`${percentage}%`, 
-                backgroundImage: 'linear-gradient(90deg, rgba(111,197,82,1) 50%, rgba(9,121,69,1) 100%)'
+                backgroundImage: 'linear-gradient(90deg, rgba(111,197,82,1) 50%, rgba(9,121,69,1) 100%)',
+                color:'black'
             }
             setStyle(style)
         },0)
     },[])
-    function addComma(num){
-        
-    }
     return (
-        <div style={{textAlign:'center'}}>
+        <div id='progressBar' style={{textAlign:'center'}}>
             <h2>{title}</h2>
             <p className='progress-description-small'>{description}</p>
             <div className='progress-info'>
@@ -39,7 +54,7 @@ function ProgressBar({title,raised,target,description}) {
                 </div>
             </div>
             <div className='progress-both-bar progress-outer-bar'>
-                <div className='progress-both-bar progress-inner-bar d-flex justify-content-center align-items-center' style={Style}>{percentage}%</div>
+                {centre? <div className='progress-both-bar d-flex'><div className='progress-both-bar' style={Style}></div><div style={StyleSm} className='percentageSm percentage-txt'>{percentage}%</div></div>:<div className='progress-both-bar d-flex justify-content-center align-items-center percentage-txt' style={Style}>{percentage}%</div>}
             </div>
         </div>
     )

@@ -1,0 +1,60 @@
+
+.progress-both-bar{
+border-radius: 3rem;
+height: 1.7rem;
+}
+.progress-outer-bar{
+background: var(--lightWhite);
+}
+
+.progress-inner-bar{
+/* transition: 1s ease ; */
+}
+.progress-info{
+display: flex;
+justify-content: space-between;
+}
+.vr{
+border-left:2px solid #000;
+height:90%;
+align-items: center;
+margin: 0 1rem;
+}
+.progress-description-small{
+display: none;
+}
+.percentageSm{
+    margin: auto;
+    margin-inline: 0;
+}
+@media only screen and (min-width: 1920px){
+    .progress-both-bar{
+        height: 2.5rem;
+    }
+    #progressBar h2{
+        font-size: 3rem;
+    }
+    #progressBar h5{
+        font-size: 2.3rem;
+    }
+    #progressBar span{
+        font-size: 1.75rem;
+    }
+    .progress-description{
+        font-size: 1.75rem;
+    }
+    .percentage-txt{
+        font-size: 1.75rem;
+    }
+}
+@media only screen and (max-width: 770px){
+.progress-description{
+    display: none;
+}
+.vr{
+    visibility: hidden;
+}
+.progress-description-small{
+    display: block;
+}
+}

@@ -42,36 +42,23 @@ export default function Contact() {
   }
 
   return (
-    <div id='contact'>
+        
+      <div id='contact'>
         <h1  className='d-flex justify-content-center mono'>Contact</h1>
-        <div className='panel-container'>
           <div className='panel'  >
-              <p className='cursive-mono'>
+              <div className='cursive-mono find-us detail-wrapper'>
                 <h2>Find us at</h2>
                 Baitul Mamur Academy <br /> 
                 191 Roman Road <br /> 
                 London <br /> 
                 E2 0QY
-              </p>
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.120863603306!2d-0.04878648434209884!3d51.5293429796387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cd885ebb13f%3A0xa83b06957ff64eca!2sBaitul%20Mamur%20Academy!5e0!3m2!1sen!2suk!4v1654802019691!5m2!1sen!2suk" 
-                  width="100%" 
-                  height="450" 
-                  allowfullscreen="" 
-                  loading="lazy" 
-                  referrerpolicy="no-referrer-when-downgrade"
-                  title='masjid-map'
-                  id='masjid-map'>
-                </iframe>
-          </div>
-          <div className='panel enquiry'>
-            <div >
+              </div>
               {submitted ? <h2 className='d-flex justify-content-center align-items-center'>Thanks for your submission</h2>:
               
-              <>
+              <div className='detail-wrapper'>
                 <h2 className='cursive'>Have a question? </h2>
                 <form onSubmit={handleSubmit} id='form' className='' autoComplete='on'>
-                    <input className='input' name="firstname" type="text" placeholder='First Name*' autoComplete='given-name' required/>
+                  <input className='input' name="firstname" type="text" placeholder='First Name*' autoComplete='given-name' required/>
                   <input className='input' name="secondname" type="text" placeholder='Second Name*' autoComplete='family-name' required/>
                   <br />
                   <div className='d-flex'>
@@ -90,17 +77,25 @@ export default function Contact() {
                     <button    type="submit">Submit</button>
                   </div>
                 </form>
-              </>}
-              <div id='email' className='cursive-mono'>
+              </div>}
+              <div id='email' className='cursive-mono detail-wrapper'>
                 <h2>Or contact us at</h2>
                 <a className='references' href={"mailto:"+bmaEmail}>{bmaEmail}</a>
                 <h5 className='references'>Makhtab only</h5>
                 <a className='references' href={"mailto:"+makhtabEmail}>{makhtabEmail}</a>
                 <a className='references' href={"tel:+44"+makhtabNumber}>{"0"+makhtabNumber}</a>
               </div>
-            </div>
-          </div>
         </div>
+        <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.120863603306!2d-0.04878648434209884!3d51.5293429796387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cd885ebb13f%3A0xa83b06957ff64eca!2sBaitul%20Mamur%20Academy!5e0!3m2!1sen!2suk!4v1654802019691!5m2!1sen!2suk" 
+                  width="100%" 
+                  height="100%" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title='masjid-map'
+                  id='masjid-map'>
+                </iframe>
     </div>
   )
 }

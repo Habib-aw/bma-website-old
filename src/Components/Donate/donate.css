@@ -20,10 +20,14 @@
   /* margin: auto; */
 }
 .donation-all{
-  width:75%;  
+  width:70%;
+}
+.donation-all,.donation-other{
+  padding-top: 2.5rem;
+
 }
 .donation-other{
-  width: 25%;
+  width: 30%;
 }
 .progress-bars,.donation{
   /* width: 50%; */
@@ -56,9 +60,15 @@
   flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 1200px){
-  .progress-bars,.donation{
-    width: 75%;
+.other-donate-title{
+  text-align: center;
+}
+@media only screen and (min-width: 1920px){
+  .donate-title{
+    font-size: 3.5rem;
+  }
+  .other-donate{
+    font-size: 1.75rem;
   }
 }
 @media only screen and (max-width: 1000px){
@@ -67,9 +77,12 @@
   }
   .donation-other{
     width: 100%;
+    margin-bottom: 3rem;
+    padding-top: 0;
   }
   .progress-bars-child:last-child{
     margin-bottom: 0;
+    padding-bottom: 3.5rem;
   }
   .donation-all{
     width:100%; 

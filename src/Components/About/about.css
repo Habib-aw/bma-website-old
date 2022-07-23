@@ -8,7 +8,7 @@
 .about-container{
   width: 70%;
   background: var(--darkBlue);
-  padding-bottom: 100vw;
+  padding-bottom: max(55vw,50rem);
 }
 
 .future-img{
@@ -63,6 +63,13 @@
   font-size: max(3.35rem,7vw);
   margin-bottom: 0;
 }
+
+/* @media only screen and (max-width:1350px) {
+  .about-container{
+    padding-bottom:50rem;
+  }
+
+} */
 
 @media only screen and (max-width:910px) {
   .about-img{
