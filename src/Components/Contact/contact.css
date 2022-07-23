@@ -1,5 +1,12 @@
+.contact-img{
+    position: absolute;
+    top:17.5rem;
+    right: 13%;
+    width: 35%;
+    border-radius: 5rem;
+}
 #contact{
-    --inputWidth:350px;
+    --inputWidth:12.5rem;
     --formWidth:calc(var(--inputWidth)*2);
 }
 #form input,#form select{
@@ -9,12 +16,8 @@
     width:var(--formWidth);
 }
 #masjid-map{
-    position: absolute;
     width: 45%;
     height: 70%;
-    border-radius: 3rem;
-    top: 20rem;
-    right: 5rem;
 }
 #Message-subject{
 width: 50%;  
@@ -76,19 +79,28 @@ select option[value=""] {
 .detail-wrapper{
     width: 25rem;
 }
+#email{
+    padding-bottom: 2rem ;
+}
 
 @media only screen and (min-width: 1920px) {
+    .detail-wrapper{
+        width: 32.5vw;
+    }
+    #contact{
+        --inputWidth:14vw;
+    }
     #contact h1{
-        font-size: 4rem;
+        font-size: 4vw;
     }
     #contact h2{
-        font-size: 3.5rem;
+        font-size: 3vw;
     }
     #email,.find-us,#form{
-        font-size: 2rem;
+        font-size: 1.5vw;
     }
-    #form{
-        width: 740px;
+    .contact-img{
+        top: 35rem;
     }
 }
 @media only screen and (max-width: 1200px) {
@@ -96,8 +108,7 @@ select option[value=""] {
         --inputWidth:48%;
     }
     #masjid-map{
-        position: static;
-        width: 100%;
+        width: 25rem;
         margin-top: 2rem;
         height: 20rem;
         border-radius: 0;
@@ -108,7 +119,9 @@ select option[value=""] {
     #contact{
         width: 100%;
     }
-
+    .contact-img{
+        display: none;
+    }
     .panel{
         display: flex;
         flex-direction: column;
@@ -120,6 +133,9 @@ select option[value=""] {
 @media only screen and (max-width: 450px) {
     .detail-wrapper{
         width: 85%;
+    }
+    #masjid-map{
+        width: 100%;
     }
 }
 @media only screen and (max-width: 380px) {
