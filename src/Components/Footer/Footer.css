@@ -61,6 +61,10 @@
   color: var(--lightBrown);
   width: 50%;
   text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 1.75px;
+
+
 }
 
 @media only screen and (min-width:1920px){
