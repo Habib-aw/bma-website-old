@@ -3,7 +3,6 @@ import React from 'react';
 import {useState,useEffect} from 'react';
 import './calendar.css';
 import data from "../../data/times.json";
-// import pdfCalendar from "../../Assets/Baitul Mamur Academy Calendar 2022.pdf"
 function Index() {
     useEffect(()=>{
         document.title = 'Calendar | Baitul Mamur Academy';
@@ -300,7 +299,7 @@ function Index() {
             </div>
             <div>
             <a
-                href="../../Assets/Calendar/Baitul Mamur Academy Calendar 2022.pdf"
+                href="../../Assets/Baitul Mamur Academy Calendar 2022.pdf"
                 download
             >Download the calendar here</a>
             </div>
