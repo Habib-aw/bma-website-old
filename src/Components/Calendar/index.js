@@ -143,7 +143,7 @@ function Index() {
     return (
         <div id='calendar'>
             <div className='bma-calendar-title'>
-                <h1 className='bma-calendar-title-text'>BMA 2022 calendar</h1>
+                <h1 className='bma-calendar-title-text mono'>BMA 2022 calendar</h1>
 
             </div>
             <div className='calendar-filter'>

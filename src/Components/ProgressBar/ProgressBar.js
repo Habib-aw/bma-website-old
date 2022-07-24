@@ -34,7 +34,7 @@ function ProgressBar({title,raised,target,description}) {
     },[])
     return (
         <div id='progressBar' style={{textAlign:'center'}}>
-            <h2>{title}</h2>
+            <h2 className='cursive'>{title}</h2>
             <p className='progress-description-small'>{description}</p>
             <div className='progress-info'>
                 <div className='d-flex'>

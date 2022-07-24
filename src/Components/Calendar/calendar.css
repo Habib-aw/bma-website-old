@@ -7,6 +7,9 @@
     -moz-user-select: none;
     pointer-events:none;
 }
+.mono{
+    font-family: 'Courier New', Courier, monospace;
+}
 .jummah{
     background-color: var(--darkBlue);
     color: var(--lightBrown);

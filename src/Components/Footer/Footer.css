@@ -4,7 +4,8 @@
     background-color: var(--darkBlue);
     color: var(--lightBrown);
     margin-bottom: 0;
-  }
+    font-size: 1.2vw;
+}
   
 .carousel-footer{
   margin: auto;
@@ -34,6 +35,7 @@
   padding-block: 1vh;
   text-align: center;
   font-family:serif;
+  font-size: 3vw;
 }
 .carousel-footer-item{
   display: flex;
@@ -41,11 +43,16 @@
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  background-color: darkslategrey;
+  background-color: var(--darkBlue);
   width: 50%;
+  height: 10vw;
   color: var(--lightBrown);
   margin: auto;
   border-radius: 3rem;
+  margin-block: 1rem;
+  border: 2px solid var(--lightBrown);
+  box-shadow: 3px 0px  3px var(--darkBlue),-3px 0px 3px var(--darkBlue),0px 3px 3px var(--darkBlue), 0px -3px 3px var(--darkBlue);
+  font-size: 1vw;
   padding-block: 1rem;
   text-align: center;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
@@ -55,9 +62,11 @@
   width: 50%;
   text-align: center;
 }
-@media only screen and (max-width:600px){
-  .fundraisers-title{
-    font-size: 5.4vw;
+
+@media only screen and (min-width:1920px){
+  .carousel-footer-item{
+    border: 3.5px solid var(--lightBrown);
+    box-shadow: 8px 0px  8px var(--darkBlue),-8px 0px 8px var(--darkBlue),0px 8px 8px var(--darkBlue), 0px -8px 8px var(--darkBlue);
   }
 }
 @media only screen and (max-width:1024px){
@@ -65,5 +74,16 @@
     width: 80%;
   }
 }
-#footer{
+
+@media only screen and (max-width:910px) {
+  .carousel-footer-item{
+    font-size: 2.5vw;
+    height: 25vw;
+  }
+  .fundraisers-title{
+    font-size: 5.4vw;
+  }
+  .footer{
+    font-size: 2.5vw;
+  }
 }

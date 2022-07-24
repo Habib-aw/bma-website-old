@@ -1,3 +1,6 @@
+#progressBar{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 .progress-both-bar{
 border-radius: 3rem;
@@ -15,7 +18,7 @@ display: flex;
 justify-content: space-between;
 }
 .vr{
-border-left:2px solid #000;
+border-left:2px solid var(--lightBrown);
 height:90%;
 align-items: center;
 margin: 0 1rem;
@@ -32,7 +35,7 @@ display: none;
         height: 2.5rem;
     }
     #progressBar h2{
-        font-size: 3rem;
+        font-size: 2.5vw;
     }
     #progressBar h5{
         font-size: 2.3rem;

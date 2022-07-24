@@ -2,28 +2,43 @@
     /* margin-left: 5vw; */
     /* margin-top: 2vw; */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+}
+.right-wrapper{
+  width: 30%;
+
+}
+.left-wrapper{
+  width: 70%;
+  background-color: var(--darkBlue);
+  color: var(--lightBrown);
+  margin-bottom: 0;
+}
+.donation-with-other{
+  display: flex;
 }
 .other-donate{
   display: flex;
   flex-direction: column;
   width:80%;
   margin: auto;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .other-masjid,.other-bank{
-  background: var(--transparentBlack);
+  color : var(--darkBlue);
   border-radius: 1rem;
   padding: 1rem;
-  color: white;
   margin: 1rem 0;
+  border: 1.5px solid var(--darkBlue);
+  box-shadow: 0px 0px 15px var(--darkBlue);
   /* margin: auto; */
   /* margin: auto; */
 }
 .donation-all{
   width:70%;
 }
-.donation-all,.donation-other{
-  padding-top: 2.5rem;
+.donation-other{
+  /* padding-top: 4rem;x   */
 
 }
 .donation-other{
@@ -59,21 +74,36 @@
   gap: 1rem;
   flex-wrap: wrap;
 }
-
+.cursive{
+  font-family: Brush Script MT, Brush Script Std, cursive;
+}
 .other-donate-title{
   text-align: center;
 }
+.donate-title{
+  font-size: 4vw;
+  /* padding-block: 1.5rem; */
+}
 @media only screen and (min-width: 1920px){
-  .donate-title{
-    font-size: 3.5rem;
+  .donate-subtitle{
+    font-size: 2vw;
   }
-  .other-donate{
-    font-size: 1.75rem;
+  .other-donate,.progress-description{
+    font-size: 1vw;
+  }
+  .donation-other h2{
+    font-size: 3vw;
   }
 }
-@media only screen and (max-width: 1000px){
-  #donate{
+@media only screen and (max-width: 910px){
+  .donation-with-other{
     flex-direction: column;
+  }
+  .left-wrapper{
+    width: 100%;
+  }
+  .right-wrapper{
+    display: none;
   }
   .donation-other{
     width: 100%;
@@ -87,7 +117,9 @@
   .donation-all{
     width:100%; 
   }
-
+  .donate-title{
+    font-size: 10vw;
+  }
 }
 .donation-other{
   background-color: var(--lightBrown);

@@ -9,7 +9,7 @@ import './classes.css'
 function Classes() {
   return (
     <div className='classes'>
-      <h1 className='title'><p className='cla'>Cla</p><p className='sses'>sses</p> </h1>
+      <h1 className='classes-title'>Classes</h1>
     <div className='card-stack'>
       <Card style={{ width: '18rem' }} className="card">
   <Card.Img variant="top" src={temp} />

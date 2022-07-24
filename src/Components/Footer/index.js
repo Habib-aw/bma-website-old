@@ -11,7 +11,7 @@ function Footer() {
     return (
     <div id='footer'>
         <h1 className="fundraisers-title">Please donate to the fundraisers below</h1>
-        <Carousel fade className='carousel-footer' variant='dark' indicators={false} controls={false}>
+        <Carousel fade className='carousel-footer' variant='dark' indicators={false} controls={false} >
             {donationMsg.map((msg)=>{
                 return (
         <Carousel.Item>

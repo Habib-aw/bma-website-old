@@ -33,15 +33,16 @@ button{
     flex-direction: column;
     align-items: center;
 }
-.right-content{
-    width: 75%;
-    font-size: 1.1vw;
-}
 .left-container{
     width: 70%;
     color: var(--darkBlue);
     background-color: var(--lightBrown);
 }
+.right-content{
+    width: 75%;
+    font-size: 1.1vw;
+}
+
 .left-content{
     margin-left: 10%;
 }

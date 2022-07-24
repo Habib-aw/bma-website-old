@@ -10,18 +10,22 @@ import bengali_dates from "../../Assets/Home/Updates/bengali-dates-water.jpeg"
 import arafat from "../../Assets/Home/Updates/arafat.jpeg"
 import eid_fitr from "../../Assets/Home/Updates/eid-fitr.jpg"
 function Updates() {
-    const [small,setSmall]= useState(false);
+    const [size,setSize]= useState(1);
     useEffect(()=>{
         if(window.innerWidth<600){
-            setSmall(true)
+            setSize(0)
+        }else if(window.innerWidth>1919){
+            setSize(2)
         }else{
-            setSmall(false)
+            setSize(1)
         }
         window.addEventListener("resize",()=>{
             if(window.innerWidth<600){
-                setSmall(true)
+                setSize(0)
+            }else if(window.innerWidth>1920){
+                setSize(2)
             }else{
-                setSmall(false)
+                setSize(1)
             }
         })
     })
@@ -36,13 +40,12 @@ function Updates() {
     ]
     return (
         <div>
-        <div className="blue-bar"></div>
         <h1 className='updates-title'>Information and Updates</h1>
         <div className='updates-container snap'>
             {images.map((img)=>{
                 return(
                     <div className='updates-img'>
-                        <img src={img} alt="" srcset="" height={small ? 350:550}/>
+                        <img src={img} alt="" srcset="" height={size===0 ? 350:(size===2? 800:550)}/>
                     </div>
                 )
             })}

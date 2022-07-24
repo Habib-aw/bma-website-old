@@ -56,6 +56,14 @@
   color: white;
 }
 
+@media only screen and (min-width:1920px){
+  .salah-times h4{
+    font-size: 1.5vw;
+  }
+  .start{
+    font-size: 1.25vw;
+  }
+}
 @media only screen and (max-width:1350px){
   .title-arabic{
     font-size: 8vw;

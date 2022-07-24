@@ -44,7 +44,7 @@ export default function Contact() {
 
   return (
     <div className='contact-root'>
-      <div className='containers'><h1  className='d-flex justify-content-center mono left-container block-space contact-title'>Contact</h1><div className='right-container'></div></div>
+      <div className='containers'><h1  className='d-flex justify-content-center mono left-container block-space contact-title'>Contact.</h1><div className='right-container'></div></div>
       <div className='containers'>
       <div  className='left-container'>
           <div className='left-content'>
