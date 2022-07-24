@@ -19,6 +19,7 @@ function Classes() {
       Enroll your child to be taught the basics of their religion ages ?-??
       <br /><br />Time: Mon-Thurs 5-7
       <br />Pricing: £?? per month 
+      <br /><a href="https://docs.google.com/forms/d/e/1FAIpQLSdz_oGG0Lu1ljlrfXMYmb3gqjnTU0BH77HF4JNMUZLLvGTG7w/viewform" target="_blank" rel="noopener noreferrer">Register here</a>
     </Card.Text>
     {/* <Button variant="primary">Go somewhere</Button> */}
   </Card.Body>
@@ -42,7 +43,7 @@ function Classes() {
     <Card.Text>
       Join us for our regular arabic class taught by Ustadh Muzhakkir
       <br /><br />Time: Every Monday at 8pm*
-      <br />Pricing: Free
+      <br />
     </Card.Text>
     {/* <Button variant="primary">Go somewhere</Button> */}
   </Card.Body>

@@ -110,7 +110,7 @@ function Home({times,scrollNeeded}) {
             {smallImg? 
             <Carousel.Caption className='caption'>
             <h1 className='arabic-caption-title'>Learn arabic</h1>
-            <h1>with ustadh Muzakkir</h1>
+            <h1>with Ustadh Muzakkir</h1>
             <h4>Every monday at 8pm</h4>
           </Carousel.Caption>:<div className='arabic-info'><h1 className='title-arabic'>Learn Arabic</h1>
             <h1 className='time-arabic'>Every Monday at 8pm</h1>
