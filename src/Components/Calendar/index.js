@@ -68,6 +68,7 @@ function Index() {
         setAsrChanges(false)
         setIshaChanges(false)
         setStart(true)
+        setJamaah(true)
         setSunrise(true)
         setFajr(true)
         setZuhr(true)
@@ -84,6 +85,7 @@ function Index() {
         
         setStart(false)
         setSunrise(false)
+        setJamaah(true)
         
         setFajr(true)
         setZuhr(false)
@@ -99,6 +101,8 @@ function Index() {
         setNoneChanges(false)
         
         setStart(false)
+        setSunrise(false)
+        setJamaah(true)
         
         setZuhr(true)
         setFajr(false)
@@ -114,7 +118,9 @@ function Index() {
         setNoneChanges(false)
         
         setStart(false)
-        
+        setSunrise(false)
+        setJamaah(true)
+
         setAsr(true)
         setFajr(false)
         setZuhr(false)
@@ -129,6 +135,8 @@ function Index() {
         setNoneChanges(false)
         
         setStart(false)
+        setSunrise(false)
+        setJamaah(true)
         
         setIsha(true)
         setFajr(false)
