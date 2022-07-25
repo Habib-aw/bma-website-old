@@ -1,5 +1,8 @@
-#hide-content{
-  display: none;
+#hide{
+  overflow: hidden;  /* Hide the element content, while height = 0 */
+    height: 0;
+    opacity: 0;
+    transition: height 0ms 1000ms, opacity 1000ms 0ms;
 }
 :root{
   --lightBrown:rgb(232,208,188);
@@ -55,6 +58,23 @@
 
 
 /* --------------------------------Navbar-------------------------------- */
+.menu-clicked:nth-child(1){
+  transform: rotate(45deg) translate(0.4rem,.3rem) scale(1.1);
+  transition: ease-out 0.5s;
+}
+.menu-clicked:nth-child(2){
+  transform: scale(0.1);
+  transition: ease-out 0.5s;
+}
+.menu-clicked:nth-child(3){
+  transform: rotate(135deg) translate(-0.5rem,0.5rem) scale(1.1);
+  transition: ease-out 0.5s;
+}
+.menu-unclicked{
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175,0.885,0.32,1.275) 0.5s;
+}
+
 .toTop{
   z-index: 10;
   bottom: 5%;
@@ -172,6 +192,7 @@ body{
   .logo{
     width: 80%;
     justify-content: flex-start;
+
   }
   .nav-title{
     justify-content: center;
@@ -197,9 +218,7 @@ body{
   .nav-links ul:last-child{
     padding-bottom: 0.7rem;
   }
-  #hide{
-    display: none;
-  }
+
   .logo p{
     font-size: 1.5rem;
   }

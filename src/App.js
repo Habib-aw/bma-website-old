@@ -55,9 +55,9 @@ function App() {
               <p className='nav-title'><div>Baitul</div>&nbsp;<div>Mamur</div>&nbsp;<div>Academy</div></p>
             </div>
             <div onClick={()=>setShowMenuItems(!showMenuItems)}  className='menu'>
-              <span className='menu-item'></span>
-              <span className='menu-item'></span>
-              <span className='menu-item'></span>
+              <span className={(showMenuItems? 'menu-clicked':'menu-unclicked')+' menu-item'}></span>
+              <span className={(showMenuItems? 'menu-clicked':'menu-unclicked')+' menu-item'}></span>
+              <span className={(showMenuItems? 'menu-clicked':'menu-unclicked')+' menu-item'}></span>
             </div>
             <div className='nav-links' id={showMenuItems? "":"hide"}>
               <ul>
@@ -70,7 +70,7 @@ function App() {
             </div>
           </nav>
           {scrollTop ? <button className="toTop" onClick={scrollToTop}>^</button>:null}
-          <Routes id={showMenuItems? "hide-content":""}>
+          <Routes >
             <Route path="/" element={<Home times={times}/>} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
