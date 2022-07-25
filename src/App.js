@@ -59,8 +59,8 @@ function App() {
               <span className={(showMenuItems? 'menu-clicked':'menu-unclicked')+' menu-item'}></span>
               <span className={(showMenuItems? 'menu-clicked':'menu-unclicked')+' menu-item'}></span>
             </div>
-            <div className='nav-links' id={showMenuItems? "":"hide"}>
-              <ul>
+            <div className=' nav-links' id={showMenuItems? "":"hide"}>
+              <ul className={showMenuItems? "h100":""}>
                 <li onClick={()=>setShowMenuItems(false)}><Link to="/">Home</Link></li>
                 <li onClick={()=>setShowMenuItems(false)}><Link to="/about">About</Link></li>
                 <li onClick={()=>setShowMenuItems(false)}><Link to="/donate">Donate</Link></li>
@@ -71,15 +71,15 @@ function App() {
           </nav>
           {scrollTop ? <button className="toTop" onClick={scrollToTop}>^</button>:null}
           <Routes >
-            <Route path="/" element={<Home times={times}/>} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/donate" element={<Donate />} />
-            <Route path="/calendar" element={<Calendar />} />
+            <Route path="/" element={showMenuItems? null:<Home times={times}/>} />
+            <Route path="/about" element={showMenuItems? null:<About />} />
+            <Route path="/contact" element={showMenuItems? null:<Contact />} />
+            <Route path="/donate" element={showMenuItems? null:<Donate />} />
+            <Route path="/calendar" element={showMenuItems? null:<Calendar />} />
             {/* <Route path="/classes" element={<Home jamaahTimes={jamaahTimes} startTimes={startTimes} scrollNeeded={true}/>} /> */}
-            <Route path="*" element={<Home times={times}/>} />
+            <Route path="*" element={showMenuItems? null:<Home times={times}/>} />
           </Routes>
-          <Footer/>
+          {showMenuItems? null:<Footer/>}
       </div>
     </Router>
   );

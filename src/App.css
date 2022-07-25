@@ -1,9 +1,8 @@
-#hide{
-  overflow: hidden;  /* Hide the element content, while height = 0 */
-    height: 0;
-    opacity: 0;
-    transition: height 0ms 1000ms, opacity 1000ms 0ms;
+.h100{
+  height: max(15rem,calc(100vh - 74px));
+  transition: height 0ms 400ms, opacity 400ms 0ms;
 }
+
 :root{
   --lightBrown:rgb(232,208,188);
   --darkBlueOld:rgb(1, 0, 16);
@@ -126,7 +125,7 @@ body{
   align-items: center;
   justify-content: space-between;
   background: var(--darkBlue);
-  padding-block: 1vh;
+  padding-block: .6rem;
 }
 
 .nav-links ul{
@@ -210,18 +209,25 @@ body{
   .nav-links ul{
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
   }
   .nav-links li{
     font-size: 1.7rem;
-    padding: 0.3rem 0;
+    /* padding: 0.3rem 0; */
   }
-  .nav-links ul:last-child{
+  /* .nav-links ul:last-child{
     padding-bottom: 0.7rem;
-  }
+  } */
 
   .logo p{
     font-size: 1.5rem;
   }
+  #hide{
+    overflow: hidden;  /* Hide the element content, while height = 0 */
+      height: 0;
+      opacity: 0;
+      transition: height 0ms 400ms, opacity 400ms 0ms;
+  } 
 }
 
 
