@@ -1,8 +1,18 @@
+
 .h100{
-  height: max(15rem,calc(100vh - 74px));
-  transition: height 0ms 400ms, opacity 400ms 0ms;
+  height: max(25rem,calc(100vh - 74px));
+  overflow: hidden;
+  animation: slide-up 500ms forwards;
 }
 
+@keyframes slide-up {
+  0% {
+    transform: translateY(25%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 :root{
   --lightBrown:rgb(232,208,188);
   --darkBlueOld:rgb(1, 0, 16);
@@ -209,7 +219,8 @@ body{
   .nav-links ul{
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 2.5rem;
   }
   .nav-links li{
     font-size: 1.7rem;
