@@ -79,8 +79,9 @@ function App() {
             <Route path="/calendar" element={showMenuItems? null:<Calendar />} />
             {/* <Route path="/classes" element={<Home jamaahTimes={jamaahTimes} startTimes={startTimes} scrollNeeded={true}/>} /> */}
             <Route path="*" element={showMenuItems? null:<Home times={times}/>} />
-          </Routes></div>
+          </Routes>
           {showMenuItems? null:<Footer/>}
+          </div>
       </div>
     </Router>
   );
