@@ -1,6 +1,11 @@
-
+#root{
+  background: var(--darkBlue);
+}
+.routes{
+  background-color: var(--lightBrown);
+}
 .h100{
-  height: max(25rem,calc(100vh - 74px));
+  height: max(25rem,85vh);
   overflow: hidden;
   animation: slide-up 500ms forwards;
 }

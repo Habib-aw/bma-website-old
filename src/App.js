@@ -70,6 +70,7 @@ function App() {
             </div>
           </nav>
           {scrollTop ? <button className="toTop" onClick={scrollToTop}>^</button>:null}
+          <div className='routes'>
           <Routes >
             <Route path="/" element={showMenuItems? null:<Home times={times}/>} />
             <Route path="/about" element={showMenuItems? null:<About />} />
@@ -78,7 +79,7 @@ function App() {
             <Route path="/calendar" element={showMenuItems? null:<Calendar />} />
             {/* <Route path="/classes" element={<Home jamaahTimes={jamaahTimes} startTimes={startTimes} scrollNeeded={true}/>} /> */}
             <Route path="*" element={showMenuItems? null:<Home times={times}/>} />
-          </Routes>
+          </Routes></div>
           {showMenuItems? null:<Footer/>}
       </div>
     </Router>
