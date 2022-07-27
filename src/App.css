@@ -1,8 +1,17 @@
+
 .h100{
   height: max(15rem,calc(100vh - 74px));
-  transition: height 0ms 400ms, opacity 400ms 0ms;
+  animation: slide-up 500ms forwards;
 }
 
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 :root{
   --lightBrown:rgb(232,208,188);
   --darkBlueOld:rgb(1, 0, 16);
