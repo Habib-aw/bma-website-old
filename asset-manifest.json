@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bma-website/static/css/main.44016893.css",
-    "main.js": "/bma-website/static/js/main.d2ac72be.js",
+    "main.js": "/bma-website/static/js/main.7a04fb73.js",
     "static/js/787.f896d5ed.chunk.js": "/bma-website/static/js/787.f896d5ed.chunk.js",
     "static/media/Baitul Mamur Academy Calendar 2022.pdf": "/bma-website/static/media/Baitul Mamur Academy Calendar 2022.a2817f7738c8b9118a98.pdf",
     "static/media/arab-history.png": "/bma-website/static/media/arab-history.c92114e801be0226eec0.png",
@@ -21,11 +21,11 @@
     "static/media/logo.png": "/bma-website/static/media/logo.b817792f8ee86fd4aca1.png",
     "index.html": "/bma-website/index.html",
     "main.44016893.css.map": "/bma-website/static/css/main.44016893.css.map",
-    "main.d2ac72be.js.map": "/bma-website/static/js/main.d2ac72be.js.map",
+    "main.7a04fb73.js.map": "/bma-website/static/js/main.7a04fb73.js.map",
     "787.f896d5ed.chunk.js.map": "/bma-website/static/js/787.f896d5ed.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.44016893.css",
-    "static/js/main.d2ac72be.js"
+    "static/js/main.7a04fb73.js"
   ]
 }
