@@ -1,6 +1,7 @@
 
 .h100{
   height: max(15rem,calc(100vh - 74px));
+  overflow: hidden;
   animation: slide-up 500ms forwards;
 }
 
