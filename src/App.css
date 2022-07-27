@@ -5,7 +5,7 @@
   background-color: var(--lightBrown);
 }
 .h100{
-  height: max(25rem,85vh);
+  height: max(25rem,80vh);
   overflow: hidden;
   animation: slide-up 500ms forwards;
 }
