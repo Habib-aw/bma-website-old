@@ -8,6 +8,8 @@
   height: max(25rem,80vh);
   overflow: hidden;
   animation: slide-up 500ms forwards;
+  margin: 0;
+  padding: 0;
 }
 
 @keyframes slide-up {
