@@ -14,10 +14,10 @@
 
 @keyframes slide-up {
   0% {
-    transform: translateY(25%);
+    margin-top: 100%;
   }
   100% {
-    transform: translateY(0%);
+    margin-top: 0%;
   }
 }
 :root{
@@ -219,6 +219,8 @@ body{
   .nav{
     flex-direction: column;
     align-items: flex-start;
+    text-align: center;
+
   }
   .nav-links{
     width: 100%;
@@ -227,11 +229,18 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     gap: 2.5rem;
   }
   .nav-links li{
+    text-align: center;
+    margin: auto;
+    margin-block: 0   ;
     font-size: 1.7rem;
     /* padding: 0.3rem 0; */
+  }
+  .nav-links li a{
+    text-align: center;
   }
   /* .nav-links ul:last-child{
     padding-bottom: 0.7rem;
