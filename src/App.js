@@ -19,7 +19,7 @@ function App() {
   const [scrollTop,setScrollTop] = useState(false);
   useEffect(()=>{
     window.addEventListener("scroll",()=>{
-      if(window.scrollY>100 && showMenuItems===true){
+      if(window.scrollY>100 && showMenuItems===false){
         setScrollTop(true)
       }else{
         setScrollTop(false)
