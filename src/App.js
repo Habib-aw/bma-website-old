@@ -37,7 +37,9 @@ function App() {
   })
   useEffect(()=>{
     window.addEventListener('resize',()=>{
-      setShowMenuItems(false)
+      if(window.innerWidth>909){
+          setShowMenuItems(false)
+      }
     })
   })
   const scrollToTop = () => {
