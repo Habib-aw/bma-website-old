@@ -1,6 +1,7 @@
 import './home.css';
 import Carousel from 'react-bootstrap/Carousel'
 import itiqaad from "../../Assets/Home/Carousel/aqeedah.png"
+import itiqaad_no_text from "../../Assets/Home/Carousel/aqeedah-no-text.png"
 import itiqaad_wide from "../../Assets/Home/Carousel/aqeedah-wide.png";
 import arabic_wide from "../../Assets/Home/Carousel/arabic-wide.jpg";
 import arabic from "../../Assets/Home/Carousel/arabic.jpg";
@@ -15,7 +16,7 @@ function Home({times,scrollNeeded}) {
   const scrollClass = useRef()
   const [carouselHeight,setCarouselHeight] = useState(500);
 
-  const [smallImg,setSmallImg] = useState(false);
+  const [smallImg,setSmallImg] = useState(true);
   const [mgrb,setMgrb] = useState();
   useEffect(()=>{
     if(scrollNeeded){
@@ -27,7 +28,7 @@ function Home({times,scrollNeeded}) {
     if(1536<=window.innerWidth ){
       setCarouselHeight(window.innerWidth/3.072)
     }
-    if (window.innerWidth <= 750){
+    if (window.innerWidth < 750){
       setSmallImg(true)
     }else{
       setSmallImg(false)
@@ -40,7 +41,7 @@ function Home({times,scrollNeeded}) {
   });
   useEffect(()=>{
     window.addEventListener("resize",()=>{
-      if (window.innerWidth <= 750){
+      if (window.innerWidth < 750){
         setSmallImg(true)
       }else{
         setSmallImg(false)
@@ -92,13 +93,14 @@ function Home({times,scrollNeeded}) {
           <Carousel.Item>
             <img
               className={styling}
-              src={smallImg ? itiqaad:itiqaad_wide}
+              src={smallImg ? itiqaad_no_text:itiqaad_wide}
               alt="First slide"
               height={carouselHeight}
             />
-            {smallImg ? null:<><h1 className='book-name'>Lum'atul Itiqaad</h1>
+            <><h1 className='book-name'><div>Lum'atul </div><div className='space'>&nbsp;</div><div>Itiqaad</div></h1>
             <h1 className='author'>By Imam Ibn Qudamah</h1>
-            <h1 className='teacher'>Taught by Ustadh Muzakkir</h1></>}
+            <h1 className='teacher'>Taught by Ustadh Muzakkir</h1>
+            <h1 className='studentOf'>Student of Shaykh Muqbil from Yemen</h1></>
           </Carousel.Item>
           <Carousel.Item>
             <img

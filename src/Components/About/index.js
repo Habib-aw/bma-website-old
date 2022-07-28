@@ -5,7 +5,7 @@ import historySlim  from '../../Assets/About/arab-history-slim.png';
 import future  from '../../Assets/About/future.jpg';
 import { useState } from 'react';
 function About() {
-  const [img,setImg] = useState(history)
+  const [img,setImg] = useState(historySlim)
   const [historyPaddingSm,setHistoryPaddingSm] = useState({})
   const [futurePaddingSm,setFuturePaddingSm] = useState({})
   // ratio in height/width

@@ -30,7 +30,8 @@ function Classes() {
     <Card.Title>Aqeedah class</Card.Title>
     <Card.Text>
       Join us for our weekly aqeedah class taught by Ustadh Muzhakkir
-      <br /><br />Time: Every Wednesday at 8pm*
+      <div className='student-of'>Student of Shaykh Muqbil from Yemen </div>
+      <br />Time: Every Wednesday at 8pm*
       <br />Pricing: Free
     </Card.Text>
     {/* <Button variant="primary">Go somewhere</Button> */}

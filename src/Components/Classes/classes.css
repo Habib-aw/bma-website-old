@@ -20,6 +20,9 @@
 .classes{
   background: var(--darkBlue);
 }
+.student-of{
+  font-size: 0.7rem;
+}
 @media (min-width:1920px) {
   .card{
     transform: scale(1.3);

@@ -30,6 +30,7 @@
   font-size: 8rem;
   color: white;
   text-shadow: 2px 2px 10px black;
+  display: flex;
 }
 .arabic-caption-title{
   font-size: 3rem;
@@ -46,6 +47,7 @@
   left: 2.5rem;
   color: white;
   text-shadow: 2px 2px 8px black;
+  font-family: monospace;
 }
 .teacher{
   position: absolute;
@@ -54,16 +56,19 @@
   font-size: 2.5rem;
   text-shadow: 2px 2px 8px black;
   color: white;
+  font-family: monospace;
+}
+.studentOf{
+  position: absolute;
+  font-size: 1.1rem;
+  left: 2.1rem;
+  bottom: 6vh;
+  text-shadow: 2px 2px 8px black;
+  color: white;
+  font-family: monospace;
+
 }
 
-@media only screen and (min-width:1920px){
-  .salah-times h4{
-    font-size: 1.5vw;
-  }
-  .start{
-    font-size: 1.25vw;
-  }
-}
 @media only screen and (max-width:1350px){
   .title-arabic{
     font-size: 8vw;
@@ -75,26 +80,81 @@
   }
 
 }
-@media only screen and (max-width:750px){
-    .salah-times h4{
-      font-size: 3.5vw;
-    }
-    .start{
-      font-size: 3vw;
-    }
-}
+
 @media only screen and (min-height:850px){
   .title-arabic,.book-name{
-    bottom: 15vw;
+    bottom: 15rem;
     font-size: 8vw;
   }
   .time-arabic,.teacher{
-    bottom: 5vw;
-    font-size: 2vw;
+    bottom: 6rem;
+    font-size: 2.5vw;
   }
-.teacher-arabic,.author{
-  bottom: 12vw;
-  font-size: 3vw;
+  .teacher-arabic,.author{
+    bottom: 11rem;
+    font-size: 3.5vw;
+  }
+  .studentOf{
+    bottom: 3rem;
+    font-size: 1.75vw;
+  }
 }
 
+@media only screen and (min-width:1920px){
+  .salah-times h4{
+    font-size: 1.5vw;
+  }
+  .start{
+    font-size: 1.25vw;
+  }
+}
+@media only screen and (min-width:2500px){
+  .title-arabic,.book-name{
+    bottom: 30rem;
+    font-size: 8vw;
+  }
+  .time-arabic,.teacher{
+    bottom: 10rem;
+    font-size: 2.5vw;
+  }
+  .teacher-arabic,.author{
+    bottom: 20rem;
+    font-size: 3.5vw;
+  }
+  .studentOf{
+    bottom: 5rem;
+    font-size: 1.25vw;
+  }
+}
+@media only screen and (max-width:750px){
+  .salah-times h4{
+    font-size: 3.5vw;
+  }
+  .start{
+    font-size: 3vw;
+  }
+  .space{
+    display: none;
+  }
+  .book-name{
+    flex-direction: column;
+    bottom: 12.5rem;
+    font-size: 12vw;
+    left:7.5vw;
+  }
+  .author{
+    bottom: 9rem;
+    font-size: 4vw;
+    left:7.5vw;
+  }
+  .teacher{
+    bottom: 5rem;
+    font-size: 4vw;
+    left: 2vw;
+  }
+  .studentOf{
+    bottom: 3rem;
+    font-size: 2.5vw;
+    left: 4vw;
+  }
 }

@@ -49,7 +49,7 @@ export default function Contact() {
       <div  className='left-container'>
           <div className='left-content'>
               
-              {submitted ? <h2 className='block-space d-flex justify-content-center align-items-center form'>Thanks for your submission</h2>:
+              {submitted ? <h2 className='block-space d-flex justify-content-center align-items-center form'>Thank you for your submission</h2>:
               
               <div className=' form block-space'>
                 <h2 className='cursive contact-subtitle'>Have a question? </h2>
