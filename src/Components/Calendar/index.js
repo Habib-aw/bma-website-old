@@ -157,7 +157,14 @@ function Index() {
             <div className='calendar-filter'>
             <div className='filter-checkbox-wrapper'>
                 <div className='filter-checkbox'>
-                <div className='filters-title-menu'><h4>Filters</h4><div className='filter-menu' onClick={()=>setToggle(!toggle)}><span className='filter-menu-item'></span><span className='filter-menu-item'></span><span className='filter-menu-item'></span></div></div>
+                <div className='filters-title-menu'>
+                    <h4>Filters</h4>
+                    <div className='filter-menu' onClick={()=>setToggle(!toggle)}>
+                        <span className={toggle? 'filter-menu-item-clicked':'filter-menu-item'}></span>
+                        <span className={toggle? 'filter-menu-item-clicked':'filter-menu-item'}></span>
+                        <span className={toggle? 'filter-menu-item-clicked':'filter-menu-item'}></span>
+                    </div>
+                </div>
                 <div className={(toggle? 'view':null)+' checkbox'}>
                     <div className='times-salahs'>
                     <div className="times">

@@ -1,3 +1,20 @@
+
+.filter-menu-item-clicked:nth-child(1){
+    transform: rotate(45deg) translate(0.625rem,.5rem) scaleX(0.75);
+    transition: ease-out 0.5s;
+}
+.filter-menu-item-clicked:nth-child(2){
+    transform: scale(0.1);
+    transition: ease-out 0.5s;
+}
+.filter-menu-item-clicked:nth-child(3){
+    transform: rotate(135deg) translate(0.075rem,0.65rem) scaleX(1.5);
+    transition: ease-out 0.5s;
+}
+.filter-menu-item{
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175,0.885,0.32,1.275) 0.5s;
+}
 .disable-select{
     user-select: none;
     -webkit-user-select: none;
