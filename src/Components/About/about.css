@@ -93,7 +93,7 @@
     position: absolute;
   }
   .about-text{
-    width: 70%;
+    width: 88%;
     margin: 0;
     margin: 15px;
     margin-bottom: 0;
@@ -110,7 +110,7 @@
     padding-bottom: 2rem;
   }
   .future-title{
-    padding-block: 30vh;
+    padding-block: 17.5vh;
   }
 }
 @media only screen and (max-width:330px) {
