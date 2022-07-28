@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bma-website/static/css/main.36c57ed8.css",
-    "main.js": "/bma-website/static/js/main.7a04fb73.js",
+    "main.css": "/bma-website/static/css/main.ffcdb4fb.css",
+    "main.js": "/bma-website/static/js/main.74ddd5f0.js",
     "static/js/787.f896d5ed.chunk.js": "/bma-website/static/js/787.f896d5ed.chunk.js",
     "static/media/Baitul Mamur Academy Calendar 2022.pdf": "/bma-website/static/media/Baitul Mamur Academy Calendar 2022.a2817f7738c8b9118a98.pdf",
     "static/media/arab-history.png": "/bma-website/static/media/arab-history.c92114e801be0226eec0.png",
@@ -9,6 +9,7 @@
     "static/media/eid-adha-2022.jpg": "/bma-website/static/media/eid-adha-2022.bbadf9044fc5612096ef.jpg",
     "static/media/future.jpg": "/bma-website/static/media/future.1a3c429a020e16ab9680.jpg",
     "static/media/aqeedah.png": "/bma-website/static/media/aqeedah.f3f2957662dbb1382d59.png",
+    "static/media/aqeedah-no-text.png": "/bma-website/static/media/aqeedah-no-text.cb4e72feda2ae48bb484.png",
     "static/media/aqeedah-wide.png": "/bma-website/static/media/aqeedah-wide.855aef66828b32f95be6.png",
     "static/media/ramadan-reflection.jpg": "/bma-website/static/media/ramadan-reflection.766b24424083800d3dbe.jpg",
     "static/media/sacrifice-hijjah.jpeg": "/bma-website/static/media/sacrifice-hijjah.80a89ee838e7c51e03d2.jpeg",
@@ -20,12 +21,12 @@
     "static/media/arabic.jpg": "/bma-website/static/media/arabic.5e308072fe5d1b8b1eb0.jpg",
     "static/media/logo.png": "/bma-website/static/media/logo.b817792f8ee86fd4aca1.png",
     "index.html": "/bma-website/index.html",
-    "main.36c57ed8.css.map": "/bma-website/static/css/main.36c57ed8.css.map",
-    "main.7a04fb73.js.map": "/bma-website/static/js/main.7a04fb73.js.map",
+    "main.ffcdb4fb.css.map": "/bma-website/static/css/main.ffcdb4fb.css.map",
+    "main.74ddd5f0.js.map": "/bma-website/static/js/main.74ddd5f0.js.map",
     "787.f896d5ed.chunk.js.map": "/bma-website/static/js/787.f896d5ed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.36c57ed8.css",
-    "static/js/main.7a04fb73.js"
+    "static/css/main.ffcdb4fb.css",
+    "static/js/main.74ddd5f0.js"
   ]
 }
