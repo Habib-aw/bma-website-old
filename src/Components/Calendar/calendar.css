@@ -8,7 +8,7 @@
     transition: ease-out 0.5s;
 }
 .filter-menu-item-clicked:nth-child(3){
-    transform: rotate(135deg) translate(0.075rem,0.65rem) scaleX(1.5);
+    transform: rotate(135deg) translate(0.075rem,0.65rem) scaleX(1.5) scaleY(1.1);
     transition: ease-out 0.5s;
 }
 .filter-menu-item{
