@@ -172,11 +172,6 @@ td,th{
     aspect-ratio: 1/1;
 }
 
-@media only screen and (max-width:880px) {
-    .calendar-with-title{
-        margin: 0;
-    }
-}
 
 
 @media only screen and (max-width:1200px) {
@@ -205,6 +200,24 @@ td,th{
     }
     .checkbox{
         display: none;
+    }
+}
+@media only screen and (max-width:970px) {
+    .calendar-with-title{
+        margin: 0;
+    }
+}
+@media only screen and (max-width:800px) {
+    .calendar,.filter-checkbox-wrapper{
+        width: 80%;
+        margin: auto;
+    }
+    td,th{
+        padding-inline:0;
+        font-size: 1rem;
+    }
+    th{
+        padding-inline: 0.25rem;
     }
 }
 
