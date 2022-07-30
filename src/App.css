@@ -22,8 +22,6 @@
 }
 :root{
   --lightBrown:rgb(232,208,188);
-  --darkBlueOld:rgb(1, 0, 16);
-  --darkBlue:rgb(2, 0,25);
   --darkBlue:rgb(0,0,35);
   --transparentBlack:rgba(15, 7, 1, 0.395);
   --lightWhite:rgb(171, 163, 163);
