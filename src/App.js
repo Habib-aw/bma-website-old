@@ -10,6 +10,7 @@ import Calendar from './Components/Calendar';
 import { useState,useEffect } from 'react';
 import data from "./data/times.json";
 import Footer from './Components/Footer';
+import toTopImg from './Assets/to-top.png' 
 function App() {
   const [times,setTimes] = useState("");
   const [showMenuItems,setShowMenuItems] = useState(false);
@@ -71,7 +72,7 @@ function App() {
               </ul>
             </div>
           </nav>
-          {scrollTop ? <button className="toTop" onClick={scrollToTop}>^</button>:null}
+          {scrollTop ? <img src={toTopImg} alt="^" className="toTop" onClick={scrollToTop} width={55}/>:null}
           <div className='routes'>
           <Routes >
             <Route path="/" element={showMenuItems? null:<Home times={times}/>} />

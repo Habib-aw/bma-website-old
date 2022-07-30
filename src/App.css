@@ -96,17 +96,12 @@
   bottom: 5%;
   right:2.5%;
   position: fixed;
-  border: none;
   color: var(--darkBlue);
-  border-radius: 3rem;
-  padding-top: 0.4rem;
-  padding-bottom: 0.1rem;
   font-size: 2rem;
-  padding-inline: 1rem;
   display: flex;
   align-items: center;
-  background-color: var(--lightWhite);
   font-weight: 500;
+  cursor: pointer;
 }
 
   /* --------------------------------Navbar-------------------------------- */
