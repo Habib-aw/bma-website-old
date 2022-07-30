@@ -195,6 +195,11 @@ td,th{
         width: 2rem;
     }
 }
+@media only screen and (min-width:1200px) {
+    .dates-changes,.times-salahs,.checkbox{
+        flex-direction: column;
+    }
+}
 @media only screen and (max-width:1200px) {
     .calendar-filter{
         flex-direction: column;
