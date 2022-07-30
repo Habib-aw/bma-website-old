@@ -72,7 +72,7 @@ function App() {
               </ul>
             </div>
           </nav>
-          {scrollTop ? <img src={toTopImg} alt="^" className="toTop" onClick={scrollToTop} width={55}/>:null}
+          {scrollTop ? <img src={toTopImg} alt="^" className="toTop" onClick={scrollToTop} width={75}/>:null}
           <div className='routes'>
           <Routes >
             <Route path="/" element={showMenuItems? null:<Home times={times}/>} />
