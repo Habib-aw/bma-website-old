@@ -1,33 +1,33 @@
 {
   "files": {
     "main.css": "/bma-website/static/css/main.3b3d4ea1.css",
-    "main.js": "/bma-website/static/js/main.2d97bf80.js",
+    "main.js": "/bma-website/static/js/main.bfbc19f8.js",
     "static/js/787.f896d5ed.chunk.js": "/bma-website/static/js/787.f896d5ed.chunk.js",
     "static/media/Baitul Mamur Academy Calendar 2022.pdf": "/bma-website/static/media/Baitul Mamur Academy Calendar 2022.a2817f7738c8b9118a98.pdf",
-    "static/media/arab-history.png": "/bma-website/static/media/arab-history.c92114e801be0226eec0.png",
-    "static/media/arab-history-slim.png": "/bma-website/static/media/arab-history-slim.a6a74c29b7a4189d47ab.png",
-    "static/media/eid-adha-2022.jpg": "/bma-website/static/media/eid-adha-2022.bbadf9044fc5612096ef.jpg",
-    "static/media/future.jpg": "/bma-website/static/media/future.1a3c429a020e16ab9680.jpg",
+    "static/media/arab-history.png": "/bma-website/static/media/arab-history.4005015826105cdb0409.png",
+    "static/media/arab-history-slim.png": "/bma-website/static/media/arab-history-slim.706249aaddd8a4f04218.png",
+    "static/media/eid-adha-2022.jpg": "/bma-website/static/media/eid-adha-2022.b5d58b0d0ea98c804ac2.jpg",
+    "static/media/future.jpg": "/bma-website/static/media/future.4e25d55940854680e0a8.jpg",
     "static/media/aqeedah.png": "/bma-website/static/media/aqeedah.f3f2957662dbb1382d59.png",
     "static/media/aqeedah-no-text.png": "/bma-website/static/media/aqeedah-no-text.cb4e72feda2ae48bb484.png",
     "static/media/aqeedah-wide.png": "/bma-website/static/media/aqeedah-wide.855aef66828b32f95be6.png",
-    "static/media/ramadan-reflection.jpg": "/bma-website/static/media/ramadan-reflection.766b24424083800d3dbe.jpg",
-    "static/media/sacrifice-hijjah.jpeg": "/bma-website/static/media/sacrifice-hijjah.80a89ee838e7c51e03d2.jpeg",
-    "static/media/takbeer-tashreeq.jpeg": "/bma-website/static/media/takbeer-tashreeq.a8f9180b75d675ea7c3c.jpeg",
-    "static/media/bengali-dates-water.jpeg": "/bma-website/static/media/bengali-dates-water.2f1c8d367d81251f4838.jpeg",
-    "static/media/arafat.jpeg": "/bma-website/static/media/arafat.1e955be0871f6d7f09e6.jpeg",
-    "static/media/eid-fitr.jpg": "/bma-website/static/media/eid-fitr.a4f52d5624de28f3e15e.jpg",
+    "static/media/ramadan-reflection.jpg": "/bma-website/static/media/ramadan-reflection.74712d0d2706256be7ae.jpg",
+    "static/media/sacrifice-hijjah.jpeg": "/bma-website/static/media/sacrifice-hijjah.9e6e0b1d9de24ac83122.jpeg",
+    "static/media/takbeer-tashreeq.jpeg": "/bma-website/static/media/takbeer-tashreeq.c790d43878436fe265b9.jpeg",
+    "static/media/bengali-dates-water.jpeg": "/bma-website/static/media/bengali-dates-water.4a7e4c198f57e06a66b8.jpeg",
+    "static/media/arafat.jpeg": "/bma-website/static/media/arafat.513fd6faeaa855ef5876.jpeg",
+    "static/media/eid-fitr.jpg": "/bma-website/static/media/eid-fitr.62141c1a8ff7ff3fda6c.jpg",
     "static/media/arabic-wide.jpg": "/bma-website/static/media/arabic-wide.b4b3c09219ee9fb02fc4.jpg",
     "static/media/arabic.jpg": "/bma-website/static/media/arabic.5e308072fe5d1b8b1eb0.jpg",
     "static/media/logo.png": "/bma-website/static/media/logo.b817792f8ee86fd4aca1.png",
-    "static/media/to-top.png": "/bma-website/static/media/to-top.9d707b2b6ca866b71eb1.png",
+    "static/media/to-top.png": "/bma-website/static/media/to-top.1cff684ef41d161cc112.png",
     "index.html": "/bma-website/index.html",
     "main.3b3d4ea1.css.map": "/bma-website/static/css/main.3b3d4ea1.css.map",
-    "main.2d97bf80.js.map": "/bma-website/static/js/main.2d97bf80.js.map",
+    "main.bfbc19f8.js.map": "/bma-website/static/js/main.bfbc19f8.js.map",
     "787.f896d5ed.chunk.js.map": "/bma-website/static/js/787.f896d5ed.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3b3d4ea1.css",
-    "static/js/main.2d97bf80.js"
+    "static/js/main.bfbc19f8.js"
   ]
 }
