@@ -94,7 +94,7 @@
 .toTop{
   z-index: 10;
   bottom: 2.5%;
-  right:1.25%;
+  right:.6%;
   position: fixed;
   color: var(--darkBlue);
   font-size: 2rem;
