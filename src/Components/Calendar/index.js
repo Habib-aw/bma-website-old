@@ -60,6 +60,7 @@ function Index() {
         setMgrb(true)
         setIsha(true)
         setToday(false)
+        setTodayOnwards(false)
         setStartDate(1)
         setEndDate(31)
         setMonth(date.getMonth())
