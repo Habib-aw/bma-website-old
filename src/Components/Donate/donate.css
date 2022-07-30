@@ -82,18 +82,13 @@
 }
 .donate-title{
   font-size: 4vw;
-  /* padding-block: 1.5rem; */
 }
+
 @media only screen and (min-width: 1920px){
-  .donate-subtitle{
-    font-size: 2vw;
+  .donate-title{
+    font-size: 5rem;
   }
-  .other-donate,.progress-description{
-    font-size: 1vw;
-  }
-  .donation-other h2{
-    font-size: 3vw;
-  }
+  
 }
 @media only screen and (max-width: 910px){
   .donation-with-other{

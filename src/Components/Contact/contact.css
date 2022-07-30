@@ -95,6 +95,23 @@ select option[value=""] {
 .contact-subtitle,.right-content h2{
     font-size: 3.25vw;
 }
+
+
+@media only screen and (min-width:1920px) {
+    .contact-subtitle,.right-content h2{
+        font-size: 4rem;
+    }
+    .contact-title{
+        font-size: 4.5rem;
+    }
+    .right-content{
+        font-size: 1.3rem;
+    }
+    .contact-root{
+        --inputWidth:17.5rem;
+    }
+    
+}
 @media only screen and (max-width:910px) {
     .containers{
         flex-direction: column-reverse;

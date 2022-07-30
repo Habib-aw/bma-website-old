@@ -180,8 +180,21 @@ td,th{
     aspect-ratio: 1/1;
 }
 
+#start-date,#end-date{
+    width: max(2.2rem,1.75vw);
+}
 
-
+@media only screen and (min-width:1920px) {
+    .filters-title-menu h4{
+        font-size: 2rem;
+    }
+    .jummah-pdfCalendar a{
+        font-size: 2rem;
+    }
+    #start-date,#end-date{
+        width: 2rem;
+    }
+}
 @media only screen and (max-width:1200px) {
     .calendar-filter{
         flex-direction: column;
@@ -240,9 +253,6 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
-#start-date,#end-date{
-    width: max(2.2rem,1.75vw);
-}
 #dash-number{
     margin-inline: 0.4rem;
 }
@@ -271,38 +281,3 @@ input[type=number] {
 }
 
 
-@media (min-width:1600px) {
-    td,th{
-        font-size: 1.25vw;
-    }
-    .filter-checkbox,.filter-checkbox h6{
-        font-size: 1.1vw;
-    }
-    .table-title{
-        font-size: 1.75vw;
-    }
-    .months-title{
-        width: 375px;
-    }
-    .bma-calendar-title-text{
-        font-size: 2.5vw;
-    }
-}
-
-@media (min-width:1920px) {
-    input[type=checkbox],input[type=radio]{
-        transform: scale(1.5);
-    }
-}
-
-@media (min-width:2700px) {
-    input[type=checkbox],input[type=radio]{
-        transform: scale(1.9);
-    }
-}
-@media (min-width:1200px) {
-    .dates-changes,.times-salahs,.checkbox{
-        flex-direction: column;
-    }
-    
-}

@@ -1,3 +1,4 @@
+
 #root{
   background: var(--darkBlue);
 }
@@ -42,34 +43,25 @@
   background-color: var(--darkBlue);
   border-left: 1px solid var(--lightBrown)
 }
+.salah-times{
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 1em;
+
+}
 .bubble{
-    margin-top: 1em;
     background: var(--transparentBlack);
     text-align: center;
     width: 14%;
-    z-index: 1;
-    position: absolute;
     border-radius: 2em;
     color: white;
     padding: 1em;
     font-family:monospace;
   }
 
-.bubble1{
-  margin-left: 3%;
-}
-.bubble2{
-  margin-left: 23%;
-}
-.bubble3{
-  margin-left: 43%;
-}
-.bubble4{
-  margin-left: 63%;
-}
-.bubble5{
-  margin-left: 83%;
-}
 
 
 
@@ -178,25 +170,22 @@ body{
 }
 
 @media only screen and (min-width:1920px) {
-  .logo img{
-    margin-left: 1vw;
-    width: 3.75vw;
-    height: 3vw;
+  #root{
+    background: var(--lightBrown);
   }
-  .logo p{
-    font-size: 3vw;
+  #app,.salah-times{
+    width: 1920px;
   }
-  .nav-links li{
-    font-size: 1.4vw;
-    margin-right: 1.2vw;
+  #app{
+    margin: auto;
   }
-  .nav-links:last-child{
-    margin-right: 1vw;
+  /* .logo{
+    padding-left: 25vw;
   }
-  .toTop{
-    font-size: 3rem;
-    padding-inline: 1.5rem;
-  }
+  .menu{
+    padding-right: 25vw;
+  } */
+
 }
 @media only screen and (max-width:910px) {
   .logo{

@@ -51,7 +51,7 @@ function App() {
 };
   return (
     <Router>
-      <div className=''>
+      <div id='app'>
           <nav className='nav'>
             <div className='logo'>
               <img src={logo} width="75" height="55" alt="logo" />
@@ -74,7 +74,7 @@ function App() {
           </nav>
           {scrollTop ? <img src={toTopImg} alt="^" className="toTop" onClick={scrollToTop} width={75}/>:null}
           <div className='routes'>
-          <Routes >
+          <Routes>
             <Route path="/" element={showMenuItems? null:<Home times={times}/>} />
             <Route path="/about" element={showMenuItems? null:<About />} />
             <Route path="/contact" element={showMenuItems? null:<Contact />} />

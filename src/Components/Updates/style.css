@@ -28,6 +28,14 @@
     margin-bottom: 3vh;
     padding-inline: 0.5vw;
 }
+@media only screen and (min-width:1920px) {
+    .updates-title{
+        font-size: 4.75rem;
+    }
+    .updates-img{
+        padding-inline: 0.5rem;
+    }
+}
 @media only screen and (max-width:910px) {
     .updates-title{
         font-size: 7vw;

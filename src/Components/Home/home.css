@@ -1,5 +1,5 @@
 .start{
-    display: block;
+  display: block;
 }
 .arabic-info{
   color: var(--lightBrown);
@@ -10,7 +10,7 @@
   right: 5rem;
   font-size: 8rem;
   text-shadow: 2px 2px 3px var(--lightBrown) ;
-
+  
 }
 .time-arabic{
   position: absolute;
@@ -81,8 +81,7 @@
   }
 
 }
-
-@media only screen and (min-height:850px){
+@media only screen and (min-height:850px) and (max-width:1920px){
   .title-arabic,.book-name{
     bottom: 15rem;
     font-size: 8vw;
@@ -102,31 +101,38 @@
 }
 
 @media only screen and (min-width:1920px){
-  .salah-times h4{
-    font-size: 1.5vw;
+  /* .book-name,.author,.teacher,.studentOf{
+    left: 7rem;
   }
-  .start{
-    font-size: 1.25vw;
-  }
-}
-@media only screen and (min-width:2500px){
-  .title-arabic,.book-name{
-    bottom: 30rem;
-    font-size: 8vw;
-  }
-  .time-arabic,.teacher{
-    bottom: 10rem;
-    font-size: 2.5vw;
-  }
-  .teacher-arabic,.author{
+  .teacher-arabic,.time-arabic,.title-arabic{
+
+  } */
+  .book-name{
     bottom: 20rem;
-    font-size: 3.5vw;
+  }
+  .teacher-arabic{
+    bottom: 16rem;
+  }
+  .time-arabic{
+    bottom: 8rem;
+  }
+  .title-arabic{
+    bottom: 20rem;
+    
+  }
+  .author{
+    bottom: 16rem;
+    
+  }
+  .teacher{
+    bottom: 8rem;
   }
   .studentOf{
-    bottom: 5rem;
-    font-size: 1.25vw;
+    bottom: 6rem;
   }
+
 }
+
 @media only screen and (max-width:750px){
   .salah-times h4{
     font-size: 3.5vw;

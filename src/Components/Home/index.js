@@ -25,8 +25,8 @@ function Home({times,scrollNeeded}) {
   })
   useEffect(() => {
     document.title = 'Baitul Mamur Academy';
-    if(1536<=window.innerWidth ){
-      setCarouselHeight(window.innerWidth/3.072)
+    if(1920<=window.innerWidth ){
+      setCarouselHeight(1920/3.072)
     }
     if (window.innerWidth < 750){
       setSmallImg(true)
@@ -51,16 +51,15 @@ function Home({times,scrollNeeded}) {
       }else{
         setMgrb(false)
       }
-      if( 1536<=window.innerWidth){
-        setCarouselHeight(window.innerWidth/3.072)
+      if(1920<=window.innerWidth ){
+        setCarouselHeight(1920/3.072)
       }
-
     })
   },[])
   // console.log(times)
   const styling = "d-block w-100"
   return (
-    <div className=''>
+    <div id='home-root'>
       <div className='salah-times'>
       <div className='bubble bubble1'>
         <h4>Fajr</h4> 

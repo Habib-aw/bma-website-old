@@ -30,26 +30,7 @@ display: none;
     margin: auto;
     margin-inline: 0;
 }
-@media only screen and (min-width: 1920px){
-    .progress-both-bar{
-        height: 2.5rem;
-    }
-    #progressBar h2{
-        font-size: 2.5vw;
-    }
-    #progressBar h5{
-        font-size: 2.3rem;
-    }
-    #progressBar span{
-        font-size: 1.75rem;
-    }
-    .progress-description{
-        font-size: 1.75rem;
-    }
-    .percentage-txt{
-        font-size: 1.75rem;
-    }
-}
+
 @media only screen and (max-width: 770px){
 .progress-description{
     display: none;

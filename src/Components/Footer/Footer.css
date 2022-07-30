@@ -67,18 +67,24 @@
 
 }
 
-@media only screen and (min-width:1920px){
-  .carousel-footer-item{
-    border: 3.5px solid var(--lightBrown);
-    box-shadow: 8px 0px  8px var(--darkBlue),-8px 0px 8px var(--darkBlue),0px 8px 8px var(--darkBlue), 0px -8px 8px var(--darkBlue);
-  }
-}
 @media only screen and (max-width:1024px){
   .carousel-footer-item,.carousel-footer-link,.carousel-footer-text{
     width: 80%;
   }
 }
 
+@media only screen and (min-width:1920px) {
+  .carousel-footer-item{
+    font-size: 1.2rem;
+    height: 12rem;
+  }
+  .fundraisers-title{
+    font-size: 3rem;
+  }
+  .footer{
+    font-size: 1rem;
+  }
+}
 @media only screen and (max-width:910px) {
   .carousel-footer-item{
     font-size: 2.75vw;

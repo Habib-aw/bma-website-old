@@ -10,22 +10,18 @@ import bengali_dates from "../../Assets/Home/Updates/bengali-dates-water.jpeg"
 import arafat from "../../Assets/Home/Updates/arafat.jpeg"
 import eid_fitr from "../../Assets/Home/Updates/eid-fitr.jpg"
 function Updates() {
-    const [size,setSize]= useState(1);
+    const [mobileSlider,setMobileSlider]= useState(false);
     useEffect(()=>{
         if(window.innerWidth<600){
-            setSize(0)
-        }else if(window.innerWidth>1919){
-            setSize(2)
+            setMobileSlider(true)
         }else{
-            setSize(1)
+            setMobileSlider(false)
         }
         window.addEventListener("resize",()=>{
             if(window.innerWidth<600){
-                setSize(0)
-            }else if(window.innerWidth>1920){
-                setSize(2)
+                setMobileSlider(true)
             }else{
-                setSize(1)
+                setMobileSlider(false)
             }
         })
     })
@@ -45,7 +41,7 @@ function Updates() {
             {images.map((img)=>{
                 return(
                     <div className='updates-img'>
-                        <img src={img} alt="" srcset="" height={size===0 ? 350:(size===2? 800:550)}/>
+                        <img src={img} alt="" srcset="" height={mobileSlider ? 350:550}/>
                     </div>
                 )
             })}
