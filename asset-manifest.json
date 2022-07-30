@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bma-website/static/css/main.46469672.css",
-    "main.js": "/bma-website/static/js/main.4a63f7f5.js",
+    "main.css": "/bma-website/static/css/main.96a994d4.css",
+    "main.js": "/bma-website/static/js/main.ac19aee4.js",
     "static/js/787.f896d5ed.chunk.js": "/bma-website/static/js/787.f896d5ed.chunk.js",
     "static/media/Baitul Mamur Academy Calendar 2022.pdf": "/bma-website/static/media/Baitul Mamur Academy Calendar 2022.a2817f7738c8b9118a98.pdf",
     "static/media/arab-history.png": "/bma-website/static/media/arab-history.c92114e801be0226eec0.png",
@@ -19,15 +19,15 @@
     "static/media/eid-fitr.jpg": "/bma-website/static/media/eid-fitr.a4f52d5624de28f3e15e.jpg",
     "static/media/arabic-wide.jpg": "/bma-website/static/media/arabic-wide.b4b3c09219ee9fb02fc4.jpg",
     "static/media/arabic.jpg": "/bma-website/static/media/arabic.5e308072fe5d1b8b1eb0.jpg",
-    "static/media/to-top.png": "/bma-website/static/media/to-top.c38037a69ee9d2429915.png",
     "static/media/logo.png": "/bma-website/static/media/logo.b817792f8ee86fd4aca1.png",
+    "static/media/to-top.png": "/bma-website/static/media/to-top.9d707b2b6ca866b71eb1.png",
     "index.html": "/bma-website/index.html",
-    "main.46469672.css.map": "/bma-website/static/css/main.46469672.css.map",
-    "main.4a63f7f5.js.map": "/bma-website/static/js/main.4a63f7f5.js.map",
+    "main.96a994d4.css.map": "/bma-website/static/css/main.96a994d4.css.map",
+    "main.ac19aee4.js.map": "/bma-website/static/js/main.ac19aee4.js.map",
     "787.f896d5ed.chunk.js.map": "/bma-website/static/js/787.f896d5ed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.46469672.css",
-    "static/js/main.4a63f7f5.js"
+    "static/css/main.96a994d4.css",
+    "static/js/main.ac19aee4.js"
   ]
 }
