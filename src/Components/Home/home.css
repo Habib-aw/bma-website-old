@@ -39,6 +39,7 @@
   background-color: var(--transparentBlack);
   border-radius: 2rem;
   color: var(--lightBrown);
+  text-shadow: 2px 2px 2px black ;
 }
 .author{
   position: absolute;

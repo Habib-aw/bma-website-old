@@ -1,4 +1,9 @@
-
+label:hover{
+    cursor: pointer;
+}
+#dash-number{
+    cursor: text;
+}
 .filter-menu-item-clicked:nth-child(1){
     transform: rotate(45deg) translate(0.625rem,.5rem) scaleX(0.75);
     transition: ease-out 0.5s;
