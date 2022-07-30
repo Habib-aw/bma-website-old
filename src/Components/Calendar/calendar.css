@@ -1,3 +1,6 @@
+.months-title{
+    margin: auto;
+    margin-inline: 0;}
 label:hover{
     cursor: pointer;
 }
@@ -225,8 +228,6 @@ td,th{
         padding-inline: 0.25rem;
     }
     .months-title{
-        margin: auto;
-        margin-inline: 0;
         font-size: 1.75rem;
     }
 }

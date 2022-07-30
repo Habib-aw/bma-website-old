@@ -9,7 +9,9 @@ function Index() {
         document.title = 'Calendar | Baitul Mamur Academy';
     })
     const date = new Date()
-    const [month,setMonth] = useState(date.getMonth())
+    const currentMonth = date.getMonth()
+    const currentDay = date.getDate()
+    const [month,setMonth] = useState(currentMonth)
     const [start,setStart] = useState(true)
     const [jamaah,setJamaah] = useState(true)
     const [sunrise,setSunrise] = useState(true)
@@ -24,6 +26,7 @@ function Index() {
     const [asrChanges,setAsrChanges] = useState(false)
     const [ishaChanges,setIshaChanges] = useState(false)
     const [today,setToday] = useState(false)
+    const [todayOnwards,setTodayOnwards] = useState(false)
     const [toggle,setToggle] = useState(false)
     const [startDate,setStartDate] = useState(1)
     const [endDate,setEndDate] = useState(31)
@@ -143,10 +146,18 @@ function Index() {
         setZuhr(false)
         setAsr(false)
         setMgrb(false)
-}
+    }
     function ChangeAllSalah(){
-            if (fajr && zuhr && asr && mgrb && isha){
+        if (fajr && zuhr && asr && mgrb && isha){
                 setFajr(false); setZuhr(false); setAsr(false); setMgrb(false); setIsha(false);}else{setFajr(true); setZuhr(true); setAsr(true); setMgrb(true); setIsha(true);}
+    }
+    function setOnwards(){
+        if(todayOnwards){
+            setTodayOnwards(false)
+        }else{
+            setMonth(currentMonth)
+            setTodayOnwards(true)
+        }
     }
     return (
         <div id='calendar'>
@@ -225,6 +236,10 @@ function Index() {
                             <input type="checkbox" id="Today-only" name="Today-only" value="Today-only" checked={today} onChange={()=>setToday(!today)} />
                             <label for="Today-only">Today only</label>
                         </div>
+                        <div>
+                            <input type="checkbox" id="Today-onwards" name="Today-onwards" value="Today-onwards" checked={todayOnwards} onChange={()=>setOnwards()} />
+                            <label for="Today-onwards">Today onwards</label>
+                        </div>
                     </div>
                     <div className='changes'>
                     <h6>View jama'ah changes</h6>
@@ -258,9 +273,9 @@ function Index() {
             <div className='table-title'> 
             {today? <div className='months-title'>{monthsLong[date.getMonth()]}</div>:
                         <>
-                        <button onClick={((month===0)? ()=>setMonth(11):()=>setMonth(month-1))}>{"<"}</button>
+                        {todayOnwards && (month===currentMonth) ? null:<button onClick={((month===0)? ()=>setMonth(11):()=>setMonth(month-1))}>{"<"}</button>}
                         <div className='months-title'>{monthsLong[month]}</div>
-                        <button onClick={(month===11)? ()=>setMonth(0):()=>setMonth(month+1)}>{">"}</button>
+                        {todayOnwards && (month===11)? null:<button onClick={(month===11)? ()=>setMonth(0):()=>setMonth(month+1)}>{">"}</button>}
                         </>}
             </div> 
             <div className='calendar'>
@@ -293,7 +308,11 @@ function Index() {
                     <tbody className='disable-select'>
                 {today ? <tr className={(data[date.getMonth()][date.getDate()-1]['Date'] === currentDate.toString())? "bg-danger":null}><td>{date.getDate()}</td>{(start && fajr)? <td>{data[date.getMonth()][date.getDate()-1]['Fajr_start']}</td>:null} {(jamaah && fajr)? <td>{data[date.getMonth()][date.getDate()-1]['Fajr_jamaah']}</td>:null}{(sunrise && fajr)? <td>{data[date.getMonth()][date.getDate()-1]['sunrise']}</td>:null}{(start&&zuhr)? <td>{data[date.getMonth()][date.getDate()-1]['Zuhr_start']}</td>:null}{(jamaah&&zuhr)? <td>{data[date.getMonth()][date.getDate()-1]['Zuhr_jamaah']}</td>:null} {start&&asr? <td>{data[date.getMonth()][date.getDate()-1]['Asr_start']}</td>:null} {jamaah&&asr? <td>{data[date.getMonth()][date.getDate()-1]['Asr_jamaah']}</td>:null}{start&&mgrb? <td>{data[date.getMonth()][date.getDate()-1]['Maghrib_start']}</td>:null}{jamaah&&mgrb? <td>{data[date.getMonth()][date.getDate()-1]['Maghrib_jamaah']}</td>:null} {start&&isha? <td>{data[date.getMonth()][date.getDate()-1]['Isha_start']}</td>:null}{jamaah&&isha? <td>{data[date.getMonth()][date.getDate()-1]['Isha_jamaah']}</td>:null}</tr>:data[month].map((day,index,array)=>{
                     num+=1
-                    return(index!==0)&&((fajrChanges&&(array[index-1]['Fajr_jamaah']===day['Fajr_jamaah']))||(zuhrChanges&&(array[index-1]['Zuhr_jamaah']===day['Zuhr_jamaah']))||(asrChanges&&(array[index-1]['Asr_jamaah']===day['Asr_jamaah']))||(ishaChanges&&(array[index-1]['Isha_jamaah']===day['Isha_jamaah'])))? null:startDate<=num&&num<=endDate?<tr className={(day['Date'] === currentDate.toString())? "bg-danger":null}><td>{num}</td>{(start && fajr)? <td>{day['Fajr_start']}</td>:null} {(jamaah && fajr)? <td>{day['Fajr_jamaah']}</td>:null}{(sunrise && fajr)? <td>{day['sunrise']}</td>:null}{(start&&zuhr)? <td>{day['Zuhr_start']}</td>:null}{(jamaah&&zuhr)? <td>{day['Zuhr_jamaah']}</td>:null} {start&&asr? <td>{day['Asr_start']}</td>:null} {jamaah&&asr? <td>{day['Asr_jamaah']}</td>:null}{start&&mgrb? <td>{day['Maghrib_start']}</td>:null}{jamaah&&mgrb? <td>{day['Maghrib_jamaah']}</td>:null} {start&&isha? <td>{day['Isha_start']}</td>:null}{jamaah&&isha? <td>{day['Isha_jamaah']}</td>:null}</tr>:null
+                    if(todayOnwards && (currentMonth === month) && (num< currentDay)){
+                        // pass or do nothing
+                    }else{
+                        return(index!==0)&&((fajrChanges&&(array[index-1]['Fajr_jamaah']===day['Fajr_jamaah']))||(zuhrChanges&&(array[index-1]['Zuhr_jamaah']===day['Zuhr_jamaah']))||(asrChanges&&(array[index-1]['Asr_jamaah']===day['Asr_jamaah']))||(ishaChanges&&(array[index-1]['Isha_jamaah']===day['Isha_jamaah'])))? null:startDate<=num&&num<=endDate?<tr className={(day['Date'] === currentDate.toString())? "bg-danger":null}><td>{num}</td>{(start && fajr)? <td>{day['Fajr_start']}</td>:null} {(jamaah && fajr)? <td>{day['Fajr_jamaah']}</td>:null}{(sunrise && fajr)? <td>{day['sunrise']}</td>:null}{(start&&zuhr)? <td>{day['Zuhr_start']}</td>:null}{(jamaah&&zuhr)? <td>{day['Zuhr_jamaah']}</td>:null} {start&&asr? <td>{day['Asr_start']}</td>:null} {jamaah&&asr? <td>{day['Asr_jamaah']}</td>:null}{start&&mgrb? <td>{day['Maghrib_start']}</td>:null}{jamaah&&mgrb? <td>{day['Maghrib_jamaah']}</td>:null} {start&&isha? <td>{day['Isha_start']}</td>:null}{jamaah&&isha? <td>{day['Isha_jamaah']}</td>:null}</tr>:null
+                    }
                 })}</tbody>
                 </table>
             </div>
