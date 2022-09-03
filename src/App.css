@@ -1,12 +1,11 @@
-
-#root{
+#root {
   background: var(--darkBlue);
 }
-.routes{
+.routes {
   background-color: var(--lightBrown);
 }
-.h100{
-  height: max(25rem,80vh);
+.h100 {
+  height: max(25rem, 80vh);
   overflow: hidden;
   animation: slide-up 350ms forwards;
   margin: 0;
@@ -21,72 +20,66 @@
     margin-top: 0%;
   }
 }
-:root{
-  --lightBrown:rgb(232,208,188);
-  --darkBlueOld:rgb(1, 0, 16);
-  --darkBlue:rgb(2, 0,25);
-  --darkBlue:rgb(0,0,35);
-  --transparentBlack:rgba(15, 7, 1, 0.395);
-  --lightWhite:rgb(171, 163, 163);
+:root {
+  --lightBrown: rgb(232, 208, 188);
+  --darkBlue: rgb(0, 0, 35);
+  --transparentBlack: rgba(15, 7, 1, 0.395);
+  --lightWhite: rgb(171, 163, 163);
 }
-::-webkit-scrollbar-corner{
+::-webkit-scrollbar-corner {
   background-color: var(--darkBlue);
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 1.25rem;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: var(--lightWhite);
 }
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background-color: var(--darkBlue);
-  border-left: 1px solid var(--lightBrown)
+  border-left: 1px solid var(--lightBrown);
 }
-.salah-times{
+.salah-times {
   position: absolute;
   z-index: 10;
   display: flex;
   width: 100%;
   justify-content: space-evenly;
   margin-top: 1em;
-
 }
-.bubble{
-    background: var(--transparentBlack);
-    text-align: center;
-    width: 14%;
-    border-radius: 2em;
-    color: white;
-    padding: 1em;
-    font-family:monospace;
-  }
-
-
-
+.bubble {
+  background: var(--transparentBlack);
+  text-align: center;
+  width: 14%;
+  border-radius: 2em;
+  color: white;
+  padding: 1em;
+  font-family: monospace;
+}
 
 /* --------------------------------Navbar-------------------------------- */
-.menu-clicked:nth-child(1){
-  transform: rotate(45deg) translate(0.4rem,.3rem) scale(1.1);
+.menu-clicked:nth-child(1) {
+  transform: rotate(45deg) translate(0.4rem, 0.3rem) scale(1.1);
   transition: ease-out 0.5s;
 }
-.menu-clicked:nth-child(2){
+.menu-clicked:nth-child(2) {
   transform: scale(0.1);
   transition: ease-out 0.5s;
 }
-.menu-clicked:nth-child(3){
-  transform: rotate(135deg) translate(-0.5rem,0.5rem) scale(1.1);
+.menu-clicked:nth-child(3) {
+  transform: rotate(135deg) translate(-0.5rem, 0.5rem) scale(1.1);
   transition: ease-out 0.5s;
 }
-.menu-unclicked{
+.menu-unclicked {
   transform: rotate(0) translate(0);
-  transition: cubic-bezier(0.175,0.885,0.32,1.275) 0.5s;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
 }
 
-.toTop{
+.toTop {
   z-index: 10;
   bottom: 2.5%;
-  right:.6%;
+  right: 0.6%;
   position: fixed;
   color: var(--darkBlue);
   font-size: 2rem;
@@ -95,63 +88,63 @@
   padding: 1rem;
 }
 
-  /* --------------------------------Navbar-------------------------------- */
-.nav-title div{
+/* --------------------------------Navbar-------------------------------- */
+.nav-title div {
   margin: 0;
   padding: 0;
 }
-.nav-title{
-display: flex;
-flex-wrap: wrap;
+.nav-title {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.logo{
-  margin-left:0.5rem;
+.logo {
+  margin-left: 0.5rem;
   margin-bottom: 0;
   color: white;
   display: flex;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-.logo p{
+.logo p {
   margin-bottom: 0;
   font-size: 2rem;
 }
-body{
+body {
   margin: 0;
   padding: 0;
 }
-.nav{
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: var(--darkBlue);
-  padding-block: .6rem;
+  padding-block: 0.6rem;
 }
 
-.nav-links ul{
-  display: flex ;
+.nav-links ul {
+  display: flex;
   margin: auto;
 }
 
-.nav-links li{
+.nav-links li {
   list-style: none;
   margin-bottom: 0;
   margin-right: 1.5rem;
 }
-.nav-links li a{
+.nav-links li a {
   text-decoration: none;
   color: white;
   display: block;
 }
-.nav-links li:hover{
+.nav-links li:hover {
   text-decoration: underline solid;
   text-underline-offset: 7.5px;
 }
 
-.menu{
+.menu {
   width: 2rem;
   height: 2rem;
   cursor: pointer;
@@ -159,9 +152,9 @@ body{
   position: absolute;
   flex-direction: column;
   right: 1rem;
-  top:1rem;
+  top: 1rem;
 }
-.menu-item{
+.menu-item {
   display: flex;
   background-color: white;
   width: 100%;
@@ -169,14 +162,15 @@ body{
   margin-top: 0.3rem;
 }
 
-@media only screen and (min-width:1920px) {
-  #root{
+@media only screen and (min-width: 1920px) {
+  #root {
     background: var(--lightBrown);
   }
-  #app,.salah-times{
+  #app,
+  .salah-times {
     width: 1920px;
   }
-  #app{
+  #app {
     margin: auto;
   }
   /* .logo{
@@ -185,72 +179,68 @@ body{
   .menu{
     padding-right: 25vw;
   } */
-
 }
-@media only screen and (max-width:910px) {
-  .logo{
+@media only screen and (max-width: 910px) {
+  .logo {
     width: 80%;
     justify-content: flex-start;
-
   }
-  .nav-title{
+  .nav-title {
     justify-content: center;
   }
-  .menu{
-    display:block;
+  .menu {
+    display: block;
   }
-  .nav{
+  .nav {
     flex-direction: column;
     align-items: flex-start;
     text-align: center;
-
   }
-  .nav-links{
+  .nav-links {
     width: 100%;
   }
-  .nav-links ul{
+  .nav-links ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     gap: 2.5rem;
   }
-  .nav-links li{
+  .nav-links li {
     text-align: center;
     margin: auto;
-    margin-block: 0   ;
+    margin-block: 0;
     font-size: 1.7rem;
     /* padding: 0.3rem 0; */
   }
-  .nav-links li a{
+  .nav-links li a {
     text-align: center;
   }
   /* .nav-links ul:last-child{
     padding-bottom: 0.7rem;
   } */
 
-  .logo p{
+  .logo p {
     font-size: 1.5rem;
   }
-  #hide{
-    overflow: hidden;  /* Hide the element content, while height = 0 */
-      height: 0;
-      opacity: 0;
-      transition: height 0ms 400ms, opacity 400ms 0ms;
-  } 
+  #hide {
+    overflow: hidden; /* Hide the element content, while height = 0 */
+    height: 0;
+    opacity: 0;
+    transition: height 0ms 400ms, opacity 400ms 0ms;
+  }
 }
 
-
-@media only screen and (max-width:465px) {
-  .logo p{
+@media only screen and (max-width: 465px) {
+  .logo p {
     font-size: 1.1rem;
   }
 }
-@media only screen and (max-width:365px) {
-  .logo p{
+@media only screen and (max-width: 365px) {
+  .logo p {
     font-size: 1rem;
   }
-  .logo{
+  .logo {
     gap: 0;
     margin-left: 0;
   }

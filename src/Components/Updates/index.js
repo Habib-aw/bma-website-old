@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect } from 'react';
-import { useState } from 'react';
+import { useState,useRef } from 'react';
 import './style.css'
 import eid_adha_2022 from "../../Assets/Home/Updates/eid-adha-2022.jpg"
 import sacrifice_hijjah from "../../Assets/Home/Updates/sacrifice-hijjah.jpeg"
@@ -11,6 +11,7 @@ import arafat from "../../Assets/Home/Updates/arafat.jpeg"
 import eid_fitr from "../../Assets/Home/Updates/eid-fitr.jpg"
 function Updates() {
     const [mobileSlider,setMobileSlider]= useState(false);
+    const [slideRight,setSlideRight]= useState(true);
     useEffect(()=>{
         if(window.innerWidth<600){
             setMobileSlider(true)
@@ -37,7 +38,10 @@ function Updates() {
     return (
         <div>
         <h1 className='updates-title'>Information and Updates</h1>
-        <div className='updates-container snap'>
+        <div className='updates-container snap' onScroll={()=>setSlideRight(false)}>
+            <div  className={slideRight? 'slide-right':'display-none '}  onClick={()=>setSlideRight(false)} >
+            Slide right for more
+            </div>
             {images.map((img)=>{
                 return(
                     <div className='updates-img'>

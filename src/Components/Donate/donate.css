@@ -1,3 +1,4 @@
+
 #donate{
     /* margin-left: 5vw; */
     /* margin-top: 2vw; */
@@ -67,8 +68,20 @@
   padding-block: 0.5rem;
   padding-inline: 1rem;
   /* margin-inline: 0.5rem; */
+
 }
 
+
+.donation-btns label{
+  background: var(--lightBrown);
+  color: var(--darkBlue);
+  padding: .75rem;
+  padding-block: 0.5rem;
+  border-radius: 0.5rem;
+}
+.donation-btns input[type=radio]{
+  display: none;
+}
 .donation-btns{
   display: flex;
   gap: 1rem;
@@ -123,4 +136,20 @@
   background-color: var(--darkBlue);
   color: var(--lightBrown);
   /* width: 70%; */
+}
+#bg-red{
+  background-color: red;
+  color: var(--lightBrown);
+}
+.donation-names{
+  /* background: #000; */
+  display: flex;
+}
+.card-num{
+  display: flex;
+  flex-direction: column;
+}
+.donation{
+  width: 50%;
+  /* background-color: #fff; */
 }
