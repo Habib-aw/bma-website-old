@@ -3,7 +3,14 @@ import ProgressBar from "../ProgressBar/ProgressBar";
 import "./donate.css";
 function Donate() {
   const [other, setOther] = useState(false);
-  const [clicked, setClicked] = useState([true, false, false, false, false]);
+  const [clicked, setClicked] = useState([
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
   const [donationAmount, setDonationAmount] = useState(5);
   const callToAction =
     ", to donate please get in contact with the imam or masjid officials";
@@ -12,27 +19,32 @@ function Donate() {
   });
   function set5() {
     setOther(false);
-    setClicked([true, false, false, false, false]);
+    setClicked([true, false, false, false, false, false]);
     setDonationAmount(5);
   }
   function set10() {
     setOther(false);
-    setClicked([false, true, false, false, false]);
+    setClicked([false, true, false, false, false, false]);
     setDonationAmount(10);
   }
   function set25() {
     setOther(false);
-    setClicked([false, false, true, false, false]);
+    setClicked([false, false, true, false, false, false]);
     setDonationAmount(25);
   }
   function set50() {
     setOther(false);
-    setClicked([false, false, false, true, false]);
+    setClicked([false, false, false, true, false, false]);
+    setDonationAmount(50);
+  }
+  function set100() {
+    setOther(false);
+    setClicked([false, false, false, false, true, false]);
     setDonationAmount(50);
   }
   function setOtherF() {
     setOther(true);
-    setClicked([false, false, false, false, true]);
+    setClicked([false, false, false, false, false, true]);
     setDonationAmount(5);
   }
   function setDonation(amount) {
@@ -72,7 +84,7 @@ function Donate() {
                 value="donate"
                 onClick={() => set5()}
               />
-              <label id={clicked[0] ? "bg-red" : ""} for="5">
+              <label id={clicked[0] ? "bg-highlight" : ""} for="5">
                 £5
               </label>
               <input
@@ -83,7 +95,7 @@ function Donate() {
                 className="donate-btn"
                 onClick={() => set10(false)}
               />
-              <label id={clicked[1] ? "bg-red" : ""} for="10">
+              <label id={clicked[1] ? "bg-highlight" : ""} for="10">
                 £10
               </label>
               <input
@@ -94,7 +106,7 @@ function Donate() {
                 className="donate-btn"
                 onClick={() => set25(false)}
               />
-              <label id={clicked[2] ? "bg-red" : ""} for="25">
+              <label id={clicked[2] ? "bg-highlight" : ""} for="25">
                 £25
               </label>
               <input
@@ -105,8 +117,19 @@ function Donate() {
                 className="donate-btn"
                 onClick={() => set50(false)}
               />
-              <label id={clicked[3] ? "bg-red" : ""} for="50">
+              <label id={clicked[3] ? "bg-highlight" : ""} for="50">
                 £50
+              </label>
+              <input
+                type="radio"
+                id="100"
+                name="donate"
+                value="donate"
+                className="donate-btn"
+                onClick={() => set100(false)}
+              />
+              <label id={clicked[4] ? "bg-highlight" : ""} for="100">
+                £100
               </label>
               <input
                 type="radio"
@@ -116,22 +139,22 @@ function Donate() {
                 className="donate-btn"
                 onClick={() => setOtherF(true)}
               />
-              <label id={clicked[4] ? "bg-red" : ""} for="other">
+              <label id={clicked[5] ? "bg-highlight" : ""} for="other">
                 Other
               </label>
+              {other ? (
+                <div style={{ marginTop: 12 }}>
+                  <span>£</span>
+                  <input
+                    type="number"
+                    id="quantity"
+                    name="quantity"
+                    value={donationAmount}
+                    onChange={(e) => setDonation(e.target.value)}
+                  ></input>
+                </div>
+              ) : null}
             </div>
-            {other ? (
-              <div style={{ marginTop: 12 }}>
-                <span>£</span>
-                <input
-                  type="number"
-                  id="quantity"
-                  name="quantity"
-                  value={donationAmount}
-                  onChange={(e) => setDonation(e.target.value)}
-                ></input>
-              </div>
-            ) : null}
             <h2 className="donate-subtitle">Payment method</h2>
             <div className="payment-method-details">
               <div className="donation-names">
@@ -174,8 +197,8 @@ function Donate() {
               Pay
             </button>
           </form>
-
           <div className="progress-bars">
+            <h3>Fundraisers</h3>
             <div className="progress-bars-child">
               <ProgressBar
                 title={"Rent"}

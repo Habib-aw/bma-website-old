@@ -1,32 +1,32 @@
-
-#donate{
-    /* margin-left: 5vw; */
-    /* margin-top: 2vw; */
-    display: flex;
-    flex-direction: column;
+#donate {
+  /* margin-left: 5vw; */
+  /* margin-top: 2vw; */
+  display: flex;
+  flex-direction: column;
 }
-.right-wrapper{
+.right-wrapper {
   width: 30%;
-
 }
-.left-wrapper{
+.left-wrapper {
   width: 70%;
   background-color: var(--darkBlue);
   color: var(--lightBrown);
   margin-bottom: 0;
 }
-.donation-with-other{
+.donation-with-other {
   display: flex;
 }
-.other-donate{
+.other-donate {
   display: flex;
   flex-direction: column;
-  width:80%;
+  width: 80%;
   margin: auto;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-.other-masjid,.other-bank{
-  color : var(--darkBlue);
+.other-masjid,
+.other-bank {
+  color: var(--darkBlue);
   border-radius: 1rem;
   padding: 1rem;
   margin: 1rem 0;
@@ -35,121 +35,141 @@
   /* margin: auto; */
   /* margin: auto; */
 }
-.donation-all{
-  width:70%;
+.donation-all {
+  width: 70%;
 }
-.donation-other{
+.donation-other {
   /* padding-top: 4rem;x   */
-
 }
-.donation-other{
+.donation-other {
   width: 30%;
 }
-.progress-bars,.donation{
+.progress-bars,
+.donation {
   /* width: 50%; */
   width: 75%;
   margin: auto;
 }
-.progress-bars-child{
+.progress-bars h3 {
+  text-align: center;
+  text-decoration: underline;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2.25rem;
+}
+.progress-bars-child {
   margin-bottom: 3rem;
 }
 
-.inner-donation-other{
+.inner-donation-other {
   width: 90%;
   margin: auto;
 }
-.org-name{
+.org-name {
   display: flex;
   flex-wrap: wrap;
 }
-.donate-btn{
+.donate-btn {
   border: none;
   border-radius: 0.5rem;
   padding-block: 0.5rem;
   padding-inline: 1rem;
   /* margin-inline: 0.5rem; */
-
 }
 
-
-.donation-btns label{
+.donation-btns label {
   background: var(--lightBrown);
   color: var(--darkBlue);
-  padding: .75rem;
+  padding: 0.75rem;
   padding-block: 0.5rem;
-  border-radius: 0.5rem;
-}
-.donation-btns input[type=radio]{
-  display: none;
-}
-.donation-btns{
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.cursive{
-  font-family: Brush Script MT, Brush Script Std, cursive;
-}
-.other-donate-title{
+  margin: 0;
+  /* border-radius: 0.5rem; */
+  width: 45%;
+  border: 2px solid grey;
   text-align: center;
 }
-.donate-title{
+#bg-highlight {
+  background-color: red;
+  border: 2px solid red;
+
+  color: var(--lightBrown);
+}
+.donation-btns input[type="radio"] {
+  display: none;
+}
+.donation-btns {
+  display: flex;
+  /* gap: 1rem; */
+  flex-wrap: wrap;
+  width: 75%;
+  justify-content: center;
+  margin: auto;
+}
+.cursive {
+  font-family: Brush Script MT, Brush Script Std, cursive;
+}
+.other-donate-title {
+  text-align: center;
+}
+.donate-title {
   font-size: 4vw;
 }
 
-@media only screen and (min-width: 1920px){
-  .donate-title{
+@media only screen and (min-width: 1920px) {
+  .donate-title {
     font-size: 5rem;
   }
-  
+  .progress-bars h3 {
+    font-size: 2.9rem;
+  }
 }
-@media only screen and (max-width: 910px){
-  .donation-with-other{
+@media only screen and (max-width: 910px) {
+  .donation-with-other {
     flex-direction: column;
   }
-  .left-wrapper{
+  .progress-bars h3 {
+    font-size: 2rem;
+  }
+  .left-wrapper {
     width: 100%;
   }
-  .right-wrapper{
+  .right-wrapper {
     display: none;
   }
-  .donation-other{
+  .donation-other {
     width: 100%;
     margin-bottom: 3rem;
     padding-top: 0;
   }
-  .progress-bars-child:last-child{
+  .progress-bars-child:last-child {
     margin-bottom: 0;
     padding-bottom: 3.5rem;
   }
-  .donation-all{
-    width:100%; 
+  .donation-all {
+    width: 100%;
   }
-  .donate-title{
+  .donate-title {
     font-size: 10vw;
   }
 }
-.donation-other{
+.donation-other {
   background-color: var(--lightBrown);
 }
-.donation-all{
+.donation-all {
   background-color: var(--darkBlue);
   color: var(--lightBrown);
   /* width: 70%; */
 }
-#bg-red{
-  background-color: red;
-  color: var(--lightBrown);
-}
-.donation-names{
+
+.donation-names {
   /* background: #000; */
   display: flex;
+  flex-wrap: wrap;
 }
-.card-num{
+.card-num {
   display: flex;
   flex-direction: column;
 }
-.donation{
+.donation {
   width: 50%;
   /* background-color: #fff; */
 }
