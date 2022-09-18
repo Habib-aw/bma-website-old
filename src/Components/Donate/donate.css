@@ -88,8 +88,8 @@
   text-align: center;
 }
 #bg-highlight {
-  background-color: red;
   border: 2px solid red;
+  background-color: red;
 
   color: var(--lightBrown);
 }
@@ -113,6 +113,10 @@
 .donate-title {
   font-size: 4vw;
 }
+.donation {
+  width: 50%;
+  /* background-color: #fff; */
+}
 
 @media only screen and (min-width: 1920px) {
   .donate-title {
@@ -123,6 +127,18 @@
   }
 }
 @media only screen and (max-width: 910px) {
+  .donation-btns {
+    width: 100%;
+  }
+  .donate-btns label {
+    border: 1px solid grey;
+  }
+  #bg-highlight {
+    border: 1px solid red;
+  }
+  .donation {
+    width: 75%;
+  }
   .donation-with-other {
     flex-direction: column;
   }
@@ -168,8 +184,4 @@
 .card-num {
   display: flex;
   flex-direction: column;
-}
-.donation {
-  width: 50%;
-  /* background-color: #fff; */
 }
