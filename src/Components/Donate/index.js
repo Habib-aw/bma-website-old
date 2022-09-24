@@ -40,7 +40,7 @@ function Donate() {
   function set100() {
     setOther(false);
     setClicked([false, false, false, false, true, false]);
-    setDonationAmount(50);
+    setDonationAmount(100);
   }
   function setOtherF() {
     setOther(true);

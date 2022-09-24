@@ -4,15 +4,33 @@
   display: flex;
   flex-direction: column;
 }
+.donate-subtitle {
+  text-align: center;
+}
+.payment-method-details label {
+  display: flex;
+  flex-direction: column;
+}
 .right-wrapper {
   width: 30%;
 }
+
+#card-number,
+#exp,
+#cvc {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .left-wrapper {
   width: 70%;
   background-color: var(--darkBlue);
   color: var(--lightBrown);
   margin-bottom: 0;
 }
+
 .donation-with-other {
   display: flex;
 }
@@ -131,7 +149,7 @@
     width: 100%;
   }
   .donate-btns label {
-    border: 1px solid grey;
+    border: 1px solid rgb(155, 155, 155);
   }
   #bg-highlight {
     border: 1px solid red;
@@ -180,8 +198,5 @@
   /* background: #000; */
   display: flex;
   flex-wrap: wrap;
-}
-.card-num {
-  display: flex;
-  flex-direction: column;
+  justify-content: space-around;
 }
