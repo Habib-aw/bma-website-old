@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/bma-website/static/css/main.e6484976.css",
-    "main.js": "/bma-website/static/js/main.b1814e07.js",
+    "main.css": "/bma-website/static/css/main.c89badb9.css",
+    "main.js": "/bma-website/static/js/main.8222db6a.js",
     "static/js/787.f896d5ed.chunk.js": "/bma-website/static/js/787.f896d5ed.chunk.js",
-    "static/media/Baitul Mamur Academy Calendar 2022.pdf": "/bma-website/static/media/Baitul Mamur Academy Calendar 2022.a2817f7738c8b9118a98.pdf",
+    "static/media/Baitul Mamur Academy Calendar print.pdf": "/bma-website/static/media/Baitul Mamur Academy Calendar print.a2817f7738c8b9118a98.pdf",
+    "static/media/Baitul Mamur Academy Calendar.pdf": "/bma-website/static/media/Baitul Mamur Academy Calendar.512a2eb58591281f2439.pdf",
     "static/media/arab-history.png": "/bma-website/static/media/arab-history.4005015826105cdb0409.png",
     "static/media/arab-history-slim.png": "/bma-website/static/media/arab-history-slim.706249aaddd8a4f04218.png",
     "static/media/eid-adha-2022.jpg": "/bma-website/static/media/eid-adha-2022.b5d58b0d0ea98c804ac2.jpg",
@@ -19,15 +20,15 @@
     "static/media/eid-fitr.jpg": "/bma-website/static/media/eid-fitr.62141c1a8ff7ff3fda6c.jpg",
     "static/media/arabic-wide.jpg": "/bma-website/static/media/arabic-wide.b4b3c09219ee9fb02fc4.jpg",
     "static/media/arabic.jpg": "/bma-website/static/media/arabic.5e308072fe5d1b8b1eb0.jpg",
-    "static/media/logo.png": "/bma-website/static/media/logo.b817792f8ee86fd4aca1.png",
     "static/media/to-top.png": "/bma-website/static/media/to-top.1cff684ef41d161cc112.png",
+    "static/media/logo.png": "/bma-website/static/media/logo.457fc4c76d810b7621b1.png",
     "index.html": "/bma-website/index.html",
-    "main.e6484976.css.map": "/bma-website/static/css/main.e6484976.css.map",
-    "main.b1814e07.js.map": "/bma-website/static/js/main.b1814e07.js.map",
+    "main.c89badb9.css.map": "/bma-website/static/css/main.c89badb9.css.map",
+    "main.8222db6a.js.map": "/bma-website/static/js/main.8222db6a.js.map",
     "787.f896d5ed.chunk.js.map": "/bma-website/static/js/787.f896d5ed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6484976.css",
-    "static/js/main.b1814e07.js"
+    "static/css/main.c89badb9.css",
+    "static/js/main.8222db6a.js"
   ]
 }
