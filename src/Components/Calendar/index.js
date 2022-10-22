@@ -2,7 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./calendar.css";
 import data from "../../data/times.json";
-import pdfCalendar from "../../Assets/Baitul Mamur Academy Calendar 2022.pdf";
+import pdfCalendar from "../../Assets/Baitul Mamur Academy Calendar.pdf";
+import pdfCalendarPrint from "../../Assets/Baitul Mamur Academy Calendar print.pdf";
 function Index() {
   useEffect(() => {
     document.title = "Calendar | Baitul Mamur Academy";
@@ -737,9 +738,11 @@ function Index() {
               </table>
             </div>
             <div>
-              <a href={pdfCalendar} download>
-                Download the calendar here
-              </a>
+              <h3>Download Calendar below</h3>
+              <ul>
+                <li><a href={pdfCalendar} download>Chronological order</a></li>
+                <li><a href={pdfCalendarPrint} download>Double sided print order</a></li>
+              </ul>
             </div>
           </div>
         </div>
