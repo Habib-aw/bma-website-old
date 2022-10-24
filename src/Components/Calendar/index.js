@@ -469,29 +469,23 @@ function Index() {
               <div className="months-title">{monthsLong[date.getMonth()]}</div>
             ) : (
               <>
-                {todayOnwards && month === currentMonth ? null : (
-                  <button
-                    onClick={
-                      month === 0
-                        ? () => setMonth(11)
-                        : () => setMonth(month - 1)
-                    }
-                  >
-                    {"<"}
-                  </button>
-                )}
+                <button
+                  id={todayOnwards && month === currentMonth ? "hidden" : null}
+                  onClick={
+                    month === 0 ? () => setMonth(11) : () => setMonth(month - 1)
+                  }
+                >
+                  {"<"}
+                </button>
                 <div className="months-title">{monthsLong[month]}</div>
-                {todayOnwards && month === 11 ? null : (
-                  <button
-                    onClick={
-                      month === 11
-                        ? () => setMonth(0)
-                        : () => setMonth(month + 1)
-                    }
-                  >
-                    {">"}
-                  </button>
-                )}
+                <button
+                  id={todayOnwards && month === 11 ? "hidden" : null}
+                  onClick={
+                    month === 11 ? () => setMonth(0) : () => setMonth(month + 1)
+                  }
+                >
+                  {">"}
+                </button>
               </>
             )}
           </div>
@@ -737,11 +731,19 @@ function Index() {
                 </tr>
               </table>
             </div>
-            <div>
+            <div className="cal-download">
               <h3>Download Calendar below</h3>
               <ul>
-                <li><a href={pdfCalendar} download>Chronological order</a></li>
-                <li><a href={pdfCalendarPrint} download>Double sided print order</a></li>
+                <li>
+                  <a href={pdfCalendar} download>
+                    Chronological order
+                  </a>
+                </li>
+                <li>
+                  <a href={pdfCalendarPrint} download>
+                    Double sided print order
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
